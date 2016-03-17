@@ -1,0 +1,6981 @@
+0 EventInit
+	2 members
+		bubbles
+			optional:1
+		cancelable
+			optional:1
+1 UIEventInit
+	inherit:EventInit
+	2 members
+		view
+			optional:1
+		detail
+			optional:1
+2 CompositionEventInit
+	inherit:UIEventInit
+	1 members
+		data
+			optional:1
+3 EventModifierInit
+	inherit:UIEventInit
+	15 members
+		ctrlKey
+			optional:1
+		shiftKey
+			optional:1
+		altKey
+			optional:1
+		metaKey
+			optional:1
+		modifierAltGraph
+			optional:1
+		modifierCapsLock
+			optional:1
+		modifierFn
+			optional:1
+		modifierFnLock
+			optional:1
+		modifierHyper
+			optional:1
+		modifierNumLock
+			optional:1
+		modifierOS
+			optional:1
+		modifierScrollLock
+			optional:1
+		modifierSuper
+			optional:1
+		modifierSymbol
+			optional:1
+		modifierSymbolLock
+			optional:1
+4 KeyboardEventInit
+	inherit:EventModifierInit
+	8 members
+		key
+			optional:1
+		code
+			optional:1
+		location
+			optional:1
+		repeat
+			optional:1
+		isComposing
+			optional:1
+		charCode
+			optional:1
+		keyCode
+			optional:1
+		which
+			optional:1
+5 MouseEventInit
+	inherit:EventModifierInit
+	8 members
+		region
+			optional:1
+		screenX
+			optional:1
+		screenY
+			optional:1
+		clientX
+			optional:1
+		clientY
+			optional:1
+		button
+			optional:1
+		buttons
+			optional:1
+		relatedTarget
+			optional:1
+6 WheelEventInit
+	inherit:MouseEventInit
+	4 members
+		deltaX
+			optional:1
+		deltaY
+			optional:1
+		deltaZ
+			optional:1
+		deltaMode
+			optional:1
+7 FocusEventInit
+	inherit:UIEventInit
+	1 members
+		relatedTarget
+			optional:1
+8 StorageEventInit
+	inherit:EventInit
+	5 members
+		key
+			optional:1
+		oldValue
+			optional:1
+		newValue
+			optional:1
+		url
+			optional:1
+		storageArea
+			optional:1
+9 CloseEventInit
+	inherit:EventInit
+	3 members
+		wasClean
+			optional:1
+		code
+			optional:1
+		reason
+			optional:1
+10 EventSourceInit
+	1 members
+		withCredentials
+			optional:1
+11 MessageEventInit
+	inherit:EventInit
+	5 members
+		data
+			optional:1
+		origin
+			optional:1
+		lastEventId
+			optional:1
+		source
+			optional:1
+		ports
+			optional:1
+12 ErrorEventInit
+	inherit:EventInit
+	5 members
+		message
+			optional:1
+		filename
+			optional:1
+		lineno
+			optional:1
+		colno
+			optional:1
+		error
+			optional:1
+13 PageTransitionEventInit
+	inherit:EventInit
+	1 members
+		persisted
+			optional:1
+14 HashChangeEventInit
+	inherit:EventInit
+	2 members
+		oldURL
+			optional:1
+		newURL
+			optional:1
+15 PopStateEventInit
+	inherit:EventInit
+	1 members
+		state
+			optional:1
+16 DragEventInit
+	inherit:MouseEventInit
+	1 members
+		dataTransfer
+			optional:1
+17 HitRegionOptions
+	8 members
+		path
+			optional:1
+		fillRule
+			optional:1
+		id
+			optional:1
+		parentID
+			optional:1
+		cursor
+			optional:1
+		control
+			optional:1
+		label
+			optional:1
+		role
+			optional:1
+18 CanvasRenderingContext2DSettings
+	1 members
+		alpha
+			optional:1
+19 RelatedEventInit
+	inherit:EventInit
+	1 members
+		relatedTarget
+			optional:1
+20 AutocompleteErrorEventInit
+	inherit:EventInit
+	1 members
+		reason
+			optional:1
+21 TrackEventInit
+	inherit:EventInit
+	1 members
+		track
+			optional:1
+22 MutationObserverInit
+	7 members
+		childList
+			optional:1
+		attributes
+			optional:1
+		characterData
+			optional:1
+		subtree
+			optional:1
+		attributeOldValue
+			optional:1
+		characterDataOldValue
+			optional:1
+		attributeFilter
+			optional:1
+23 CustomEventInit
+	inherit:EventInit
+	1 members
+		detail
+			optional:1
+24 Console
+	class:0x8f18ac8
+	12 operations
+		debug
+			method:0x8f192b0
+			overload:0
+				return type:0x8f97068
+				arguments:2
+				optionals:0
+				elipsis:1
+					msg
+					subst
+						elipsis:1
+		dir
+			method:0x8f19670
+			overload:0
+				return type:0x8f953b0
+				arguments:1
+				optionals:0
+				elipsis:0
+					object
+		error
+			method:0x8f193a0
+			overload:0
+				return type:0x8f97278
+				arguments:2
+				optionals:0
+				elipsis:1
+					msg
+					subst
+						elipsis:1
+		group
+			method:0x8f18c90
+			overload:0
+				return type:0x8f973b0
+				arguments:0
+				optionals:0
+				elipsis:0
+		groupCollapsed
+			method:0x8f18fe8
+			overload:0
+				return type:0x8f97410
+				arguments:0
+				optionals:0
+				elipsis:0
+		groupEnd
+			method:0x8f190d0
+			overload:0
+				return type:0x8f97478
+				arguments:0
+				optionals:0
+				elipsis:0
+		info
+			method:0x8f191c0
+			overload:0
+				return type:0x8f974d8
+				arguments:2
+				optionals:0
+				elipsis:1
+					msg
+					subst
+						elipsis:1
+		log
+			method:0x8f19490
+			overload:0
+				return type:0x8f97610
+				arguments:2
+				optionals:0
+				elipsis:1
+					msg
+					subst
+						elipsis:1
+		time
+			method:0x8f198b8
+			overload:0
+				return type:0x8f97748
+				arguments:1
+				optionals:0
+				elipsis:0
+					timerName
+		timeEnd
+			method:0x8f19938
+			overload:0
+				return type:0x8f977f8
+				arguments:1
+				optionals:0
+				elipsis:0
+					timerName
+		trace
+			method:0x8f19c58
+			overload:0
+				return type:0x8f978a8
+				arguments:0
+				optionals:0
+				elipsis:0
+		warn
+			method:0x8f19580
+			overload:0
+				return type:0x8f97908
+				arguments:2
+				optionals:0
+				elipsis:1
+					msg
+					subst
+						elipsis:1
+25 URLSearchParams
+	6 operations
+		append
+			method:(nil)
+			overload:0
+				return type:0x8f96818
+				arguments:2
+				optionals:0
+				elipsis:0
+					name
+					value
+		delete
+			method:(nil)
+			overload:0
+				return type:0x8f96958
+				arguments:1
+				optionals:0
+				elipsis:0
+					name
+		get
+			method:(nil)
+			overload:0
+				return type:0x8f96a68
+				arguments:1
+				optionals:0
+				elipsis:0
+					name
+		getAll
+			method:(nil)
+			overload:0
+				return type:0x8f96b78
+				arguments:1
+				optionals:0
+				elipsis:0
+					name
+		has
+			method:(nil)
+			overload:0
+				return type:0x8f96c48
+				arguments:1
+				optionals:0
+				elipsis:0
+					name
+		set
+			method:(nil)
+			overload:0
+				return type:0x8f96d08
+				arguments:2
+				optionals:0
+				elipsis:0
+					name
+					value
+26 URLUtilsReadOnly
+	9 attributes
+		href (nil)
+		origin (nil)
+		protocol (nil)
+		host (nil)
+		hostname (nil)
+		port (nil)
+		pathname (nil)
+		search (nil)
+		hash (nil)
+27 URLUtilsSearchParams
+	1 attributes
+		searchParams (nil) (nil)
+28 URLUtils
+	11 attributes
+		href (nil) (nil)
+		origin (nil)
+		protocol (nil) (nil)
+		username (nil) (nil)
+		password (nil) (nil)
+		host (nil) (nil)
+		hostname (nil) (nil)
+		port (nil) (nil)
+		pathname (nil) (nil)
+		search (nil) (nil)
+		hash (nil) (nil)
+29 URL
+	2 operations
+		domainToASCII
+			method:(nil)
+			overload:0
+				return type:0x8f955f0
+				arguments:1
+				optionals:0
+				elipsis:0
+					domain
+		domainToUnicode
+			method:(nil)
+			overload:0
+				return type:0x8f956f8
+				arguments:1
+				optionals:0
+				elipsis:0
+					domain
+	12 attributes
+		href (nil) (nil)
+		origin (nil)
+		protocol (nil) (nil)
+		username (nil) (nil)
+		password (nil) (nil)
+		host (nil) (nil)
+		hostname (nil) (nil)
+		port (nil) (nil)
+		pathname (nil) (nil)
+		search (nil) (nil)
+		hash (nil) (nil)
+		searchParams (nil) (nil)
+30 Event
+	class:0x8f27e98
+	4 operations
+		stopPropagation
+			method:0x8f28858
+			overload:0
+				return type:0x8f10af0
+				arguments:0
+				optionals:0
+				elipsis:0
+		stopImmediatePropagation
+			method:0x8f289a0
+			overload:0
+				return type:0x8f10b58
+				arguments:0
+				optionals:0
+				elipsis:0
+		preventDefault
+			method:0x8f28d78
+			overload:0
+				return type:0x8f10c88
+				arguments:0
+				optionals:0
+				elipsis:0
+		initEvent
+			method:(nil)
+			overload:0
+				return type:0x8f10e70
+				arguments:3
+				optionals:0
+				elipsis:0
+					type
+					bubbles
+					cancelable
+	9 attributes
+		type 0x8f28280
+		target 0x8f28418
+		currentTarget 0x8f285c0
+		eventPhase 0x8f28728
+		bubbles 0x8f28af0
+		cancelable 0x8f28c48
+		defaultPrevented 0x8f28ee0
+		isTrusted (nil)
+		timeStamp (nil)
+	4 constants
+		NONE
+		CAPTURING_PHASE
+		AT_TARGET
+		BUBBLING_PHASE
+31 MutationEvent
+	inherit:Event
+	class:0x8f29058
+	1 operations
+		initMutationEvent
+			method:(nil)
+			overload:0
+				return type:0x8f9deb8
+				arguments:8
+				optionals:0
+				elipsis:0
+					typeArg
+					bubblesArg
+					cancelableArg
+					relatedNodeArg
+					prevValueArg
+					newValueArg
+					attrNameArg
+					attrChangeArg
+	5 attributes
+		relatedNode (nil)
+		prevValue (nil)
+		newValue (nil)
+		attrName (nil)
+		attrChange (nil)
+	3 constants
+		MODIFICATION
+		ADDITION
+		REMOVAL
+32 UIEvent
+	inherit:Event
+	class:0x8f291c8
+	1 operations
+		initUIEvent
+			method:(nil)
+			overload:0
+				return type:0x8f9c0d0
+				arguments:5
+				optionals:0
+				elipsis:0
+					typeArg
+					bubblesArg
+					cancelableArg
+					viewArg
+					detailArg
+	2 attributes
+		view (nil)
+		detail (nil)
+33 CompositionEvent
+	inherit:UIEvent
+	class:0x8f29ee8
+	1 operations
+		initCompositionEvent
+			method:(nil)
+			overload:0
+				return type:0x8f9d560
+				arguments:6
+				optionals:0
+				elipsis:0
+					typeArg
+					bubblesArg
+					cancelableArg
+					viewArg
+					dataArg
+					locale
+	1 attributes
+		data (nil)
+34 KeyboardEvent
+	inherit:UIEvent
+	class:0x8f29a88
+	2 operations
+		getModifierState
+			method:(nil)
+			overload:0
+				return type:0x8f9b848
+				arguments:1
+				optionals:0
+				elipsis:0
+					keyArg
+		initKeyboardEvent
+			method:(nil)
+			overload:0
+				return type:0x8f9d1b0
+				arguments:9
+				optionals:0
+				elipsis:0
+					typeArg
+					bubblesArg
+					cancelableArg
+					viewArg
+					keyArg
+					locationArg
+					modifiersListArg
+					repeat
+					locale
+	12 attributes
+		key (nil)
+		code (nil)
+		location (nil)
+		ctrlKey (nil)
+		shiftKey (nil)
+		altKey (nil)
+		metaKey (nil)
+		repeat (nil)
+		isComposing (nil)
+		charCode (nil)
+		keyCode (nil)
+		which (nil)
+	4 constants
+		DOM_KEY_LOCATION_STANDARD
+		DOM_KEY_LOCATION_LEFT
+		DOM_KEY_LOCATION_RIGHT
+		DOM_KEY_LOCATION_NUMPAD
+35 MouseEvent
+	inherit:UIEvent
+	class:0x8f29910
+	2 operations
+		getModifierState
+			method:(nil)
+			overload:0
+				return type:0x8f99e90
+				arguments:1
+				optionals:0
+				elipsis:0
+					keyArg
+		initMouseEvent
+			method:(nil)
+			overload:0
+				return type:0x8f9c5f0
+				arguments:15
+				optionals:0
+				elipsis:0
+					typeArg
+					bubblesArg
+					cancelableArg
+					viewArg
+					detailArg
+					screenXArg
+					screenYArg
+					clientXArg
+					clientYArg
+					ctrlKeyArg
+					altKeyArg
+					shiftKeyArg
+					metaKeyArg
+					buttonArg
+					relatedTargetArg
+	12 attributes
+		region (nil)
+		screenX (nil)
+		screenY (nil)
+		clientX (nil)
+		clientY (nil)
+		ctrlKey (nil)
+		shiftKey (nil)
+		altKey (nil)
+		metaKey (nil)
+		button (nil)
+		relatedTarget (nil)
+		buttons (nil)
+36 WheelEvent
+	inherit:MouseEvent
+	class:0x8f2a058
+	1 operations
+		initWheelEvent
+			method:(nil)
+			overload:0
+				return type:0x8f9cb98
+				arguments:16
+				optionals:0
+				elipsis:0
+					typeArg
+					bubblesArg
+					cancelableArg
+					viewArg
+					detailArg
+					screenXArg
+					screenYArg
+					clientXArg
+					clientYArg
+					buttonArg
+					relatedTargetArg
+					modifiersListArg
+					deltaXArg
+					deltaYArg
+					deltaZArg
+					deltaMode
+	4 attributes
+		deltaX (nil)
+		deltaY (nil)
+		deltaZ (nil)
+		deltaMode (nil)
+	3 constants
+		DOM_DELTA_PIXEL
+		DOM_DELTA_LINE
+		DOM_DELTA_PAGE
+37 FocusEvent
+	inherit:UIEvent
+	class:0x8f2a1c8
+	1 operations
+		initFocusEvent
+			method:(nil)
+			overload:0
+				return type:0x8f9c318
+				arguments:6
+				optionals:0
+				elipsis:0
+					typeArg
+					bubblesArg
+					cancelableArg
+					viewArg
+					detailArg
+					relatedTargetArg
+	1 attributes
+		relatedTarget (nil)
+38 CSS
+	1 operations
+		escape
+			method:(nil)
+			overload:0
+				return type:0x8f62cb0
+				arguments:1
+				optionals:0
+				elipsis:0
+					ident
+39 PseudoElement
+	4 attributes
+		cascadedStyle (nil)
+		defaultStyle (nil)
+		rawComputedStyle (nil)
+		usedStyle (nil)
+40 GetStyleUtils
+	4 attributes
+		cascadedStyle (nil)
+		defaultStyle (nil)
+		rawComputedStyle (nil)
+		usedStyle (nil)
+41 SVGElement
+	1 attributes
+		style (nil)
+42 ElementCSSInlineStyle
+	1 attributes
+		style (nil)
+43 CSSStyleDeclaration
+	7 operations
+		item
+			method:(nil)
+			overload:0
+				return type:0x8f618a8
+				arguments:1
+				optionals:0
+				elipsis:0
+					index
+		getPropertyValue
+			method:(nil)
+			overload:0
+				return type:0x8f61970
+				arguments:1
+				optionals:0
+				elipsis:0
+					property
+		getPropertyPriority
+			method:(nil)
+			overload:0
+				return type:0x8f61a28
+				arguments:1
+				optionals:0
+				elipsis:0
+					property
+		setProperty
+			method:(nil)
+			overload:0
+				return type:0x8f61ac8
+				arguments:3
+				optionals:1
+				elipsis:0
+					property
+					value
+					priority
+						optional:1
+		setPropertyValue
+			method:(nil)
+			overload:0
+				return type:0x8f61d28
+				arguments:2
+				optionals:0
+				elipsis:0
+					property
+					value
+		setPropertyPriority
+			method:(nil)
+			overload:0
+				return type:0x8f61ea0
+				arguments:2
+				optionals:0
+				elipsis:0
+					property
+					priority
+		removeProperty
+			method:(nil)
+			overload:0
+				return type:0x8f62030
+				arguments:1
+				optionals:0
+				elipsis:0
+					property
+	5 attributes
+		cssText (nil) (nil)
+		length (nil)
+		parentRule (nil)
+		cssFloat (nil) (nil)
+		dashed_attribute (nil) (nil)
+44 CSSRule
+	4 attributes
+		type (nil)
+		cssText (nil) (nil)
+		parentRule (nil)
+		parentStyleSheet (nil)
+	8 constants
+		STYLE_RULE
+		CHARSET_RULE
+		IMPORT_RULE
+		MEDIA_RULE
+		FONT_FACE_RULE
+		PAGE_RULE
+		MARGIN_RULE
+		NAMESPACE_RULE
+45 CSSNamespaceRule
+	inherit:CSSRule
+	2 attributes
+		namespaceURI (nil)
+		prefix (nil)
+46 CSSMarginRule
+	inherit:CSSRule
+	2 attributes
+		name (nil)
+		style (nil)
+47 CSSGroupingRule
+	inherit:CSSRule
+	2 operations
+		insertRule
+			method:(nil)
+			overload:0
+				return type:0x8f60f18
+				arguments:2
+				optionals:0
+				elipsis:0
+					rule
+					index
+		deleteRule
+			method:(nil)
+			overload:0
+				return type:0x8f61018
+				arguments:1
+				optionals:0
+				elipsis:0
+					index
+	1 attributes
+		cssRules (nil)
+48 CSSPageRule
+	inherit:CSSGroupingRule
+	2 attributes
+		selectorText (nil) (nil)
+		style (nil)
+49 CSSMediaRule
+	inherit:CSSGroupingRule
+	1 attributes
+		media (nil)
+50 CSSImportRule
+	inherit:CSSRule
+	3 attributes
+		href (nil)
+		media (nil)
+		styleSheet (nil)
+51 CSSStyleRule
+	inherit:CSSRule
+	2 attributes
+		selectorText (nil) (nil)
+		style (nil)
+52 CSSRuleList
+	1 operations
+		item
+			method:(nil)
+			overload:0
+				return type:0x8f60280
+				arguments:1
+				optionals:0
+				elipsis:0
+					index
+	1 attributes
+		length (nil)
+53 LinkStyle
+	1 attributes
+		sheet (nil)
+54 StyleSheetList
+	1 operations
+		item
+			method:(nil)
+			overload:0
+				return type:0x8f5fbd0
+				arguments:1
+				optionals:0
+				elipsis:0
+					index
+	1 attributes
+		length (nil)
+55 StyleSheet
+	7 attributes
+		type (nil)
+		href (nil)
+		ownerNode (nil)
+		parentStyleSheet (nil)
+		title (nil)
+		media (nil)
+		disabled (nil) (nil)
+56 CSSStyleSheet
+	inherit:StyleSheet
+	2 operations
+		insertRule
+			method:(nil)
+			overload:0
+				return type:0x8f5f938
+				arguments:2
+				optionals:0
+				elipsis:0
+					rule
+					index
+		deleteRule
+			method:(nil)
+			overload:0
+				return type:0x8f5fa38
+				arguments:1
+				optionals:0
+				elipsis:0
+					index
+	2 attributes
+		ownerRule (nil)
+		cssRules (nil)
+57 MediaList
+	3 operations
+		item
+			method:(nil)
+			overload:0
+				return type:0x8f5f0f8
+				arguments:1
+				optionals:0
+				elipsis:0
+					index
+		appendMedium
+			method:(nil)
+			overload:0
+				return type:0x8f5f1a8
+				arguments:1
+				optionals:0
+				elipsis:0
+					medium
+		deleteMedium
+			method:(nil)
+			overload:0
+				return type:0x8f5f260
+				arguments:1
+				optionals:0
+				elipsis:0
+					medium
+	2 attributes
+		mediaText (nil) (nil)
+		length (nil)
+58 EventTarget
+	3 operations
+		addEventListener
+			method:(nil)
+			overload:0
+				return type:0x8f11710
+				arguments:3
+				optionals:1
+				elipsis:0
+					type
+					callback
+					capture
+						optional:1
+		removeEventListener
+			method:(nil)
+			overload:0
+				return type:0x8f118c0
+				arguments:3
+				optionals:1
+				elipsis:0
+					type
+					callback
+					capture
+						optional:1
+		dispatchEvent
+			method:(nil)
+			overload:0
+				return type:0x8f11a88
+				arguments:1
+				optionals:0
+				elipsis:0
+					event
+59 Node
+	inherit:EventTarget
+	class:0x8f1b580
+	13 operations
+		hasChildNodes
+			method:0x8f1c320
+			overload:0
+				return type:0x8f55368
+				arguments:0
+				optionals:0
+				elipsis:0
+		normalize
+			method:0x8f1d528
+			overload:0
+				return type:0x8f55770
+				arguments:0
+				optionals:0
+				elipsis:0
+		cloneNode
+			method:0x8f1d6e8
+			overload:0
+				return type:0x8f55830
+				arguments:1
+				optionals:1
+				elipsis:0
+					deep
+						optional:1
+		isEqualNode
+			method:0x8f1d8f8
+			overload:0
+				return type:0x8f55900
+				arguments:1
+				optionals:0
+				elipsis:0
+					otherNode
+		compareDocumentPosition
+			method:0x8f1db28
+			overload:0
+				return type:0x8f55d20
+				arguments:1
+				optionals:0
+				elipsis:0
+					other
+		contains
+			method:0x8f1de08
+			overload:0
+				return type:0x8f55df0
+				arguments:1
+				optionals:0
+				elipsis:0
+					other
+		lookupPrefix
+			method:0x8f1e088
+			overload:0
+				return type:0x8f55ee8
+				arguments:1
+				optionals:0
+				elipsis:0
+					namespace
+		lookupNamespaceURI
+			method:0x8f1e308
+			overload:0
+				return type:0x8f55fc0
+				arguments:1
+				optionals:0
+				elipsis:0
+					prefix
+		isDefaultNamespace
+			method:0x8f1e538
+			overload:0
+				return type:0x8f56088
+				arguments:1
+				optionals:0
+				elipsis:0
+					namespace
+		insertBefore
+			method:0x8f1e880
+			overload:0
+				return type:0x8f56170
+				arguments:2
+				optionals:0
+				elipsis:0
+					node
+					child
+		appendChild
+			method:0x8f1eab0
+			overload:0
+				return type:0x8f562e0
+				arguments:1
+				optionals:0
+				elipsis:0
+					node
+		replaceChild
+			method:0x8f1eda0
+			overload:0
+				return type:0x8f563d8
+				arguments:2
+				optionals:0
+				elipsis:0
+					node
+					child
+		removeChild
+			method:0x8f1f150
+			overload:0
+				return type:0x8f56538
+				arguments:1
+				optionals:0
+				elipsis:0
+					child
+	13 attributes
+		nodeType 0x8f1b8f0
+		nodeName 0x8f1ba90
+		baseURI 0x8f1bc48
+		ownerDocument 0x8f1bde0
+		parentNode 0x8f1bf60
+		parentElement 0x8f1c1c0
+		childNodes 0x8f1c600
+		firstChild 0x8f1c798
+		lastChild 0x8f1c930
+		previousSibling 0x8f1cad8
+		nextSibling 0x8f1cc70
+		nodeValue 0x8f1ce50 0x8f1d038
+		textContent 0x8f1d220 0x8f1d408
+	18 constants
+		ELEMENT_NODE
+		ATTRIBUTE_NODE
+		TEXT_NODE
+		CDATA_SECTION_NODE
+		ENTITY_REFERENCE_NODE
+		ENTITY_NODE
+		PROCESSING_INSTRUCTION_NODE
+		COMMENT_NODE
+		DOCUMENT_NODE
+		DOCUMENT_TYPE_NODE
+		DOCUMENT_FRAGMENT_NODE
+		NOTATION_NODE
+		DOCUMENT_POSITION_DISCONNECTED
+		DOCUMENT_POSITION_PRECEDING
+		DOCUMENT_POSITION_FOLLOWING
+		DOCUMENT_POSITION_CONTAINS
+		DOCUMENT_POSITION_CONTAINED_BY
+		DOCUMENT_POSITION_IMPLEMENTATION_SPECIFIC
+60 Element
+	inherit:Node
+	class:0x8f22d80
+	31 operations
+		hasAttributes
+			method:(nil)
+			overload:0
+				return type:0x8f58e70
+				arguments:0
+				optionals:0
+				elipsis:0
+		getAttribute
+			method:0x8f240c0
+			overload:0
+				return type:0x8f58fa0
+				arguments:1
+				optionals:0
+				elipsis:0
+					name
+		getAttributeNS
+			method:(nil)
+			overload:0
+				return type:0x8f59068
+				arguments:2
+				optionals:0
+				elipsis:0
+					namespace
+					localName
+		setAttribute
+			method:0x8f24178
+			overload:0
+				return type:0x8f59168
+				arguments:2
+				optionals:0
+				elipsis:0
+					name
+					value
+		setAttributeNS
+			method:(nil)
+			overload:0
+				return type:0x8f59270
+				arguments:3
+				optionals:0
+				elipsis:0
+					namespace
+					name
+					value
+		removeAttribute
+			method:0x8f24a30
+			overload:0
+				return type:0x8f593d8
+				arguments:1
+				optionals:0
+				elipsis:0
+					name
+		removeAttributeNS
+			method:(nil)
+			overload:0
+				return type:0x8f59490
+				arguments:2
+				optionals:0
+				elipsis:0
+					namespace
+					localName
+		hasAttribute
+			method:0x8f251a0
+			overload:0
+				return type:0x8f595c0
+				arguments:1
+				optionals:0
+				elipsis:0
+					name
+		hasAttributeNS
+			method:(nil)
+			overload:0
+				return type:0x8f59678
+				arguments:2
+				optionals:0
+				elipsis:0
+					namespace
+					localName
+		getAttributeNode
+			method:(nil)
+			overload:0
+				return type:0x8f597c0
+				arguments:1
+				optionals:0
+				elipsis:0
+					name
+		getAttributeNodeNS
+			method:(nil)
+			overload:0
+				return type:0x8f598a8
+				arguments:2
+				optionals:0
+				elipsis:0
+					namespace
+					localName
+		setAttributeNode
+			method:(nil)
+			overload:0
+				return type:0x8f599f0
+				arguments:1
+				optionals:0
+				elipsis:0
+					attr
+		setAttributeNodeNS
+			method:(nil)
+			overload:0
+				return type:0x8f59af8
+				arguments:1
+				optionals:0
+				elipsis:0
+					attr
+		removeAttributeNode
+			method:(nil)
+			overload:0
+				return type:0x8f59bf0
+				arguments:1
+				optionals:0
+				elipsis:0
+					attr
+		closest
+			method:(nil)
+			overload:0
+				return type:0x8f59cf0
+				arguments:1
+				optionals:0
+				elipsis:0
+					selectors
+		matches
+			method:(nil)
+			overload:0
+				return type:0x8f59da0
+				arguments:1
+				optionals:0
+				elipsis:0
+					selectors
+		getElementsByTagName
+			method:0x8f24010
+			overload:0
+				return type:0x8f59e88
+				arguments:1
+				optionals:0
+				elipsis:0
+					localName
+		getElementsByTagNameNS
+			method:(nil)
+			overload:0
+				return type:0x8f59f70
+				arguments:2
+				optionals:0
+				elipsis:0
+					namespace
+					localName
+		getElementsByClassName
+			method:(nil)
+			overload:0
+				return type:0x8f5a0b8
+				arguments:1
+				optionals:0
+				elipsis:0
+					classNames
+		insertAdjacentHTML
+			method:(nil)
+			overload:0
+				return type:0x8f50f58
+				arguments:2
+				optionals:0
+				elipsis:0
+					position
+					text
+		pseudo
+			method:(nil)
+			overload:0
+				return type:0x8f62b20
+				arguments:1
+				optionals:0
+				elipsis:0
+					pseudoElt
+		prepend
+			method:(nil)
+			overload:0
+				return type:0x8f12280
+				arguments:1
+				optionals:0
+				elipsis:1
+					nodes
+						elipsis:1
+		append
+			method:(nil)
+			overload:0
+				return type:0x8f123b0
+				arguments:1
+				optionals:0
+				elipsis:1
+					nodes
+						elipsis:1
+		query
+			method:(nil)
+			overload:0
+				return type:0x8f12520
+				arguments:1
+				optionals:0
+				elipsis:0
+					relativeSelectors
+		queryAll
+			method:(nil)
+			overload:0
+				return type:0x8f12658
+				arguments:1
+				optionals:0
+				elipsis:0
+					relativeSelectors
+		querySelector
+			method:(nil)
+			overload:0
+				return type:0x8f12748
+				arguments:1
+				optionals:0
+				elipsis:0
+					selectors
+		querySelectorAll
+			method:(nil)
+			overload:0
+				return type:0x8f12850
+				arguments:1
+				optionals:0
+				elipsis:0
+					selectors
+		before
+			method:(nil)
+			overload:0
+				return type:0x8f12d98
+				arguments:1
+				optionals:0
+				elipsis:1
+					nodes
+						elipsis:1
+		after
+			method:(nil)
+			overload:0
+				return type:0x8f12ec8
+				arguments:1
+				optionals:0
+				elipsis:1
+					nodes
+						elipsis:1
+		replaceWith
+			method:(nil)
+			overload:0
+				return type:0x8f12ff8
+				arguments:1
+				optionals:0
+				elipsis:1
+					nodes
+						elipsis:1
+		remove
+			method:(nil)
+			overload:0
+				return type:0x8f13128
+				arguments:0
+				optionals:0
+				elipsis:0
+	20 attributes
+		namespaceURI (nil)
+		prefix (nil)
+		localName (nil)
+		tagName (nil)
+		id 0x8f245e8 0x8f24818
+		className 0x8f253d0 0x8f25788
+		classList (nil)
+		attributes (nil)
+		innerHTML (nil) (nil)
+		outerHTML (nil) (nil)
+		children (nil)
+		firstElementChild 0x8f23228
+		lastElementChild 0x8f235a0
+		childElementCount 0x8f23d88
+		previousElementSibling 0x8f23920
+		nextElementSibling 0x8f23c90
+		cascadedStyle (nil)
+		defaultStyle (nil)
+		rawComputedStyle (nil)
+		usedStyle (nil)
+61 HTMLElement
+	inherit:Element
+	class:0x8f30938
+	4 operations
+		click
+			method:(nil)
+			overload:0
+				return type:0x8f546c0
+				arguments:0
+				optionals:0
+				elipsis:0
+		focus
+			method:(nil)
+			overload:0
+				return type:0x8f54770
+				arguments:0
+				optionals:0
+				elipsis:0
+		blur
+			method:(nil)
+			overload:0
+				return type:0x8f547d0
+				arguments:0
+				optionals:0
+				elipsis:0
+		forceSpellCheck
+			method:(nil)
+			overload:0
+				return type:0x8f63090
+				arguments:0
+				optionals:0
+				elipsis:0
+	85 attributes
+		title 0x8f30dc8 0x8f30e70
+		lang 0x8f30c78 0x8f30d20
+		translate (nil) (nil)
+		dir 0x8f30b28 0x8f30bd0
+		dataset (nil)
+		hidden (nil) (nil)
+		tabIndex (nil) (nil)
+		accessKey (nil) (nil)
+		accessKeyLabel (nil)
+		draggable (nil) (nil)
+		dropzone (nil)
+		contextMenu (nil) (nil)
+		spellcheck (nil) (nil)
+		commandType (nil)
+		commandLabel (nil)
+		commandIcon (nil)
+		commandHidden (nil)
+		commandDisabled (nil)
+		commandChecked (nil)
+		onabort 0x8f311b8 0x8f31260
+		onautocomplete 0x8f31470 0x8f31520
+		onautocompleteerror 0x8f31310 0x8f313c0
+		onblur 0x8f315c8 0x8f31670
+		oncancel 0x8f31718 0x8f317c0
+		oncanplay 0x8f319c8 0x8f31a70
+		oncanplaythrough 0x8f31870 0x8f31920
+		onchange 0x8f30f18 0x8f30fc0
+		onclick 0x8f31110 0x8f31068
+		onclose 0x8f31b18 0x8f31bc0
+		oncontextmenu 0x8f31c70 0x8f31d20
+		oncuechange 0x8f31dc8 0x8f31e70
+		ondblclick 0x8f31f18 0x8f31fc0
+		ondrag 0x8f32848 0x8f328f0
+		ondragend 0x8f32068 0x8f32110
+		ondragenter 0x8f321b8 0x8f32260
+		ondragexit 0x8f32308 0x8f323b0
+		ondragleave 0x8f32458 0x8f32500
+		ondragover 0x8f325a8 0x8f32650
+		ondragstart 0x8f326f8 0x8f327a0
+		ondrop 0x8f32998 0x8f32a40
+		ondurationchange 0x8f32af0 0x8f32ba0
+		onemptied 0x8f32c48 0x8f32cf0
+		onended 0x8f32d98 0x8f32e40
+		onerror (nil) (nil)
+		onfocus 0x8f32ee8 0x8f32f90
+		oninput 0x8f33038 0x8f330e0
+		oninvalid 0x8f33188 0x8f33230
+		onkeydown 0x8f332d8 0x8f33380
+		onkeypress 0x8f33428 0x8f334d0
+		onkeyup 0x8f33578 0x8f33620
+		onload 0x8f33ad8 0x8f33b80
+		onloadeddata 0x8f336d0 0x8f33780
+		onloadedmetadata 0x8f33830 0x8f338e0
+		onloadstart 0x8f33988 0x8f33a30
+		onmousedown 0x8f33c28 0x8f33cd0
+		onmouseenter 0x8f33d80 0x8f33e30
+		onmouseleave 0x8f33ee0 0x8f33f90
+		onmousemove 0x8f34038 0x8f340e0
+		onmouseout 0x8f34188 0x8f34230
+		onmouseover 0x8f342d8 0x8f34380
+		onmouseup 0x8f34428 0x8f344d0
+		onwheel 0x8f35fe8 0x8f36090
+		onpause 0x8f34578 0x8f34620
+		onplay 0x8f34818 0x8f348c0
+		onplaying 0x8f346c8 0x8f34770
+		onprogress 0x8f34968 0x8f34a10
+		onratechange 0x8f34ac0 0x8f34b70
+		onreset 0x8f34c18 0x8f34cc0
+		onresize 0x8f34d68 0x8f34e10
+		onscroll 0x8f34eb8 0x8f34f60
+		onseeked 0x8f35008 0x8f350b0
+		onseeking 0x8f35158 0x8f35200
+		onselect 0x8f352a8 0x8f35350
+		onshow 0x8f353f8 0x8f354a0
+		onsort 0x8f35548 0x8f355f0
+		onstalled 0x8f35698 0x8f35740
+		onsubmit 0x8f357e8 0x8f35890
+		onsuspend 0x8f35938 0x8f359e0
+		ontimeupdate 0x8f35a90 0x8f35b40
+		ontoggle 0x8f35be8 0x8f35c90
+		onvolumechange 0x8f35d40 0x8f35df0
+		onwaiting 0x8f35e98 0x8f35f40
+		contentEditable (nil) (nil)
+		isContentEditable (nil)
+		style 0x8f2ca38
+62 HTMLFontElement
+	inherit:HTMLElement
+	class:0x8f36d38
+	3 attributes
+		color 0x8f36de8 0x8f36e98
+		face 0x8f36f48 0x8f36ff8
+		size 0x8f370a8 0x8f37158
+63 HTMLDirectoryElement
+	inherit:HTMLElement
+	class:0x8f4ca98
+	1 attributes
+		compact (nil) (nil)
+64 HTMLFrameElement
+	inherit:HTMLElement
+	class:0x8f37e38
+	10 attributes
+		name 0x8f384c0 0x8f38578
+		scrolling 0x8f387a0 0x8f38858
+		src 0x8f38910 0x8f389c8
+		frameBorder 0x8f37ef0 0x8f37fa8
+		longDesc 0x8f38060 0x8f38118
+		noResize 0x8f38630 0x8f386e8
+		contentDocument (nil)
+		contentWindow (nil)
+		marginHeight 0x8f381d8 0x8f38298
+		marginWidth 0x8f38350 0x8f38408
+65 HTMLFrameSetElement
+	inherit:HTMLElement
+	class:0x8f38cd0
+	15 attributes
+		cols 0x8f38d88 0x8f38e40
+		rows 0x8f38ef8 0x8f38fb0
+		onafterprint (nil) (nil)
+		onbeforeprint (nil) (nil)
+		onbeforeunload (nil) (nil)
+		onhashchange (nil) (nil)
+		onlanguagechange (nil) (nil)
+		onmessage (nil) (nil)
+		onoffline (nil) (nil)
+		ononline (nil) (nil)
+		onpagehide (nil) (nil)
+		onpageshow (nil) (nil)
+		onpopstate (nil) (nil)
+		onstorage (nil) (nil)
+		onunload (nil) (nil)
+66 HTMLMarqueeElement
+	inherit:HTMLElement
+	class:0x8f3fbf0
+	2 operations
+		start
+			method:(nil)
+			overload:0
+				return type:0x8f914b8
+				arguments:0
+				optionals:0
+				elipsis:0
+		stop
+			method:(nil)
+			overload:0
+				return type:0x8f91518
+				arguments:0
+				optionals:0
+				elipsis:0
+	14 attributes
+		behavior (nil) (nil)
+		bgColor (nil) (nil)
+		direction (nil) (nil)
+		height (nil) (nil)
+		hspace (nil) (nil)
+		loop (nil) (nil)
+		scrollAmount (nil) (nil)
+		scrollDelay (nil) (nil)
+		trueSpeed (nil) (nil)
+		vspace (nil) (nil)
+		width (nil) (nil)
+		onbounce (nil) (nil)
+		onfinish (nil) (nil)
+		onstart (nil) (nil)
+67 HTMLAppletElement
+	inherit:HTMLElement
+	class:0x8f2da38
+	11 attributes
+		align 0x8f2daf0 0x8f2dba8
+		alt 0x8f2dc60 0x8f2dd18
+		archive 0x8f2ddd0 0x8f2de88
+		code 0x8f2e0b0 0x8f2e168
+		codeBase 0x8f2df40 0x8f2dff8
+		height 0x8f2e220 0x8f2e2d8
+		hspace (nil) (nil)
+		name 0x8f2e390 0x8f2e448
+		object 0x8f2e500 0x8f2e5b8
+		vspace (nil) (nil)
+		width 0x8f2e670 0x8f2e728
+68 StorageEvent
+	inherit:Event
+	class:0x8f2a338
+	5 attributes
+		key (nil)
+		oldValue (nil)
+		newValue (nil)
+		url (nil)
+		storageArea (nil)
+69 WindowLocalStorage
+	1 attributes
+		localStorage (nil)
+70 WindowSessionStorage
+	1 attributes
+		sessionStorage (nil)
+71 Storage
+	5 operations
+		key
+			method:(nil)
+			overload:0
+				return type:0x8f8fe88
+				arguments:1
+				optionals:0
+				elipsis:0
+					index
+		getItem
+			method:(nil)
+			overload:0
+				return type:0x8f8ff68
+				arguments:1
+				optionals:0
+				elipsis:0
+					key
+		setItem
+			method:(nil)
+			overload:0
+				return type:0x8f90018
+				arguments:2
+				optionals:0
+				elipsis:0
+					key
+					value
+		removeItem
+			method:(nil)
+			overload:0
+				return type:0x8f90128
+				arguments:1
+				optionals:0
+				elipsis:0
+					key
+		clear
+			method:(nil)
+			overload:0
+				return type:0x8f901d8
+				arguments:0
+				optionals:0
+				elipsis:0
+	1 attributes
+		length (nil)
+72 WorkerLocation
+	9 attributes
+		href (nil)
+		origin (nil)
+		protocol (nil)
+		host (nil)
+		hostname (nil)
+		port (nil)
+		pathname (nil)
+		search (nil)
+		hash (nil)
+73 WorkerNavigator
+	1 operations
+		taintEnabled
+			method:(nil)
+			overload:0
+				return type:0x8f88f08
+				arguments:0
+				optionals:0
+				elipsis:0
+	12 attributes
+		appCodeName (nil)
+		appName (nil)
+		appVersion (nil)
+		platform (nil)
+		product (nil)
+		productSub (nil)
+		userAgent (nil)
+		vendor (nil)
+		vendorSub (nil)
+		language (nil)
+		languages (nil)
+		onLine (nil)
+74 SharedWorker
+	inherit:EventTarget
+	2 attributes
+		port (nil)
+		onerror (nil) (nil)
+75 Worker
+	inherit:EventTarget
+	2 operations
+		terminate
+			method:(nil)
+			overload:0
+				return type:0x8f8f190
+				arguments:0
+				optionals:0
+				elipsis:0
+		postMessage
+			method:(nil)
+			overload:0
+				return type:0x8f8f1f0
+				arguments:2
+				optionals:1
+				elipsis:0
+					message
+					transfer
+						optional:1
+	2 attributes
+		onmessage (nil) (nil)
+		onerror (nil) (nil)
+76 AbstractWorker
+	1 attributes
+		onerror (nil) (nil)
+77 WorkerGlobalScope
+	inherit:EventTarget
+	9 operations
+		importScripts
+			method:(nil)
+			overload:0
+				return type:0x8f8e480
+				arguments:1
+				optionals:0
+				elipsis:1
+					urls
+						elipsis:1
+		close
+			method:(nil)
+			overload:0
+				return type:0x8f8e548
+				arguments:0
+				optionals:0
+				elipsis:0
+		btoa
+			method:(nil)
+			overload:0
+				return type:0x8f87920
+				arguments:1
+				optionals:0
+				elipsis:0
+					btoa
+		atob
+			method:(nil)
+			overload:0
+				return type:0x8f879d0
+				arguments:1
+				optionals:0
+				elipsis:0
+					atob
+		setTimeout
+			method:(nil)
+			overload:0
+				return type:0x8f87c58
+				arguments:3
+				optionals:1
+				elipsis:1
+					handler
+					timeout
+						optional:1
+					arguments
+						elipsis:1
+		clearTimeout
+			method:(nil)
+			overload:0
+				return type:0x8f87f68
+				arguments:1
+				optionals:1
+				elipsis:0
+					handle
+						optional:1
+		setInterval
+			method:(nil)
+			overload:0
+				return type:0x8f88050
+				arguments:3
+				optionals:1
+				elipsis:1
+					handler
+					timeout
+						optional:1
+					arguments
+						elipsis:1
+		clearInterval
+			method:(nil)
+			overload:0
+				return type:0x8f88360
+				arguments:1
+				optionals:1
+				elipsis:0
+					handle
+						optional:1
+		createImageBitmap
+			method:(nil)
+			overload:0
+				return type:0x8f8af80
+				arguments:1
+				optionals:0
+				elipsis:0
+					image
+	7 attributes
+		self (nil)
+		location (nil)
+		navigator (nil)
+		onerror (nil) (nil)
+		onlanguagechange (nil) (nil)
+		onoffline (nil) (nil)
+		ononline (nil) (nil)
+78 SharedWorkerGlobalScope
+	inherit:WorkerGlobalScope
+	3 attributes
+		name (nil)
+		applicationCache (nil)
+		onconnect (nil) (nil)
+79 DedicatedWorkerGlobalScope
+	inherit:WorkerGlobalScope
+	1 operations
+		postMessage
+			method:(nil)
+			overload:0
+				return type:0x8f8e928
+				arguments:2
+				optionals:1
+				elipsis:0
+					message
+					transfer
+						optional:1
+	1 attributes
+		onmessage (nil) (nil)
+80 BroadcastChannel
+	inherit:EventTarget
+	2 operations
+		postMessage
+			method:(nil)
+			overload:0
+				return type:0x8f8e088
+				arguments:1
+				optionals:0
+				elipsis:0
+					message
+		close
+			method:(nil)
+			overload:0
+				return type:0x8f8e138
+				arguments:0
+				optionals:0
+				elipsis:0
+	2 attributes
+		name (nil)
+		onmessage (nil) (nil)
+81 MessagePort
+	inherit:EventTarget
+	3 operations
+		postMessage
+			method:(nil)
+			overload:0
+				return type:0x8f8dbd0
+				arguments:2
+				optionals:1
+				elipsis:0
+					message
+					transfer
+						optional:1
+		start
+			method:(nil)
+			overload:0
+				return type:0x8f8dd28
+				arguments:0
+				optionals:0
+				elipsis:0
+		close
+			method:(nil)
+			overload:0
+				return type:0x8f8dd88
+				arguments:0
+				optionals:0
+				elipsis:0
+	1 attributes
+		onmessage (nil) (nil)
+82 MessageChannel
+	2 attributes
+		port1 (nil)
+		port2 (nil)
+83 CloseEvent
+	inherit:Event
+	class:0x8f2a4a0
+	3 attributes
+		wasClean (nil)
+		code (nil)
+		reason (nil)
+84 WebSocket
+	inherit:EventTarget
+	2 operations
+		close
+			method:(nil)
+			overload:0
+				return type:0x8f8cdb0
+				arguments:2
+				optionals:2
+				elipsis:0
+					code
+						optional:1
+					reason
+						optional:1
+		send
+			method:(nil)
+			overload:0
+				return type:0x8f8d018
+				arguments:1
+				optionals:0
+				elipsis:0
+					data
+	10 attributes
+		url (nil)
+		readyState (nil)
+		bufferedAmount (nil)
+		onopen (nil) (nil)
+		onerror (nil) (nil)
+		onclose (nil) (nil)
+		extensions (nil)
+		protocol (nil)
+		onmessage (nil) (nil)
+		binaryType (nil) (nil)
+	4 constants
+		CONNECTING
+		OPEN
+		CLOSING
+		CLOSED
+85 EventSource
+	inherit:EventTarget
+	1 operations
+		close
+			method:(nil)
+			overload:0
+				return type:0x8f8c4c8
+				arguments:0
+				optionals:0
+				elipsis:0
+	6 attributes
+		url (nil)
+		withCredentials (nil)
+		readyState (nil)
+		onopen (nil) (nil)
+		onmessage (nil) (nil)
+		onerror (nil) (nil)
+	3 constants
+		CONNECTING
+		OPEN
+		CLOSED
+86 MessageEvent
+	inherit:Event
+	class:0x8f2a610
+	1 operations
+		initMessageEvent
+			method:(nil)
+			overload:0
+				return type:0x8f8b7f8
+				arguments:8
+				optionals:0
+				elipsis:0
+					type
+					bubbles
+					cancelable
+					data
+					origin
+					lastEventId
+					source
+					ports
+	5 attributes
+		data (nil)
+		origin (nil)
+		lastEventId (nil)
+		source (nil)
+		ports (nil)
+87 ImageBitmapFactories
+	1 operations
+		createImageBitmap
+			method:(nil)
+			overload:0
+				return type:0x8f8af80
+				arguments:1
+				optionals:0
+				elipsis:0
+					image
+88 ImageBitmap
+	2 attributes
+		width (nil)
+		height (nil)
+89 External
+	2 operations
+		AddSearchProvider
+			method:(nil)
+			overload:0
+				return type:0x8f8a888
+				arguments:1
+				optionals:0
+				elipsis:0
+					engineURL
+		IsSearchProviderInstalled
+			method:(nil)
+			overload:0
+				return type:0x8f8a970
+				arguments:1
+				optionals:0
+				elipsis:0
+					engineURL
+90 MimeType
+	4 attributes
+		type (nil)
+		description (nil)
+		suffixes (nil)
+		enabledPlugin (nil)
+91 Plugin
+	2 operations
+		item
+			method:(nil)
+			overload:0
+				return type:0x8f8a4c0
+				arguments:1
+				optionals:0
+				elipsis:0
+					index
+		namedItem
+			method:(nil)
+			overload:0
+				return type:0x8f8a5c0
+				arguments:1
+				optionals:0
+				elipsis:0
+					name
+	4 attributes
+		name (nil)
+		description (nil)
+		filename (nil)
+		length (nil)
+92 MimeTypeArray
+	2 operations
+		item
+			method:(nil)
+			overload:0
+				return type:0x8f8a100
+				arguments:1
+				optionals:0
+				elipsis:0
+					index
+		namedItem
+			method:(nil)
+			overload:0
+				return type:0x8f8a200
+				arguments:1
+				optionals:0
+				elipsis:0
+					name
+	1 attributes
+		length (nil)
+93 PluginArray
+	3 operations
+		refresh
+			method:(nil)
+			overload:0
+				return type:0x8f89cc8
+				arguments:1
+				optionals:1
+				elipsis:0
+					reload
+						optional:1
+		item
+			method:(nil)
+			overload:0
+				return type:0x8f89e58
+				arguments:1
+				optionals:0
+				elipsis:0
+					index
+		namedItem
+			method:(nil)
+			overload:0
+				return type:0x8f89f58
+				arguments:1
+				optionals:0
+				elipsis:0
+					name
+	1 attributes
+		length (nil)
+94 NavigatorPlugins
+	3 attributes
+		plugins (nil)
+		mimeTypes (nil)
+		javaEnabled (nil)
+95 NavigatorStorageUtils
+	1 operations
+		yieldForStorageUpdates
+			method:(nil)
+			overload:0
+				return type:0x8f899d0
+				arguments:0
+				optionals:0
+				elipsis:0
+	1 attributes
+		cookieEnabled (nil)
+96 NavigatorContentUtils
+	6 operations
+		registerProtocolHandler
+			method:(nil)
+			overload:0
+				return type:0x8f891e0
+				arguments:3
+				optionals:0
+				elipsis:0
+					scheme
+					url
+					title
+		registerContentHandler
+			method:(nil)
+			overload:0
+				return type:0x8f89340
+				arguments:3
+				optionals:0
+				elipsis:0
+					mimeType
+					url
+					title
+		isProtocolHandlerRegistered
+			method:(nil)
+			overload:0
+				return type:0x8f894c0
+				arguments:2
+				optionals:0
+				elipsis:0
+					scheme
+					url
+		isContentHandlerRegistered
+			method:(nil)
+			overload:0
+				return type:0x8f895d0
+				arguments:2
+				optionals:0
+				elipsis:0
+					mimeType
+					url
+		unregisterProtocolHandler
+			method:(nil)
+			overload:0
+				return type:0x8f896c0
+				arguments:2
+				optionals:0
+				elipsis:0
+					scheme
+					url
+		unregisterContentHandler
+			method:(nil)
+			overload:0
+				return type:0x8f897d0
+				arguments:2
+				optionals:0
+				elipsis:0
+					mimeType
+					url
+97 NavigatorLanguage
+	2 attributes
+		language (nil)
+		languages (nil)
+98 NavigatorID
+	1 operations
+		taintEnabled
+			method:(nil)
+			overload:0
+				return type:0x8f88f08
+				arguments:0
+				optionals:0
+				elipsis:0
+	9 attributes
+		appCodeName (nil)
+		appName (nil)
+		appVersion (nil)
+		platform (nil)
+		product (nil)
+		productSub (nil)
+		userAgent (nil)
+		vendor (nil)
+		vendorSub (nil)
+99 Navigator
+	class:0x8f27168
+	8 operations
+		taintEnabled
+			method:0x8f27258
+			overload:0
+				return type:0x8f88f08
+				arguments:0
+				optionals:0
+				elipsis:0
+		registerProtocolHandler
+			method:(nil)
+			overload:0
+				return type:0x8f891e0
+				arguments:3
+				optionals:0
+				elipsis:0
+					scheme
+					url
+					title
+		registerContentHandler
+			method:(nil)
+			overload:0
+				return type:0x8f89340
+				arguments:3
+				optionals:0
+				elipsis:0
+					mimeType
+					url
+					title
+		isProtocolHandlerRegistered
+			method:(nil)
+			overload:0
+				return type:0x8f894c0
+				arguments:2
+				optionals:0
+				elipsis:0
+					scheme
+					url
+		isContentHandlerRegistered
+			method:(nil)
+			overload:0
+				return type:0x8f895d0
+				arguments:2
+				optionals:0
+				elipsis:0
+					mimeType
+					url
+		unregisterProtocolHandler
+			method:(nil)
+			overload:0
+				return type:0x8f896c0
+				arguments:2
+				optionals:0
+				elipsis:0
+					scheme
+					url
+		unregisterContentHandler
+			method:(nil)
+			overload:0
+				return type:0x8f897d0
+				arguments:2
+				optionals:0
+				elipsis:0
+					mimeType
+					url
+		yieldForStorageUpdates
+			method:(nil)
+			overload:0
+				return type:0x8f899d0
+				arguments:0
+				optionals:0
+				elipsis:0
+	16 attributes
+		appCodeName 0x8f27348
+		appName 0x8f27438
+		appVersion 0x8f27520
+		platform 0x8f27608
+		product 0x8f276f8
+		productSub 0x8f277e8
+		userAgent 0x8f27df8
+		vendor 0x8f278d0
+		vendorSub 0x8f279b8
+		language (nil)
+		languages (nil)
+		onLine (nil)
+		cookieEnabled 0x8f27aa8
+		plugins (nil)
+		mimeTypes (nil)
+		javaEnabled 0x8f27b90
+100 WindowModal
+	2 attributes
+		dialogArguments (nil)
+		returnValue (nil) (nil)
+101 WindowTimers
+	4 operations
+		setTimeout
+			method:(nil)
+			overload:0
+				return type:0x8f87c58
+				arguments:3
+				optionals:1
+				elipsis:1
+					handler
+					timeout
+						optional:1
+					arguments
+						elipsis:1
+		clearTimeout
+			method:(nil)
+			overload:0
+				return type:0x8f87f68
+				arguments:1
+				optionals:1
+				elipsis:0
+					handle
+						optional:1
+		setInterval
+			method:(nil)
+			overload:0
+				return type:0x8f88050
+				arguments:3
+				optionals:1
+				elipsis:1
+					handler
+					timeout
+						optional:1
+					arguments
+						elipsis:1
+		clearInterval
+			method:(nil)
+			overload:0
+				return type:0x8f88360
+				arguments:1
+				optionals:1
+				elipsis:0
+					handle
+						optional:1
+102 WindowBase64
+	2 operations
+		btoa
+			method:(nil)
+			overload:0
+				return type:0x8f87920
+				arguments:1
+				optionals:0
+				elipsis:0
+					btoa
+		atob
+			method:(nil)
+			overload:0
+				return type:0x8f879d0
+				arguments:1
+				optionals:0
+				elipsis:0
+					atob
+103 WindowEventHandlers
+	13 attributes
+		onafterprint (nil) (nil)
+		onbeforeprint (nil) (nil)
+		onbeforeunload (nil) (nil)
+		onhashchange (nil) (nil)
+		onlanguagechange (nil) (nil)
+		onmessage (nil) (nil)
+		onoffline (nil) (nil)
+		ononline (nil) (nil)
+		onpagehide (nil) (nil)
+		onpageshow (nil) (nil)
+		onpopstate (nil) (nil)
+		onstorage (nil) (nil)
+		onunload (nil) (nil)
+104 GlobalEventHandlers
+	63 attributes
+		onabort (nil) (nil)
+		onautocomplete (nil) (nil)
+		onautocompleteerror (nil) (nil)
+		onblur (nil) (nil)
+		oncancel (nil) (nil)
+		oncanplay (nil) (nil)
+		oncanplaythrough (nil) (nil)
+		onchange (nil) (nil)
+		onclick (nil) (nil)
+		onclose (nil) (nil)
+		oncontextmenu (nil) (nil)
+		oncuechange (nil) (nil)
+		ondblclick (nil) (nil)
+		ondrag (nil) (nil)
+		ondragend (nil) (nil)
+		ondragenter (nil) (nil)
+		ondragexit (nil) (nil)
+		ondragleave (nil) (nil)
+		ondragover (nil) (nil)
+		ondragstart (nil) (nil)
+		ondrop (nil) (nil)
+		ondurationchange (nil) (nil)
+		onemptied (nil) (nil)
+		onended (nil) (nil)
+		onerror (nil) (nil)
+		onfocus (nil) (nil)
+		oninput (nil) (nil)
+		oninvalid (nil) (nil)
+		onkeydown (nil) (nil)
+		onkeypress (nil) (nil)
+		onkeyup (nil) (nil)
+		onload (nil) (nil)
+		onloadeddata (nil) (nil)
+		onloadedmetadata (nil) (nil)
+		onloadstart (nil) (nil)
+		onmousedown (nil) (nil)
+		onmouseenter (nil) (nil)
+		onmouseleave (nil) (nil)
+		onmousemove (nil) (nil)
+		onmouseout (nil) (nil)
+		onmouseover (nil) (nil)
+		onmouseup (nil) (nil)
+		onwheel (nil) (nil)
+		onpause (nil) (nil)
+		onplay (nil) (nil)
+		onplaying (nil) (nil)
+		onprogress (nil) (nil)
+		onratechange (nil) (nil)
+		onreset (nil) (nil)
+		onresize (nil) (nil)
+		onscroll (nil) (nil)
+		onseeked (nil) (nil)
+		onseeking (nil) (nil)
+		onselect (nil) (nil)
+		onshow (nil) (nil)
+		onsort (nil) (nil)
+		onstalled (nil) (nil)
+		onsubmit (nil) (nil)
+		onsuspend (nil) (nil)
+		ontimeupdate (nil) (nil)
+		ontoggle (nil) (nil)
+		onvolumechange (nil) (nil)
+		onwaiting (nil) (nil)
+105 ErrorEvent
+	inherit:Event
+	class:0x8f2a778
+	5 attributes
+		message (nil)
+		filename (nil)
+		lineno (nil)
+		colno (nil)
+		error (nil)
+106 NavigatorOnLine
+	1 attributes
+		onLine (nil)
+107 ApplicationCache
+	inherit:EventTarget
+	3 operations
+		update
+			method:(nil)
+			overload:0
+				return type:0x8f83ed8
+				arguments:0
+				optionals:0
+				elipsis:0
+		abort
+			method:(nil)
+			overload:0
+				return type:0x8f83f38
+				arguments:0
+				optionals:0
+				elipsis:0
+		swapCache
+			method:(nil)
+			overload:0
+				return type:0x8f83f98
+				arguments:0
+				optionals:0
+				elipsis:0
+	9 attributes
+		status (nil)
+		onchecking (nil) (nil)
+		onerror (nil) (nil)
+		onnoupdate (nil) (nil)
+		ondownloading (nil) (nil)
+		onprogress (nil) (nil)
+		onupdateready (nil) (nil)
+		oncached (nil) (nil)
+		onobsolete (nil) (nil)
+	6 constants
+		UNCACHED
+		IDLE
+		CHECKING
+		DOWNLOADING
+		UPDATEREADY
+		OBSOLETE
+108 BeforeUnloadEvent
+	inherit:Event
+	class:0x8f2a8e8
+	1 attributes
+		returnValue (nil) (nil)
+109 PageTransitionEvent
+	inherit:Event
+	class:0x8f2aa58
+	1 attributes
+		persisted (nil)
+110 HashChangeEvent
+	inherit:Event
+	class:0x8f2abc8
+	2 attributes
+		oldURL (nil)
+		newURL (nil)
+111 PopStateEvent
+	inherit:Event
+	class:0x8f2ad38
+	1 attributes
+		state (nil)
+112 Location
+	class:0x8f25cb8
+	3 operations
+		assign
+			method:0x8f264a0
+			overload:0
+				return type:0x8f82c08
+				arguments:1
+				optionals:0
+				elipsis:0
+					url
+		replace
+			method:0x8f267b0
+			overload:0
+				return type:0x8f82cb8
+				arguments:1
+				optionals:0
+				elipsis:0
+					url
+		reload
+			method:0x8f26188
+			overload:0
+				return type:0x8f82d68
+				arguments:0
+				optionals:0
+				elipsis:0
+	12 attributes
+		ancestorOrigins (nil)
+		href 0x8f26950 0x8f26a08
+		origin 0x8f26ac0
+		protocol 0x8f2b3c8 (nil)
+		username 0x8f2b5a8 (nil)
+		password 0x8f2b788 (nil)
+		host 0x8f2b960 (nil)
+		hostname 0x8f2bb38 (nil)
+		port 0x8f2bd10 (nil)
+		pathname 0x8f2bee8 (nil)
+		search 0x8f2c0c0 (nil)
+		hash 0x8f27088 (nil)
+113 History
+	5 operations
+		go
+			method:(nil)
+			overload:0
+				return type:0x8f82700
+				arguments:1
+				optionals:1
+				elipsis:0
+					delta
+						optional:1
+		back
+			method:(nil)
+			overload:0
+				return type:0x8f827d0
+				arguments:0
+				optionals:0
+				elipsis:0
+		forward
+			method:(nil)
+			overload:0
+				return type:0x8f82830
+				arguments:0
+				optionals:0
+				elipsis:0
+		pushState
+			method:(nil)
+			overload:0
+				return type:0x8f82890
+				arguments:3
+				optionals:1
+				elipsis:0
+					data
+					title
+					url
+						optional:1
+		replaceState
+			method:(nil)
+			overload:0
+				return type:0x8f82a10
+				arguments:3
+				optionals:1
+				elipsis:0
+					data
+					title
+					url
+						optional:1
+	2 attributes
+		length (nil)
+		state (nil)
+114 BarProp
+	1 attributes
+		visible (nil)
+115 Window
+	inherit:EventTarget
+	class:0x8f19e60
+	23 operations
+		close
+			method:(nil)
+			overload:0
+				return type:0x8f80fe0
+				arguments:0
+				optionals:0
+				elipsis:0
+		stop
+			method:(nil)
+			overload:0
+				return type:0x8f810a0
+				arguments:0
+				optionals:0
+				elipsis:0
+		focus
+			method:(nil)
+			overload:0
+				return type:0x8f81100
+				arguments:0
+				optionals:0
+				elipsis:0
+		blur
+			method:(nil)
+			overload:0
+				return type:0x8f81160
+				arguments:0
+				optionals:0
+				elipsis:0
+		open
+			method:(nil)
+			overload:0
+				return type:0x8f81588
+				arguments:4
+				optionals:4
+				elipsis:0
+					url
+						optional:1
+					target
+						optional:1
+					features
+						optional:1
+					replace
+						optional:1
+		alert
+			method:0x8f1a358
+			overload:0
+				return type:0x8f81870
+				arguments:1
+				optionals:0
+				elipsis:0
+					index
+			overload:1
+				return type:0x8f81940
+				arguments:1
+				optionals:0
+				elipsis:0
+					name
+			overload:2
+				return type:0x8f81bc0
+				arguments:0
+				optionals:0
+				elipsis:0
+		confirm
+			method:(nil)
+			overload:0
+				return type:0x8f81ce0
+				arguments:1
+				optionals:1
+				elipsis:0
+					message
+						optional:1
+		prompt
+			method:(nil)
+			overload:0
+				return type:0x8f81dd0
+				arguments:2
+				optionals:2
+				elipsis:0
+					message
+						optional:1
+					default
+						optional:1
+		print
+			method:(nil)
+			overload:0
+				return type:0x8f81f20
+				arguments:0
+				optionals:0
+				elipsis:0
+		showModalDialog
+			method:(nil)
+			overload:0
+				return type:0x8f81f98
+				arguments:2
+				optionals:1
+				elipsis:0
+					url
+					argument
+						optional:1
+		requestAnimationFrame
+			method:(nil)
+			overload:0
+				return type:0x8f820c8
+				arguments:1
+				optionals:0
+				elipsis:0
+					callback
+		cancelAnimationFrame
+			method:(nil)
+			overload:0
+				return type:0x8f82198
+				arguments:1
+				optionals:0
+				elipsis:0
+					handle
+		postMessage
+			method:(nil)
+			overload:0
+				return type:0x8f82268
+				arguments:3
+				optionals:1
+				elipsis:0
+					message
+					targetOrigin
+					transfer
+						optional:1
+		captureEvents
+			method:(nil)
+			overload:0
+				return type:0x8f94fc0
+				arguments:0
+				optionals:0
+				elipsis:0
+		releaseEvents
+			method:(nil)
+			overload:0
+				return type:0x8f95028
+				arguments:0
+				optionals:0
+				elipsis:0
+		getComputedStyle
+			method:(nil)
+			overload:0
+				return type:0x8f62610
+				arguments:2
+				optionals:1
+				elipsis:0
+					elt
+					pseudoElt
+						optional:1
+		btoa
+			method:(nil)
+			overload:0
+				return type:0x8f87920
+				arguments:1
+				optionals:0
+				elipsis:0
+					btoa
+		atob
+			method:(nil)
+			overload:0
+				return type:0x8f879d0
+				arguments:1
+				optionals:0
+				elipsis:0
+					atob
+		setTimeout
+			method:(nil)
+			overload:0
+				return type:0x8f87c58
+				arguments:3
+				optionals:1
+				elipsis:1
+					handler
+					timeout
+						optional:1
+					arguments
+						elipsis:1
+		clearTimeout
+			method:(nil)
+			overload:0
+				return type:0x8f87f68
+				arguments:1
+				optionals:1
+				elipsis:0
+					handle
+						optional:1
+		setInterval
+			method:(nil)
+			overload:0
+				return type:0x8f88050
+				arguments:3
+				optionals:1
+				elipsis:1
+					handler
+					timeout
+						optional:1
+					arguments
+						elipsis:1
+		clearInterval
+			method:(nil)
+			overload:0
+				return type:0x8f88360
+				arguments:1
+				optionals:1
+				elipsis:0
+					handle
+						optional:1
+		createImageBitmap
+			method:(nil)
+			overload:0
+				return type:0x8f8af80
+				arguments:1
+				optionals:0
+				elipsis:0
+					image
+	102 attributes
+		window 0x8f1a8b8
+		self (nil)
+		document 0x8f1a750
+		name 0x8f1b0c0 0x8f1b1e0
+		location 0x8f1ad58
+		history (nil)
+		locationbar (nil)
+		menubar (nil)
+		personalbar (nil)
+		scrollbars (nil)
+		statusbar (nil)
+		toolbar (nil)
+		status (nil) (nil)
+		closed (nil)
+		frames (nil)
+		length (nil)
+		top (nil)
+		opener (nil) (nil)
+		parent (nil)
+		frameElement (nil)
+		navigator 0x8f1afa0
+		external (nil)
+		applicationCache (nil)
+		console 0x8f1aae0
+		onabort (nil) (nil)
+		onautocomplete (nil) (nil)
+		onautocompleteerror (nil) (nil)
+		onblur (nil) (nil)
+		oncancel (nil) (nil)
+		oncanplay (nil) (nil)
+		oncanplaythrough (nil) (nil)
+		onchange (nil) (nil)
+		onclick (nil) (nil)
+		onclose (nil) (nil)
+		oncontextmenu (nil) (nil)
+		oncuechange (nil) (nil)
+		ondblclick (nil) (nil)
+		ondrag (nil) (nil)
+		ondragend (nil) (nil)
+		ondragenter (nil) (nil)
+		ondragexit (nil) (nil)
+		ondragleave (nil) (nil)
+		ondragover (nil) (nil)
+		ondragstart (nil) (nil)
+		ondrop (nil) (nil)
+		ondurationchange (nil) (nil)
+		onemptied (nil) (nil)
+		onended (nil) (nil)
+		onerror (nil) (nil)
+		onfocus (nil) (nil)
+		oninput (nil) (nil)
+		oninvalid (nil) (nil)
+		onkeydown (nil) (nil)
+		onkeypress (nil) (nil)
+		onkeyup (nil) (nil)
+		onload (nil) (nil)
+		onloadeddata (nil) (nil)
+		onloadedmetadata (nil) (nil)
+		onloadstart (nil) (nil)
+		onmousedown (nil) (nil)
+		onmouseenter (nil) (nil)
+		onmouseleave (nil) (nil)
+		onmousemove (nil) (nil)
+		onmouseout (nil) (nil)
+		onmouseover (nil) (nil)
+		onmouseup (nil) (nil)
+		onwheel (nil) (nil)
+		onpause (nil) (nil)
+		onplay (nil) (nil)
+		onplaying (nil) (nil)
+		onprogress (nil) (nil)
+		onratechange (nil) (nil)
+		onreset (nil) (nil)
+		onresize (nil) (nil)
+		onscroll (nil) (nil)
+		onseeked (nil) (nil)
+		onseeking (nil) (nil)
+		onselect (nil) (nil)
+		onshow (nil) (nil)
+		onsort (nil) (nil)
+		onstalled (nil) (nil)
+		onsubmit (nil) (nil)
+		onsuspend (nil) (nil)
+		ontimeupdate (nil) (nil)
+		ontoggle (nil) (nil)
+		onvolumechange (nil) (nil)
+		onwaiting (nil) (nil)
+		onafterprint (nil) (nil)
+		onbeforeprint (nil) (nil)
+		onbeforeunload (nil) (nil)
+		onhashchange (nil) (nil)
+		onlanguagechange (nil) (nil)
+		onmessage (nil) (nil)
+		onoffline (nil) (nil)
+		ononline (nil) (nil)
+		onpagehide (nil) (nil)
+		onpageshow (nil) (nil)
+		onpopstate (nil) (nil)
+		onstorage (nil) (nil)
+		onunload (nil) (nil)
+		sessionStorage (nil)
+		localStorage (nil)
+116 DragEvent
+	inherit:MouseEvent
+	class:0x8f2aea8
+	1 attributes
+		dataTransfer (nil)
+117 DataTransferItem
+	2 operations
+		getAsString
+			method:(nil)
+			overload:0
+				return type:0x8f80188
+				arguments:1
+				optionals:0
+				elipsis:0
+					callback
+		getAsFile
+			method:(nil)
+			overload:0
+				return type:0x8f802b8
+				arguments:0
+				optionals:0
+				elipsis:0
+	2 attributes
+		kind (nil)
+		type (nil)
+118 DataTransferItemList
+	3 operations
+		add
+			method:(nil)
+			overload:0
+				return type:0x8f7fc80
+				arguments:1
+				optionals:0
+				elipsis:0
+					index
+			overload:1
+				return type:0x8f7fd68
+				arguments:2
+				optionals:0
+				elipsis:0
+					data
+					type
+		remove
+			method:(nil)
+			overload:0
+				return type:0x8f7ff60
+				arguments:1
+				optionals:0
+				elipsis:0
+					index
+		clear
+			method:(nil)
+			overload:0
+				return type:0x8f80020
+				arguments:0
+				optionals:0
+				elipsis:0
+	1 attributes
+		length (nil)
+119 DataTransfer
+	4 operations
+		setDragImage
+			method:(nil)
+			overload:0
+				return type:0x8f7f650
+				arguments:3
+				optionals:0
+				elipsis:0
+					image
+					x
+					y
+		getData
+			method:(nil)
+			overload:0
+				return type:0x8f7f878
+				arguments:1
+				optionals:0
+				elipsis:0
+					format
+		setData
+			method:(nil)
+			overload:0
+				return type:0x8f7f918
+				arguments:2
+				optionals:0
+				elipsis:0
+					format
+					data
+		clearData
+			method:(nil)
+			overload:0
+				return type:0x8f7fa18
+				arguments:1
+				optionals:1
+				elipsis:0
+					format
+						optional:1
+	5 attributes
+		dropEffect (nil) (nil)
+		effectAllowed (nil) (nil)
+		items (nil)
+		types (nil)
+		files (nil)
+120 ElementContentEditable
+	2 attributes
+		contentEditable (nil) (nil)
+		isContentEditable (nil)
+121 Touch
+	1 attributes
+		region (nil)
+122 Path2D
+	13 operations
+		addPath
+			method:(nil)
+			overload:0
+				return type:0x8f7e290
+				arguments:2
+				optionals:1
+				elipsis:0
+					path
+					transformation
+						optional:1
+		addPathByStrokingPath
+			method:(nil)
+			overload:0
+				return type:0x8f7e408
+				arguments:3
+				optionals:1
+				elipsis:0
+					path
+					styles
+					transformation
+						optional:1
+		addText
+			method:(nil)
+			overload:0
+				return type:0x8f7e608
+				arguments:6
+				optionals:1
+				elipsis:0
+					text
+					styles
+					transformation
+					x
+					y
+					maxWidth
+						optional:1
+		addPathByStrokingText
+			method:(nil)
+			overload:0
+				return type:0x8f7e8e8
+				arguments:6
+				optionals:1
+				elipsis:0
+					text
+					styles
+					transformation
+					x
+					y
+					maxWidth
+						optional:1
+		closePath
+			method:(nil)
+			overload:0
+				return type:0x8f7b428
+				arguments:0
+				optionals:0
+				elipsis:0
+		moveTo
+			method:(nil)
+			overload:0
+				return type:0x8f7b488
+				arguments:2
+				optionals:0
+				elipsis:0
+					x
+					y
+		lineTo
+			method:(nil)
+			overload:0
+				return type:0x8f7b5a8
+				arguments:2
+				optionals:0
+				elipsis:0
+					x
+					y
+		quadraticCurveTo
+			method:(nil)
+			overload:0
+				return type:0x8f7b6c8
+				arguments:4
+				optionals:0
+				elipsis:0
+					cpx
+					cpy
+					x
+					y
+		bezierCurveTo
+			method:(nil)
+			overload:0
+				return type:0x8f7b8b0
+				arguments:6
+				optionals:0
+				elipsis:0
+					cp1x
+					cp1y
+					cp2x
+					cp2y
+					x
+					y
+		arcTo
+			method:(nil)
+			overload:0
+				return type:0x8f7bb58
+				arguments:5
+				optionals:0
+				elipsis:0
+					x1
+					y1
+					x2
+					y2
+					radius
+		rect
+			method:(nil)
+			overload:0
+				return type:0x8f7c098
+				arguments:4
+				optionals:0
+				elipsis:0
+					x
+					y
+					w
+					h
+		arc
+			method:(nil)
+			overload:0
+				return type:0x8f7c278
+				arguments:6
+				optionals:1
+				elipsis:0
+					x
+					y
+					radius
+					startAngle
+					endAngle
+					anticlockwise
+						optional:1
+		ellipse
+			method:(nil)
+			overload:0
+				return type:0x8f7c530
+				arguments:8
+				optionals:1
+				elipsis:0
+					x
+					y
+					radiusX
+					radiusY
+					rotation
+					startAngle
+					endAngle
+					anticlockwise
+						optional:1
+123 DrawingStyle
+	2 operations
+		setLineDash
+			method:(nil)
+			overload:0
+				return type:0x8f7afc8
+				arguments:1
+				optionals:0
+				elipsis:0
+					segments
+		getLineDash
+			method:(nil)
+			overload:0
+				return type:0x8f7b0e8
+				arguments:0
+				optionals:0
+				elipsis:0
+	9 attributes
+		lineWidth (nil) (nil)
+		lineCap (nil) (nil)
+		lineJoin (nil) (nil)
+		miterLimit (nil) (nil)
+		lineDashOffset (nil) (nil)
+		font (nil) (nil)
+		textAlign (nil) (nil)
+		textBaseline (nil) (nil)
+		direction (nil) (nil)
+124 ImageData
+	3 attributes
+		width (nil)
+		height (nil)
+		data (nil)
+125 TextMetrics
+	12 attributes
+		width (nil)
+		actualBoundingBoxLeft (nil)
+		actualBoundingBoxRight (nil)
+		fontBoundingBoxAscent (nil)
+		fontBoundingBoxDescent (nil)
+		actualBoundingBoxAscent (nil)
+		actualBoundingBoxDescent (nil)
+		emHeightAscent (nil)
+		emHeightDescent (nil)
+		hangingBaseline (nil)
+		alphabeticBaseline (nil)
+		ideographicBaseline (nil)
+126 CanvasPattern
+	1 operations
+		setTransform
+			method:(nil)
+			overload:0
+				return type:0x8f7cbc0
+				arguments:1
+				optionals:0
+				elipsis:0
+					transform
+127 CanvasGradient
+	1 operations
+		addColorStop
+			method:(nil)
+			overload:0
+				return type:0x8f7c9b0
+				arguments:2
+				optionals:0
+				elipsis:0
+					offset
+					color
+128 CanvasPathMethods
+	9 operations
+		closePath
+			method:(nil)
+			overload:0
+				return type:0x8f7b428
+				arguments:0
+				optionals:0
+				elipsis:0
+		moveTo
+			method:(nil)
+			overload:0
+				return type:0x8f7b488
+				arguments:2
+				optionals:0
+				elipsis:0
+					x
+					y
+		lineTo
+			method:(nil)
+			overload:0
+				return type:0x8f7b5a8
+				arguments:2
+				optionals:0
+				elipsis:0
+					x
+					y
+		quadraticCurveTo
+			method:(nil)
+			overload:0
+				return type:0x8f7b6c8
+				arguments:4
+				optionals:0
+				elipsis:0
+					cpx
+					cpy
+					x
+					y
+		bezierCurveTo
+			method:(nil)
+			overload:0
+				return type:0x8f7b8b0
+				arguments:6
+				optionals:0
+				elipsis:0
+					cp1x
+					cp1y
+					cp2x
+					cp2y
+					x
+					y
+		arcTo
+			method:(nil)
+			overload:0
+				return type:0x8f7bb58
+				arguments:5
+				optionals:0
+				elipsis:0
+					x1
+					y1
+					x2
+					y2
+					radius
+		rect
+			method:(nil)
+			overload:0
+				return type:0x8f7c098
+				arguments:4
+				optionals:0
+				elipsis:0
+					x
+					y
+					w
+					h
+		arc
+			method:(nil)
+			overload:0
+				return type:0x8f7c278
+				arguments:6
+				optionals:1
+				elipsis:0
+					x
+					y
+					radius
+					startAngle
+					endAngle
+					anticlockwise
+						optional:1
+		ellipse
+			method:(nil)
+			overload:0
+				return type:0x8f7c530
+				arguments:8
+				optionals:1
+				elipsis:0
+					x
+					y
+					radiusX
+					radiusY
+					rotation
+					startAngle
+					endAngle
+					anticlockwise
+						optional:1
+129 CanvasDrawingStyles
+	2 operations
+		setLineDash
+			method:(nil)
+			overload:0
+				return type:0x8f7afc8
+				arguments:1
+				optionals:0
+				elipsis:0
+					segments
+		getLineDash
+			method:(nil)
+			overload:0
+				return type:0x8f7b0e8
+				arguments:0
+				optionals:0
+				elipsis:0
+	9 attributes
+		lineWidth (nil) (nil)
+		lineCap (nil) (nil)
+		lineJoin (nil) (nil)
+		miterLimit (nil) (nil)
+		lineDashOffset (nil) (nil)
+		font (nil) (nil)
+		textAlign (nil) (nil)
+		textBaseline (nil) (nil)
+		direction (nil) (nil)
+130 CanvasRenderingContext2D
+	45 operations
+		commit
+			method:(nil)
+			overload:0
+				return type:0x8f76a08
+				arguments:0
+				optionals:0
+				elipsis:0
+		save
+			method:(nil)
+			overload:0
+				return type:0x8f76a68
+				arguments:0
+				optionals:0
+				elipsis:0
+		restore
+			method:(nil)
+			overload:0
+				return type:0x8f76ac8
+				arguments:0
+				optionals:0
+				elipsis:0
+		scale
+			method:(nil)
+			overload:0
+				return type:0x8f76ba0
+				arguments:2
+				optionals:0
+				elipsis:0
+					x
+					y
+		rotate
+			method:(nil)
+			overload:0
+				return type:0x8f76cc0
+				arguments:1
+				optionals:0
+				elipsis:0
+					angle
+		translate
+			method:(nil)
+			overload:0
+				return type:0x8f76d80
+				arguments:2
+				optionals:0
+				elipsis:0
+					x
+					y
+		transform
+			method:(nil)
+			overload:0
+				return type:0x8f76ea0
+				arguments:6
+				optionals:0
+				elipsis:0
+					a
+					b
+					c
+					d
+					e
+					f
+		setTransform
+			method:(nil)
+			overload:0
+				return type:0x8f77140
+				arguments:6
+				optionals:0
+				elipsis:0
+					a
+					b
+					c
+					d
+					e
+					f
+		resetTransform
+			method:(nil)
+			overload:0
+				return type:0x8f773e8
+				arguments:0
+				optionals:0
+				elipsis:0
+		createLinearGradient
+			method:(nil)
+			overload:0
+				return type:0x8f77808
+				arguments:4
+				optionals:0
+				elipsis:0
+					x0
+					y0
+					x1
+					y1
+		createRadialGradient
+			method:(nil)
+			overload:0
+				return type:0x8f779e0
+				arguments:6
+				optionals:0
+				elipsis:0
+					x0
+					y0
+					r0
+					x1
+					y1
+					r1
+		createPattern
+			method:(nil)
+			overload:0
+				return type:0x8f77c50
+				arguments:2
+				optionals:0
+				elipsis:0
+					image
+					repetition
+		clearRect
+			method:(nil)
+			overload:0
+				return type:0x8f77f58
+				arguments:4
+				optionals:0
+				elipsis:0
+					x
+					y
+					w
+					h
+		fillRect
+			method:(nil)
+			overload:0
+				return type:0x8f78138
+				arguments:4
+				optionals:0
+				elipsis:0
+					x
+					y
+					w
+					h
+		strokeRect
+			method:(nil)
+			overload:0
+				return type:0x8f78318
+				arguments:4
+				optionals:0
+				elipsis:0
+					x
+					y
+					w
+					h
+		beginPath
+			method:(nil)
+			overload:0
+				return type:0x8f784f8
+				arguments:0
+				optionals:0
+				elipsis:0
+		fill
+			method:(nil)
+			overload:0
+				return type:0x8f78558
+				arguments:1
+				optionals:1
+				elipsis:0
+					fillRule
+						optional:1
+		stroke
+			method:(nil)
+			overload:0
+				return type:0x8f787d8
+				arguments:0
+				optionals:0
+				elipsis:0
+		drawFocusIfNeeded
+			method:(nil)
+			overload:0
+				return type:0x8f78908
+				arguments:1
+				optionals:0
+				elipsis:0
+					element
+		scrollPathIntoView
+			method:(nil)
+			overload:0
+				return type:0x8f78b28
+				arguments:0
+				optionals:0
+				elipsis:0
+		clip
+			method:(nil)
+			overload:0
+				return type:0x8f78c68
+				arguments:1
+				optionals:1
+				elipsis:0
+					fillRule
+						optional:1
+		resetClip
+			method:(nil)
+			overload:0
+				return type:0x8f78ee8
+				arguments:0
+				optionals:0
+				elipsis:0
+		isPointInPath
+			method:(nil)
+			overload:0
+				return type:0x8f78f60
+				arguments:3
+				optionals:1
+				elipsis:0
+					x
+					y
+					fillRule
+						optional:1
+		isPointInStroke
+			method:(nil)
+			overload:0
+				return type:0x8f79370
+				arguments:2
+				optionals:0
+				elipsis:0
+					x
+					y
+		fillText
+			method:(nil)
+			overload:0
+				return type:0x8f79618
+				arguments:4
+				optionals:1
+				elipsis:0
+					text
+					x
+					y
+					maxWidth
+						optional:1
+		strokeText
+			method:(nil)
+			overload:0
+				return type:0x8f797f8
+				arguments:4
+				optionals:1
+				elipsis:0
+					text
+					x
+					y
+					maxWidth
+						optional:1
+		measureText
+			method:(nil)
+			overload:0
+				return type:0x8f79a08
+				arguments:1
+				optionals:0
+				elipsis:0
+					text
+		drawImage
+			method:(nil)
+			overload:0
+				return type:0x8f79aa8
+				arguments:3
+				optionals:0
+				elipsis:0
+					image
+					dx
+					dy
+		addHitRegion
+			method:(nil)
+			overload:0
+				return type:0x8f7a270
+				arguments:1
+				optionals:1
+				elipsis:0
+					options
+						optional:1
+		removeHitRegion
+			method:(nil)
+			overload:0
+				return type:0x8f7a360
+				arguments:1
+				optionals:0
+				elipsis:0
+					id
+		clearHitRegions
+			method:(nil)
+			overload:0
+				return type:0x8f7a418
+				arguments:0
+				optionals:0
+				elipsis:0
+		createImageData
+			method:(nil)
+			overload:0
+				return type:0x8f7a4b8
+				arguments:2
+				optionals:0
+				elipsis:0
+					sw
+					sh
+		getImageData
+			method:(nil)
+			overload:0
+				return type:0x8f7a6d8
+				arguments:4
+				optionals:0
+				elipsis:0
+					sx
+					sy
+					sw
+					sh
+		putImageData
+			method:(nil)
+			overload:0
+				return type:0x8f7a868
+				arguments:3
+				optionals:0
+				elipsis:0
+					imagedata
+					dx
+					dy
+		setLineDash
+			method:(nil)
+			overload:0
+				return type:0x8f7afc8
+				arguments:1
+				optionals:0
+				elipsis:0
+					segments
+		getLineDash
+			method:(nil)
+			overload:0
+				return type:0x8f7b0e8
+				arguments:0
+				optionals:0
+				elipsis:0
+		closePath
+			method:(nil)
+			overload:0
+				return type:0x8f7b428
+				arguments:0
+				optionals:0
+				elipsis:0
+		moveTo
+			method:(nil)
+			overload:0
+				return type:0x8f7b488
+				arguments:2
+				optionals:0
+				elipsis:0
+					x
+					y
+		lineTo
+			method:(nil)
+			overload:0
+				return type:0x8f7b5a8
+				arguments:2
+				optionals:0
+				elipsis:0
+					x
+					y
+		quadraticCurveTo
+			method:(nil)
+			overload:0
+				return type:0x8f7b6c8
+				arguments:4
+				optionals:0
+				elipsis:0
+					cpx
+					cpy
+					x
+					y
+		bezierCurveTo
+			method:(nil)
+			overload:0
+				return type:0x8f7b8b0
+				arguments:6
+				optionals:0
+				elipsis:0
+					cp1x
+					cp1y
+					cp2x
+					cp2y
+					x
+					y
+		arcTo
+			method:(nil)
+			overload:0
+				return type:0x8f7bb58
+				arguments:5
+				optionals:0
+				elipsis:0
+					x1
+					y1
+					x2
+					y2
+					radius
+		rect
+			method:(nil)
+			overload:0
+				return type:0x8f7c098
+				arguments:4
+				optionals:0
+				elipsis:0
+					x
+					y
+					w
+					h
+		arc
+			method:(nil)
+			overload:0
+				return type:0x8f7c278
+				arguments:6
+				optionals:1
+				elipsis:0
+					x
+					y
+					radius
+					startAngle
+					endAngle
+					anticlockwise
+						optional:1
+		ellipse
+			method:(nil)
+			overload:0
+				return type:0x8f7c530
+				arguments:8
+				optionals:1
+				elipsis:0
+					x
+					y
+					radiusX
+					radiusY
+					rotation
+					startAngle
+					endAngle
+					anticlockwise
+						optional:1
+	23 attributes
+		canvas (nil)
+		width (nil) (nil)
+		height (nil) (nil)
+		currentTransform (nil) (nil)
+		globalAlpha (nil) (nil)
+		globalCompositeOperation (nil) (nil)
+		imageSmoothingEnabled (nil) (nil)
+		imageSmoothingQuality (nil) (nil)
+		strokeStyle (nil) (nil)
+		fillStyle (nil) (nil)
+		shadowOffsetX (nil) (nil)
+		shadowOffsetY (nil) (nil)
+		shadowBlur (nil) (nil)
+		shadowColor (nil) (nil)
+		lineWidth (nil) (nil)
+		lineCap (nil) (nil)
+		lineJoin (nil) (nil)
+		miterLimit (nil) (nil)
+		lineDashOffset (nil) (nil)
+		font (nil) (nil)
+		textAlign (nil) (nil)
+		textBaseline (nil) (nil)
+		direction (nil) (nil)
+131 CanvasProxy
+	1 operations
+		setContext
+			method:(nil)
+			overload:0
+				return type:0x8f762a8
+				arguments:1
+				optionals:0
+				elipsis:0
+					context
+132 HTMLCanvasElement
+	inherit:HTMLElement
+	class:0x8f4cc20
+	6 operations
+		getContext
+			method:(nil)
+			overload:0
+				return type:0x8f75b48
+				arguments:2
+				optionals:0
+				elipsis:1
+					contextId
+					arguments
+						elipsis:1
+		probablySupportsContext
+			method:(nil)
+			overload:0
+				return type:0x8f75c68
+				arguments:2
+				optionals:0
+				elipsis:1
+					contextId
+					arguments
+						elipsis:1
+		setContext
+			method:(nil)
+			overload:0
+				return type:0x8f75d68
+				arguments:1
+				optionals:0
+				elipsis:0
+					context
+		transferControlToProxy
+			method:(nil)
+			overload:0
+				return type:0x8f75e80
+				arguments:0
+				optionals:0
+				elipsis:0
+		toDataURL
+			method:(nil)
+			overload:0
+				return type:0x8f75ee0
+				arguments:2
+				optionals:1
+				elipsis:1
+					type
+						optional:1
+					arguments
+						elipsis:1
+		toBlob
+			method:(nil)
+			overload:0
+				return type:0x8f75ff0
+				arguments:3
+				optionals:1
+				elipsis:1
+					callback
+					type
+						optional:1
+					arguments
+						elipsis:1
+	2 attributes
+		width (nil) (nil)
+		height (nil) (nil)
+133 HTMLTemplateElement
+	inherit:HTMLElement
+	class:0x8f4cdb0
+	1 attributes
+		content (nil)
+134 HTMLScriptElement
+	inherit:HTMLElement
+	class:0x8f454d8
+	10 attributes
+		src 0x8f45b50 0x8f45c08
+		type 0x8f45e30 0x8f45ee8
+		charset 0x8f45590 0x8f45648
+		async (nil) (nil)
+		defer 0x8f45700 0x8f457b8
+		crossOrigin (nil) (nil)
+		text 0x8f45cc0 0x8f45d78
+		nonce (nil) (nil)
+		event 0x8f45870 0x8f45928
+		htmlFor 0x8f459e0 0x8f45a98
+135 HTMLDialogElement
+	inherit:HTMLElement
+	class:0x8f4cf38
+	3 operations
+		show
+			method:(nil)
+			overload:0
+				return type:0x8f75238
+				arguments:1
+				optionals:1
+				elipsis:0
+					anchor
+						optional:1
+		showModal
+			method:(nil)
+			overload:0
+				return type:0x8f75358
+				arguments:1
+				optionals:1
+				elipsis:0
+					anchor
+						optional:1
+		close
+			method:(nil)
+			overload:0
+				return type:0x8f75478
+				arguments:1
+				optionals:1
+				elipsis:0
+					returnValue
+						optional:1
+	2 attributes
+		open (nil) (nil)
+		returnValue (nil) (nil)
+136 RelatedEvent
+	inherit:Event
+	class:0x8f2c3a8
+	1 attributes
+		relatedTarget (nil)
+137 HTMLMenuItemElement
+	inherit:HTMLElement
+	class:0x8f4d0c8
+	8 attributes
+		type (nil) (nil)
+		label (nil) (nil)
+		icon (nil) (nil)
+		disabled (nil) (nil)
+		checked (nil) (nil)
+		radiogroup (nil) (nil)
+		default (nil) (nil)
+		command (nil)
+138 HTMLMenuElement
+	inherit:HTMLElement
+	class:0x8f3fee0
+	3 attributes
+		type (nil) (nil)
+		label (nil) (nil)
+		compact 0x8f3ff90 0x8f40040
+139 HTMLDetailsElement
+	inherit:HTMLElement
+	class:0x8f4d258
+	1 attributes
+		open (nil) (nil)
+140 ValidityState
+	11 attributes
+		valueMissing (nil)
+		typeMismatch (nil)
+		patternMismatch (nil)
+		tooLong (nil)
+		tooShort (nil)
+		rangeUnderflow (nil)
+		rangeOverflow (nil)
+		stepMismatch (nil)
+		badInput (nil)
+		customError (nil)
+		valid (nil)
+141 AutocompleteErrorEvent
+	inherit:Event
+	class:0x8f2c520
+	1 attributes
+		reason (nil)
+142 HTMLLegendElement
+	inherit:HTMLElement
+	class:0x8f3dbf0
+	2 attributes
+		form (nil)
+		align 0x8f3dca8 0x8f3dd60
+143 HTMLFieldSetElement
+	inherit:HTMLElement
+	class:0x8f4d3e8
+	3 operations
+		checkValidity
+			method:(nil)
+			overload:0
+				return type:0x8f73e20
+				arguments:0
+				optionals:0
+				elipsis:0
+		reportValidity
+			method:(nil)
+			overload:0
+				return type:0x8f73e88
+				arguments:0
+				optionals:0
+				elipsis:0
+		setCustomValidity
+			method:(nil)
+			overload:0
+				return type:0x8f73ed8
+				arguments:1
+				optionals:0
+				elipsis:0
+					error
+	8 attributes
+		disabled (nil) (nil)
+		form (nil)
+		name (nil) (nil)
+		type (nil)
+		elements (nil)
+		willValidate (nil)
+		validity (nil)
+		validationMessage (nil)
+144 HTMLMeterElement
+	inherit:HTMLElement
+	class:0x8f4d570
+	7 attributes
+		value (nil) (nil)
+		min (nil) (nil)
+		max (nil) (nil)
+		low (nil) (nil)
+		high (nil) (nil)
+		optimum (nil) (nil)
+		labels (nil)
+145 HTMLProgressElement
+	inherit:HTMLElement
+	class:0x8f4d700
+	4 attributes
+		value (nil) (nil)
+		max (nil) (nil)
+		position (nil)
+		labels (nil)
+146 HTMLOutputElement
+	inherit:HTMLElement
+	class:0x8f4d888
+	3 operations
+		checkValidity
+			method:(nil)
+			overload:0
+				return type:0x8f73350
+				arguments:0
+				optionals:0
+				elipsis:0
+		reportValidity
+			method:(nil)
+			overload:0
+				return type:0x8f733b8
+				arguments:0
+				optionals:0
+				elipsis:0
+		setCustomValidity
+			method:(nil)
+			overload:0
+				return type:0x8f73408
+				arguments:1
+				optionals:0
+				elipsis:0
+					error
+	10 attributes
+		htmlFor (nil)
+		form (nil)
+		name (nil) (nil)
+		type (nil)
+		defaultValue (nil) (nil)
+		value (nil) (nil)
+		willValidate (nil)
+		validity (nil)
+		validationMessage (nil)
+		labels (nil)
+147 HTMLKeygenElement
+	inherit:HTMLElement
+	class:0x8f4da10
+	3 operations
+		checkValidity
+			method:(nil)
+			overload:0
+				return type:0x8f72c98
+				arguments:0
+				optionals:0
+				elipsis:0
+		reportValidity
+			method:(nil)
+			overload:0
+				return type:0x8f72d00
+				arguments:0
+				optionals:0
+				elipsis:0
+		setCustomValidity
+			method:(nil)
+			overload:0
+				return type:0x8f72d50
+				arguments:1
+				optionals:0
+				elipsis:0
+					error
+	11 attributes
+		autofocus (nil) (nil)
+		challenge (nil) (nil)
+		disabled (nil) (nil)
+		form (nil)
+		keytype (nil) (nil)
+		name (nil) (nil)
+		type (nil)
+		willValidate (nil)
+		validity (nil)
+		validationMessage (nil)
+		labels (nil)
+148 HTMLTextAreaElement
+	inherit:HTMLElement
+	class:0x8f4b460
+	6 operations
+		checkValidity
+			method:(nil)
+			overload:0
+				return type:0x8f72058
+				arguments:0
+				optionals:0
+				elipsis:0
+		reportValidity
+			method:(nil)
+			overload:0
+				return type:0x8f720c0
+				arguments:0
+				optionals:0
+				elipsis:0
+		setCustomValidity
+			method:(nil)
+			overload:0
+				return type:0x8f72110
+				arguments:1
+				optionals:0
+				elipsis:0
+					error
+		select
+			method:(nil)
+			overload:0
+				return type:0x8f72248
+				arguments:0
+				optionals:0
+				elipsis:0
+		setRangeText
+			method:(nil)
+			overload:0
+				return type:0x8f723d0
+				arguments:1
+				optionals:0
+				elipsis:0
+					replacement
+		setSelectionRange
+			method:(nil)
+			overload:0
+				return type:0x8f726b0
+				arguments:3
+				optionals:1
+				elipsis:0
+					start
+					end
+					direction
+						optional:1
+	26 attributes
+		autocomplete (nil) (nil)
+		autofocus (nil) (nil)
+		cols (nil) (nil)
+		dirName (nil) (nil)
+		disabled 0x8f4b698 0x8f4b750
+		form (nil)
+		inputMode (nil) (nil)
+		maxLength (nil) (nil)
+		minLength (nil) (nil)
+		name 0x8f4b808 0x8f4b8c0
+		placeholder (nil) (nil)
+		readOnly 0x8f4b978 0x8f4ba30
+		required (nil) (nil)
+		rows (nil) (nil)
+		wrap (nil) (nil)
+		type 0x8f4bae8
+		defaultValue 0x8f4b520 0x8f4b5e0
+		value 0x8f4bba0 0x8f4bc58
+		textLength (nil)
+		willValidate (nil)
+		validity (nil)
+		validationMessage (nil)
+		labels (nil)
+		selectionStart (nil) (nil)
+		selectionEnd (nil) (nil)
+		selectionDirection (nil) (nil)
+149 HTMLOptionElement
+	inherit:HTMLElement
+	class:0x8f422d0
+	8 attributes
+		disabled 0x8f42508 0x8f425c0
+		form (nil)
+		label 0x8f42678 0x8f42730
+		defaultSelected 0x8f42390 0x8f42450
+		selected 0x8f427e8 0x8f428a0
+		value 0x8f42a10 0x8f42ac8
+		text 0x8f42958 (nil)
+		index (nil)
+150 HTMLOptGroupElement
+	inherit:HTMLElement
+	class:0x8f4dba0
+	2 attributes
+		disabled (nil) (nil)
+		label (nil) (nil)
+151 HTMLDataListElement
+	inherit:HTMLElement
+	class:0x8f4dd30
+	1 attributes
+		options (nil)
+152 HTMLSelectElement
+	inherit:HTMLElement
+	class:0x8f461e8
+	7 operations
+		item
+			method:(nil)
+			overload:0
+				return type:0x8f705a0
+				arguments:1
+				optionals:0
+				elipsis:0
+					index
+		namedItem
+			method:(nil)
+			overload:0
+				return type:0x8f70698
+				arguments:1
+				optionals:0
+				elipsis:0
+					name
+		add
+			method:(nil)
+			overload:0
+				return type:0x8f70738
+				arguments:2
+				optionals:1
+				elipsis:0
+					element
+					before
+						optional:1
+		remove
+			method:(nil)
+			overload:0
+				return type:0x8f70918
+				arguments:0
+				optionals:0
+				elipsis:0
+		checkValidity
+			method:(nil)
+			overload:0
+				return type:0x8f70a38
+				arguments:2
+				optionals:0
+				elipsis:0
+					index
+					option
+			overload:1
+				return type:0x8f70e08
+				arguments:0
+				optionals:0
+				elipsis:0
+		reportValidity
+			method:(nil)
+			overload:0
+				return type:0x8f70e70
+				arguments:0
+				optionals:0
+				elipsis:0
+		setCustomValidity
+			method:(nil)
+			overload:0
+				return type:0x8f70ec0
+				arguments:1
+				optionals:0
+				elipsis:0
+					error
+	18 attributes
+		autocomplete (nil) (nil)
+		autofocus (nil) (nil)
+		disabled 0x8f462a0 0x8f46358
+		form (nil)
+		multiple 0x8f46410 0x8f464c8
+		name 0x8f46580 0x8f46638
+		required (nil) (nil)
+		size (nil) (nil)
+		type 0x8f466f0
+		options (nil)
+		length (nil) (nil)
+		selectedOptions (nil)
+		selectedIndex (nil) (nil)
+		value 0x8f467a8 0x8f46860
+		willValidate (nil)
+		validity (nil)
+		validationMessage (nil)
+		labels (nil)
+153 HTMLButtonElement
+	inherit:HTMLElement
+	class:0x8f304d8
+	3 operations
+		checkValidity
+			method:(nil)
+			overload:0
+				return type:0x8f6fec8
+				arguments:0
+				optionals:0
+				elipsis:0
+		reportValidity
+			method:(nil)
+			overload:0
+				return type:0x8f6ff30
+				arguments:0
+				optionals:0
+				elipsis:0
+		setCustomValidity
+			method:(nil)
+			overload:0
+				return type:0x8f6ff80
+				arguments:1
+				optionals:0
+				elipsis:0
+					error
+	16 attributes
+		autofocus (nil) (nil)
+		disabled 0x8f30590 0x8f30648
+		form (nil)
+		formAction (nil) (nil)
+		formEnctype (nil) (nil)
+		formMethod (nil) (nil)
+		formNoValidate (nil) (nil)
+		formTarget (nil) (nil)
+		name 0x8f30700 0x8f307b8
+		type (nil) (nil)
+		value 0x8f3a1d0 0x8f3a288
+		menu (nil) (nil)
+		willValidate (nil)
+		validity (nil)
+		validationMessage (nil)
+		labels (nil)
+154 HTMLInputElement
+	inherit:HTMLElement
+	class:0x8f3bb28
+	8 operations
+		stepUp
+			method:(nil)
+			overload:0
+				return type:0x8f6edb8
+				arguments:1
+				optionals:1
+				elipsis:0
+					n
+						optional:1
+		stepDown
+			method:(nil)
+			overload:0
+				return type:0x8f6ee88
+				arguments:1
+				optionals:1
+				elipsis:0
+					n
+						optional:1
+		checkValidity
+			method:(nil)
+			overload:0
+				return type:0x8f6f0c8
+				arguments:0
+				optionals:0
+				elipsis:0
+		reportValidity
+			method:(nil)
+			overload:0
+				return type:0x8f6f130
+				arguments:0
+				optionals:0
+				elipsis:0
+		setCustomValidity
+			method:(nil)
+			overload:0
+				return type:0x8f6f180
+				arguments:1
+				optionals:0
+				elipsis:0
+					error
+		select
+			method:(nil)
+			overload:0
+				return type:0x8f6f2b8
+				arguments:0
+				optionals:0
+				elipsis:0
+		setRangeText
+			method:(nil)
+			overload:0
+				return type:0x8f6f440
+				arguments:1
+				optionals:0
+				elipsis:0
+					replacement
+		setSelectionRange
+			method:(nil)
+			overload:0
+				return type:0x8f6f720
+				arguments:3
+				optionals:1
+				elipsis:0
+					start
+					end
+					direction
+						optional:1
+	49 attributes
+		accept 0x8f3bbe0 0x8f3bc98
+		alt 0x8f3bec0 0x8f3bf78
+		autocomplete (nil) (nil)
+		autofocus (nil) (nil)
+		defaultChecked 0x8f3c1a8 0x8f3c268
+		checked 0x8f3c030 0x8f3c0e8
+		dirName (nil) (nil)
+		disabled 0x8f3c4a0 0x8f3c558
+		form (nil)
+		files (nil)
+		formAction (nil) (nil)
+		formEnctype (nil) (nil)
+		formMethod (nil) (nil)
+		formNoValidate (nil) (nil)
+		formTarget (nil) (nil)
+		height (nil) (nil)
+		indeterminate (nil) (nil)
+		inputMode (nil) (nil)
+		list (nil)
+		max (nil) (nil)
+		maxLength 0x8f3d1a0 0x8f3d258
+		min (nil) (nil)
+		minLength (nil) (nil)
+		multiple (nil) (nil)
+		name 0x8f3c610 0x8f3c6c8
+		pattern (nil) (nil)
+		placeholder (nil) (nil)
+		readOnly 0x8f3c780 0x8f3c838
+		required (nil) (nil)
+		size 0x8f3d310 0x8f3d3c8
+		src 0x8f3c8f0 0x8f3c9a8
+		step (nil) (nil)
+		type 0x8f3d480 (nil)
+		defaultValue 0x8f3c328 0x8f3c3e8
+		value 0x8f3d030 0x8f3d0e8
+		valueAsDate (nil) (nil)
+		valueAsNumber 0x8f3cbd8 0x8f3cc98
+		valueLow 0x8f3cec0 0x8f3cf78
+		valueHigh 0x8f3cd50 0x8f3ce08
+		width (nil) (nil)
+		willValidate (nil)
+		validity (nil)
+		validationMessage (nil)
+		labels (nil)
+		selectionStart (nil) (nil)
+		selectionEnd (nil) (nil)
+		selectionDirection (nil) (nil)
+		align 0x8f3bd50 0x8f3be08
+		useMap 0x8f3ca60 0x8f3cb18
+155 HTMLLabelElement
+	inherit:HTMLElement
+	class:0x8f3d780
+	3 attributes
+		form (nil)
+		htmlFor 0x8f3d838 0x8f3d8f0
+		control (nil)
+156 HTMLFormElement
+	inherit:HTMLElement
+	class:0x8f37448
+	5 operations
+		submit
+			method:(nil)
+			overload:0
+				return type:0x8f6d998
+				arguments:1
+				optionals:0
+				elipsis:0
+					index
+			overload:1
+				return type:0x8f6da70
+				arguments:1
+				optionals:0
+				elipsis:0
+					name
+			overload:2
+				return type:0x8f6db40
+				arguments:0
+				optionals:0
+				elipsis:0
+		reset
+			method:(nil)
+			overload:0
+				return type:0x8f6dba0
+				arguments:0
+				optionals:0
+				elipsis:0
+		checkValidity
+			method:(nil)
+			overload:0
+				return type:0x8f6dc18
+				arguments:0
+				optionals:0
+				elipsis:0
+		reportValidity
+			method:(nil)
+			overload:0
+				return type:0x8f6dc80
+				arguments:0
+				optionals:0
+				elipsis:0
+		requestAutocomplete
+			method:(nil)
+			overload:0
+				return type:0x8f6dcd0
+				arguments:0
+				optionals:0
+				elipsis:0
+	11 attributes
+		acceptCharset 0x8f37500 0x8f375b8
+		action 0x8f37668 0x8f37718
+		autocomplete (nil) (nil)
+		enctype 0x8f377c8 0x8f37878
+		encoding (nil) (nil)
+		method 0x8f37928 0x8f379d8
+		name (nil) (nil)
+		noValidate (nil) (nil)
+		target 0x8f37a88 0x8f37b38
+		elements (nil)
+		length (nil)
+157 HTMLTableCellElement
+	inherit:HTMLElement
+	class:0x8f475e0
+	13 attributes
+		colSpan 0x8f4c6f8 0x8f4c7b8
+		rowSpan 0x8f4c878 0x8f4c938
+		headers (nil)
+		cellIndex 0x8f4c638
+		align 0x8f476a0 0x8f47760
+		axis 0x8f47820 0x8f478e0
+		height 0x8f47e20 0x8f47ee0
+		width 0x8f4c4b8 0x8f4c578
+		ch 0x8f47ca0 0x8f47d60
+		chOff 0x8f47b20 0x8f47be0
+		noWrap 0x8f47fa0 0x8f48060
+		vAlign 0x8f4c338 0x8f4c3f8
+		bgColor 0x8f479a0 0x8f47a60
+158 HTMLTableHeaderCellElement
+	inherit:HTMLTableCellElement
+	class:0x8f4f140
+	1 operations
+		sort
+			method:(nil)
+			overload:0
+				return type:0x8f6d208
+				arguments:0
+				optionals:0
+				elipsis:0
+	3 attributes
+		scope (nil) (nil)
+		abbr (nil) (nil)
+		sorted (nil) (nil)
+159 HTMLTableDataCellElement
+	inherit:HTMLTableCellElement
+	class:0x8f4f2e8
+	1 attributes
+		abbr (nil) (nil)
+160 HTMLTableRowElement
+	inherit:HTMLElement
+	class:0x8f49fa0
+	2 operations
+		insertCell
+			method:(nil)
+			overload:0
+				return type:0x8f6cea8
+				arguments:1
+				optionals:1
+				elipsis:0
+					index
+						optional:1
+		deleteCell
+			method:(nil)
+			overload:0
+				return type:0x8f6cf68
+				arguments:1
+				optionals:0
+				elipsis:0
+					index
+	8 attributes
+		rowIndex 0x8f4a788
+		sectionRowIndex 0x8f4a848
+		cells (nil)
+		align 0x8f4a058 0x8f4a110
+		ch 0x8f4a4a8 0x8f4a560
+		chOff 0x8f4a338 0x8f4a3f0
+		vAlign 0x8f4a618 0x8f4a6d0
+		bgColor 0x8f4a1c8 0x8f4a280
+161 HTMLTableSectionElement
+	inherit:HTMLElement
+	class:0x8f4ab58
+	2 operations
+		insertRow
+			method:(nil)
+			overload:0
+				return type:0x8f6cb50
+				arguments:1
+				optionals:1
+				elipsis:0
+					index
+						optional:1
+		deleteRow
+			method:(nil)
+			overload:0
+				return type:0x8f6cc10
+				arguments:1
+				optionals:0
+				elipsis:0
+					index
+	5 attributes
+		rows (nil)
+		align 0x8f4ac18 0x8f4acd8
+		ch 0x8f4af18 0x8f4afd8
+		chOff 0x8f4ad98 0x8f4ae58
+		vAlign 0x8f4b098 0x8f4b158
+162 HTMLTableColElement
+	inherit:HTMLElement
+	class:0x8f48578
+	6 attributes
+		span (nil) (nil)
+		align 0x8f48630 0x8f486e8
+		ch 0x8f48910 0x8f489c8
+		chOff 0x8f487a0 0x8f48858
+		vAlign 0x8f48a80 0x8f48b38
+		width 0x8f48bf0 0x8f48ca8
+163 HTMLTableCaptionElement
+	inherit:HTMLElement
+	class:0x8f47150
+	1 attributes
+		align 0x8f47210 0x8f472d0
+164 HTMLTableElement
+	inherit:HTMLElement
+	class:0x8f48fa8
+	10 operations
+		createCaption
+			method:(nil)
+			overload:0
+				return type:0x8f6c178
+				arguments:0
+				optionals:0
+				elipsis:0
+		deleteCaption
+			method:(nil)
+			overload:0
+				return type:0x8f6c1c8
+				arguments:0
+				optionals:0
+				elipsis:0
+		createTHead
+			method:(nil)
+			overload:0
+				return type:0x8f6c2f0
+				arguments:0
+				optionals:0
+				elipsis:0
+		deleteTHead
+			method:(nil)
+			overload:0
+				return type:0x8f6c340
+				arguments:0
+				optionals:0
+				elipsis:0
+		createTFoot
+			method:(nil)
+			overload:0
+				return type:0x8f6c460
+				arguments:0
+				optionals:0
+				elipsis:0
+		deleteTFoot
+			method:(nil)
+			overload:0
+				return type:0x8f6c4b0
+				arguments:0
+				optionals:0
+				elipsis:0
+		createTBody
+			method:(nil)
+			overload:0
+				return type:0x8f6c5c8
+				arguments:0
+				optionals:0
+				elipsis:0
+		insertRow
+			method:(nil)
+			overload:0
+				return type:0x8f6c6d0
+				arguments:1
+				optionals:1
+				elipsis:0
+					index
+						optional:1
+		deleteRow
+			method:(nil)
+			overload:0
+				return type:0x8f6c790
+				arguments:1
+				optionals:0
+				elipsis:0
+					index
+		stopSorting
+			method:(nil)
+			overload:0
+				return type:0x8f6c890
+				arguments:0
+				optionals:0
+				elipsis:0
+	15 attributes
+		caption (nil) (nil)
+		tHead (nil) (nil)
+		tFoot (nil) (nil)
+		tBodies (nil)
+		rows (nil)
+		sortable (nil) (nil)
+		align 0x8f49060 0x8f49118
+		border 0x8f49340 0x8f493f8
+		frame 0x8f49790 0x8f49848
+		rules 0x8f49900 0x8f499b8
+		summary 0x8f49a70 0x8f49b28
+		width 0x8f49be0 0x8f49c98
+		bgColor 0x8f491d0 0x8f49288
+		cellPadding 0x8f494b0 0x8f49568
+		cellSpacing 0x8f49620 0x8f496d8
+165 HTMLAreaElement
+	inherit:HTMLElement
+	class:0x8f2ea18
+	22 attributes
+		alt 0x8f2eac8 0x8f2eb78
+		coords 0x8f2ec28 0x8f2ecd8
+		shape 0x8f2eee8 0x8f2ef98
+		target 0x8f2f048 0x8f2f0f8
+		download (nil) (nil)
+		ping (nil)
+		rel (nil) (nil)
+		relList (nil)
+		hreflang (nil) (nil)
+		type (nil) (nil)
+		noHref 0x8f2ed88 0x8f2ee38
+		href (nil) (nil)
+		origin (nil)
+		protocol (nil) (nil)
+		username (nil) (nil)
+		password (nil) (nil)
+		host (nil) (nil)
+		hostname (nil) (nil)
+		port (nil) (nil)
+		pathname (nil) (nil)
+		search (nil) (nil)
+		hash (nil) (nil)
+166 HTMLMapElement
+	inherit:HTMLElement
+	class:0x8f3f788
+	2 attributes
+		name 0x8f3f838 0x8f3f8e8
+		areas (nil)
+167 TrackEvent
+	inherit:Event
+	class:0x8f2c688
+	1 attributes
+		track (nil)
+168 TimeRanges
+	2 operations
+		start
+			method:(nil)
+			overload:0
+				return type:0x8f6b4e8
+				arguments:1
+				optionals:0
+				elipsis:0
+					index
+		end
+			method:(nil)
+			overload:0
+				return type:0x8f6b5a8
+				arguments:1
+				optionals:0
+				elipsis:0
+					index
+	1 attributes
+		length (nil)
+169 TextTrackCue
+	inherit:EventTarget
+	7 attributes
+		track (nil)
+		id (nil) (nil)
+		startTime (nil) (nil)
+		endTime (nil) (nil)
+		pauseOnExit (nil) (nil)
+		onenter (nil) (nil)
+		onexit (nil) (nil)
+170 TextTrackCueList
+	1 operations
+		getCueById
+			method:(nil)
+			overload:0
+				return type:0x8f6af78
+				arguments:1
+				optionals:0
+				elipsis:0
+					index
+			overload:1
+				return type:0x8f6b060
+				arguments:1
+				optionals:0
+				elipsis:0
+					id
+	1 attributes
+		length (nil)
+171 TextTrack
+	inherit:EventTarget
+	2 operations
+		addCue
+			method:(nil)
+			overload:0
+				return type:0x8f6ac50
+				arguments:1
+				optionals:0
+				elipsis:0
+					cue
+		removeCue
+			method:(nil)
+			overload:0
+				return type:0x8f6ad28
+				arguments:1
+				optionals:0
+				elipsis:0
+					cue
+	9 attributes
+		kind (nil)
+		label (nil)
+		language (nil)
+		id (nil)
+		inBandMetadataTrackDispatchType (nil)
+		mode (nil) (nil)
+		cues (nil)
+		activeCues (nil)
+		oncuechange (nil) (nil)
+172 TextTrackList
+	inherit:EventTarget
+	1 operations
+		getTrackById
+			method:(nil)
+			overload:0
+				return type:0x8f6a478
+				arguments:1
+				optionals:0
+				elipsis:0
+					index
+			overload:1
+				return type:0x8f6a560
+				arguments:1
+				optionals:0
+				elipsis:0
+					id
+	4 attributes
+		length (nil)
+		onchange (nil) (nil)
+		onaddtrack (nil) (nil)
+		onremovetrack (nil) (nil)
+173 MediaController
+	inherit:EventTarget
+	3 operations
+		pause
+			method:(nil)
+			overload:0
+				return type:0x8f69a38
+				arguments:0
+				optionals:0
+				elipsis:0
+		unpause
+			method:(nil)
+			overload:0
+				return type:0x8f69a98
+				arguments:0
+				optionals:0
+				elipsis:0
+		play
+			method:(nil)
+			overload:0
+				return type:0x8f69af8
+				arguments:0
+				optionals:0
+				elipsis:0
+	26 attributes
+		readyState (nil)
+		buffered (nil)
+		seekable (nil)
+		duration (nil)
+		currentTime (nil) (nil)
+		paused (nil)
+		playbackState (nil)
+		played (nil)
+		defaultPlaybackRate (nil) (nil)
+		playbackRate (nil) (nil)
+		volume (nil) (nil)
+		muted (nil) (nil)
+		onemptied (nil) (nil)
+		onloadedmetadata (nil) (nil)
+		onloadeddata (nil) (nil)
+		oncanplay (nil) (nil)
+		oncanplaythrough (nil) (nil)
+		onplaying (nil) (nil)
+		onended (nil) (nil)
+		onwaiting (nil) (nil)
+		ondurationchange (nil) (nil)
+		ontimeupdate (nil) (nil)
+		onplay (nil) (nil)
+		onpause (nil) (nil)
+		onratechange (nil) (nil)
+		onvolumechange (nil) (nil)
+174 VideoTrack
+	5 attributes
+		id (nil)
+		kind (nil)
+		label (nil)
+		language (nil)
+		selected (nil) (nil)
+175 VideoTrackList
+	inherit:EventTarget
+	1 operations
+		getTrackById
+			method:(nil)
+			overload:0
+				return type:0x8f69028
+				arguments:1
+				optionals:0
+				elipsis:0
+					index
+			overload:1
+				return type:0x8f69110
+				arguments:1
+				optionals:0
+				elipsis:0
+					id
+	5 attributes
+		length (nil)
+		selectedIndex (nil)
+		onchange (nil) (nil)
+		onaddtrack (nil) (nil)
+		onremovetrack (nil) (nil)
+176 AudioTrack
+	5 attributes
+		id (nil)
+		kind (nil)
+		label (nil)
+		language (nil)
+		enabled (nil) (nil)
+177 AudioTrackList
+	inherit:EventTarget
+	1 operations
+		getTrackById
+			method:(nil)
+			overload:0
+				return type:0x8f68a18
+				arguments:1
+				optionals:0
+				elipsis:0
+					index
+			overload:1
+				return type:0x8f68b00
+				arguments:1
+				optionals:0
+				elipsis:0
+					id
+	4 attributes
+		length (nil)
+		onchange (nil) (nil)
+		onaddtrack (nil) (nil)
+		onremovetrack (nil) (nil)
+178 MediaError
+	1 attributes
+		code (nil)
+	4 constants
+		MEDIA_ERR_ABORTED
+		MEDIA_ERR_NETWORK
+		MEDIA_ERR_DECODE
+		MEDIA_ERR_SRC_NOT_SUPPORTED
+179 HTMLMediaElement
+	inherit:HTMLElement
+	class:0x8f4deb8
+	7 operations
+		load
+			method:(nil)
+			overload:0
+				return type:0x8f67628
+				arguments:0
+				optionals:0
+				elipsis:0
+		canPlayType
+			method:(nil)
+			overload:0
+				return type:0x8f676c0
+				arguments:1
+				optionals:0
+				elipsis:0
+					type
+		fastSeek
+			method:(nil)
+			overload:0
+				return type:0x8f67ad8
+				arguments:1
+				optionals:0
+				elipsis:0
+					time
+		getStartDate
+			method:(nil)
+			overload:0
+				return type:0x8f67c10
+				arguments:0
+				optionals:0
+				elipsis:0
+		play
+			method:(nil)
+			overload:0
+				return type:0x8f67f70
+				arguments:0
+				optionals:0
+				elipsis:0
+		pause
+			method:(nil)
+			overload:0
+				return type:0x8f67fd0
+				arguments:0
+				optionals:0
+				elipsis:0
+		addTextTrack
+			method:(nil)
+			overload:0
+				return type:0x8f684b0
+				arguments:3
+				optionals:2
+				elipsis:0
+					kind
+					label
+						optional:1
+					language
+						optional:1
+	29 attributes
+		error (nil)
+		src (nil) (nil)
+		srcObject (nil) (nil)
+		currentSrc (nil)
+		crossOrigin (nil) (nil)
+		networkState (nil)
+		preload (nil) (nil)
+		buffered (nil)
+		readyState (nil)
+		seeking (nil)
+		currentTime (nil) (nil)
+		duration (nil)
+		paused (nil)
+		defaultPlaybackRate (nil) (nil)
+		playbackRate (nil) (nil)
+		played (nil)
+		seekable (nil)
+		ended (nil)
+		autoplay (nil) (nil)
+		loop (nil) (nil)
+		mediaGroup (nil) (nil)
+		controller (nil) (nil)
+		controls (nil) (nil)
+		volume (nil) (nil)
+		muted (nil) (nil)
+		defaultMuted (nil) (nil)
+		audioTracks (nil)
+		videoTracks (nil)
+		textTracks (nil)
+	9 constants
+		NETWORK_EMPTY
+		NETWORK_IDLE
+		NETWORK_LOADING
+		NETWORK_NO_SOURCE
+		HAVE_NOTHING
+		HAVE_METADATA
+		HAVE_CURRENT_DATA
+		HAVE_FUTURE_DATA
+		HAVE_ENOUGH_DATA
+180 HTMLTrackElement
+	inherit:HTMLElement
+	class:0x8f4e040
+	7 attributes
+		kind (nil) (nil)
+		src (nil) (nil)
+		srclang (nil) (nil)
+		label (nil) (nil)
+		default (nil) (nil)
+		readyState (nil)
+		track (nil)
+	4 constants
+		NONE
+		LOADING
+		LOADED
+		ERROR
+181 HTMLAudioElement
+	inherit:HTMLMediaElement
+	class:0x8f4f470
+182 HTMLVideoElement
+	inherit:HTMLMediaElement
+	class:0x8f4f5f8
+	5 attributes
+		width (nil) (nil)
+		height (nil) (nil)
+		videoWidth (nil)
+		videoHeight (nil)
+		poster (nil) (nil)
+183 HTMLParamElement
+	inherit:HTMLElement
+	class:0x8f44358
+	4 attributes
+		name 0x8f44410 0x8f444c8
+		value 0x8f446f0 0x8f447a8
+		type 0x8f44580 0x8f44638
+		valueType 0x8f44860 0x8f44918
+184 HTMLObjectElement
+	inherit:HTMLElement
+	class:0x8f40bb0
+	4 operations
+		getSVGDocument
+			method:(nil)
+			overload:0
+				return type:0x8f66130
+				arguments:0
+				optionals:0
+				elipsis:0
+		checkValidity
+			method:(nil)
+			overload:0
+				return type:0x8f662f0
+				arguments:0
+				optionals:0
+				elipsis:0
+		reportValidity
+			method:(nil)
+			overload:0
+				return type:0x8f66358
+				arguments:0
+				optionals:0
+				elipsis:0
+		setCustomValidity
+			method:(nil)
+			overload:0
+				return type:0x8f663a8
+				arguments:1
+				optionals:0
+				elipsis:0
+					error
+	23 attributes
+		data 0x8f41508 0x8f415c0
+		type 0x8f41c38 0x8f41cf0
+		typeMustMatch (nil) (nil)
+		name 0x8f41958 0x8f41a10
+		useMap 0x8f41da8 0x8f41e60
+		form (nil)
+		width 0x8f41f18 0x8f41fd0
+		height 0x8f417e8 0x8f418a0
+		contentDocument (nil)
+		contentWindow (nil)
+		willValidate (nil)
+		validity (nil)
+		validationMessage (nil)
+		align 0x8f40c68 0x8f40d20
+		archive 0x8f40dd8 0x8f40e90
+		code 0x8f41228 0x8f412e0
+		declare 0x8f41678 0x8f41730
+		hspace (nil) (nil)
+		standby 0x8f41ac8 0x8f41b80
+		vspace (nil) (nil)
+		codeBase 0x8f410b8 0x8f41170
+		codeType 0x8f41398 0x8f41450
+		border 0x8f40f48 0x8f41000
+185 HTMLEmbedElement
+	inherit:HTMLElement
+	class:0x8f4e1c8
+	1 operations
+		getSVGDocument
+			method:(nil)
+			overload:0
+				return type:0x8f65b80
+				arguments:0
+				optionals:0
+				elipsis:0
+	6 attributes
+		src (nil) (nil)
+		type (nil) (nil)
+		width (nil) (nil)
+		height (nil) (nil)
+		align (nil) (nil)
+		name (nil) (nil)
+186 HTMLIFrameElement
+	inherit:HTMLElement
+	class:0x8f3e4c8
+	1 operations
+		getSVGDocument
+			method:(nil)
+			overload:0
+				return type:0x8f65940
+				arguments:0
+				optionals:0
+				elipsis:0
+	16 attributes
+		src 0x8f3f110 0x8f3f1c8
+		srcdoc (nil) (nil)
+		name 0x8f3ee30 0x8f3eee8
+		sandbox (nil)
+		seamless (nil) (nil)
+		allowFullscreen (nil) (nil)
+		width 0x8f3f280 0x8f3f338
+		height 0x8f3e860 0x8f3e918
+		contentDocument (nil)
+		contentWindow (nil)
+		align 0x8f3e580 0x8f3e638
+		scrolling 0x8f3efa0 0x8f3f058
+		frameBorder 0x8f3e6f0 0x8f3e7a8
+		longDesc 0x8f3e9d0 0x8f3ea88
+		marginHeight 0x8f3eb48 0x8f3ec08
+		marginWidth 0x8f3ecc0 0x8f3ed78
+187 HTMLImageElement
+	inherit:HTMLElement
+	class:0x8f3a6e8
+	20 attributes
+		alt 0x8f3a910 0x8f3a9c8
+		src 0x8f3b040 0x8f3b0f8
+		srcset (nil) (nil)
+		sizes (nil) (nil)
+		crossOrigin (nil) (nil)
+		useMap 0x8f3b1b0 0x8f3b268
+		isMap 0x8f3abf0 0x8f3aca8
+		width 0x8f3b770 0x8f3b828
+		height 0x8f3b320 0x8f3b3d8
+		naturalWidth (nil)
+		naturalHeight (nil)
+		complete (nil)
+		currentSrc (nil)
+		name 0x8f3aed0 0x8f3af88
+		lowsrc (nil) (nil)
+		align 0x8f3a7a0 0x8f3a858
+		hspace 0x8f3b490 0x8f3b548
+		vspace 0x8f3b600 0x8f3b6b8
+		longDesc 0x8f3ad60 0x8f3ae18
+		border 0x8f3aa80 0x8f3ab38
+188 HTMLSourceElement
+	inherit:HTMLElement
+	class:0x8f4e350
+	5 attributes
+		srcset (nil) (nil)
+		sizes (nil) (nil)
+		media (nil) (nil)
+		src (nil) (nil)
+		type (nil) (nil)
+189 HTMLPictureElement
+	inherit:HTMLElement
+	class:0x8f4e4e0
+190 HTMLModElement
+	inherit:HTMLElement
+	class:0x8f4e668
+	2 attributes
+		cite (nil) (nil)
+		dateTime (nil) (nil)
+191 HTMLBRElement
+	inherit:HTMLElement
+	class:0x8f36498
+	1 attributes
+		clear 0x8f36548 0x8f365f8
+192 HTMLSpanElement
+	inherit:HTMLElement
+	class:0x8f4e7f0
+193 HTMLTimeElement
+	inherit:HTMLElement
+	class:0x8f4e978
+	1 attributes
+		dateTime (nil) (nil)
+194 HTMLDataElement
+	inherit:HTMLElement
+	class:0x8f4eb00
+	1 attributes
+		value (nil) (nil)
+195 HTMLAnchorElement
+	inherit:HTMLElement
+	class:0x8f2cbb8
+	24 attributes
+		target 0x8f2d680 0x8f2d738
+		download (nil) (nil)
+		ping (nil)
+		rel 0x8f2d230 0x8f2d2e8
+		relList (nil)
+		hreflang 0x8f2cf50 0x8f2d008
+		type (nil) (nil)
+		text (nil) (nil)
+		coords 0x8f2cde0 0x8f2ce98
+		charset 0x8f2cc70 0x8f2cd28
+		name 0x8f2d0c0 0x8f2d178
+		rev 0x8f2d3a0 0x8f2d458
+		shape 0x8f2d510 0x8f2d5c8
+		href (nil) (nil)
+		origin (nil)
+		protocol (nil) (nil)
+		username (nil) (nil)
+		password (nil) (nil)
+		host (nil) (nil)
+		hostname (nil) (nil)
+		port (nil) (nil)
+		pathname (nil) (nil)
+		search (nil) (nil)
+		hash (nil) (nil)
+196 HTMLDivElement
+	inherit:HTMLElement
+	class:0x8f368e8
+	1 attributes
+		align 0x8f36998 0x8f36a48
+197 HTMLDListElement
+	inherit:HTMLElement
+	class:0x8f4ec88
+	1 attributes
+		compact (nil) (nil)
+198 HTMLLIElement
+	inherit:HTMLElement
+	class:0x8f3e050
+	2 attributes
+		value 0x8f3e260 0x8f3e310
+		type 0x8f3e100 0x8f3e1b0
+199 HTMLUListElement
+	inherit:HTMLElement
+	class:0x8f4ee10
+	2 attributes
+		compact (nil) (nil)
+		type (nil) (nil)
+200 HTMLOListElement
+	inherit:HTMLElement
+	class:0x8f42dc8
+	4 attributes
+		reversed (nil) (nil)
+		start 0x8f42ff0 0x8f430a8
+		type 0x8f43160 0x8f43218
+		compact 0x8f42e80 0x8f42f38
+201 HTMLQuoteElement
+	inherit:HTMLElement
+	class:0x8f45068
+	1 attributes
+		cite 0x8f45120 0x8f451d8
+202 HTMLPreElement
+	inherit:HTMLElement
+	class:0x8f44c08
+	1 attributes
+		width 0x8f44cb8 0x8f44d68
+203 HTMLHRElement
+	inherit:HTMLElement
+	class:0x8f39718
+	5 attributes
+		align 0x8f39928 0x8f399d8
+		color (nil) (nil)
+		noShade 0x8f397c8 0x8f39878
+		size 0x8f39a88 0x8f39b38
+		width 0x8f39be8 0x8f39c98
+204 HTMLParagraphElement
+	inherit:HTMLElement
+	class:0x8f480f0
+	1 attributes
+		align 0x8f481b0 0x8f48270
+205 HTMLHeadingElement
+	inherit:HTMLElement
+	class:0x8f392b8
+	1 attributes
+		align 0x8f39370 0x8f39428
+206 HTMLBodyElement
+	inherit:HTMLElement
+	class:0x8f2f998
+	19 attributes
+		text 0x8f2ffc8 0x8f30078
+		link 0x8f2fe68 0x8f2ff18
+		vLink 0x8f30128 0x8f301d8
+		aLink 0x8f2fa48 0x8f2faf8
+		bgColor 0x8f2fd08 0x8f2fdb8
+		background 0x8f2fba8 0x8f2fc58
+		onafterprint (nil) (nil)
+		onbeforeprint (nil) (nil)
+		onbeforeunload (nil) (nil)
+		onhashchange (nil) (nil)
+		onlanguagechange (nil) (nil)
+		onmessage (nil) (nil)
+		onoffline (nil) (nil)
+		ononline (nil) (nil)
+		onpagehide (nil) (nil)
+		onpageshow (nil) (nil)
+		onpopstate (nil) (nil)
+		onstorage (nil) (nil)
+		onunload (nil) (nil)
+207 HTMLStyleElement
+	inherit:HTMLElement
+	class:0x8f46b60
+	5 attributes
+		media 0x8f46c18 0x8f46cd0
+		nonce (nil) (nil)
+		type 0x8f46d88 0x8f46e40
+		scoped (nil) (nil)
+		sheet (nil)
+208 HTMLMetaElement
+	inherit:HTMLElement
+	class:0x8f40330
+	4 attributes
+		name 0x8f406a0 0x8f40750
+		httpEquiv 0x8f40540 0x8f405f0
+		content 0x8f403e0 0x8f40490
+		scheme 0x8f40800 0x8f408b0
+209 HTMLLinkElement
+	inherit:HTMLElement
+	class:0x8f43558
+	12 attributes
+		href 0x8f438c8 0x8f43978
+		crossOrigin (nil) (nil)
+		rel 0x8f43b88 0x8f43c38
+		relList (nil)
+		media 0x8f43a28 0x8f43ad8
+		hreflang 0x8f43768 0x8f43818
+		type 0x8f43fa8 0x8f44058
+		sizes (nil)
+		charset 0x8f43608 0x8f436b8
+		rev 0x8f43ce8 0x8f43d98
+		target 0x8f43e48 0x8f43ef8
+		sheet (nil)
+210 HTMLBaseElement
+	inherit:HTMLElement
+	class:0x8f2f3e8
+	2 attributes
+		href 0x8f2f498 0x8f2f548
+		target 0x8f2f5f8 0x8f2f6a8
+211 HTMLTitleElement
+	inherit:HTMLElement
+	class:0x8f4bf58
+	1 attributes
+		text 0x8f4c010 0x8f4c0c8
+212 HTMLHeadElement
+	inherit:HTMLElement
+	class:0x8f4ef98
+213 HTMLHtmlElement
+	inherit:HTMLElement
+	class:0x8f39f88
+	1 attributes
+		version 0x8f3a038 0x8f3a0e8
+214 HTMLUnknownElement
+	inherit:HTMLElement
+	class:0x8f4c238
+215 DOMElementMap
+216 DOMStringMap
+217 HTMLCollection
+	class:0x8f25858
+	2 operations
+		item
+			method:(nil)
+			overload:0
+				return type:0x8f13620
+				arguments:1
+				optionals:0
+				elipsis:0
+					index
+		namedItem
+			method:(nil)
+			overload:0
+				return type:0x8f13720
+				arguments:1
+				optionals:0
+				elipsis:0
+					name
+	1 attributes
+		length (nil)
+218 HTMLOptionsCollection
+	inherit:HTMLCollection
+	class:0x8f50700
+	2 operations
+		add
+			method:(nil)
+			overload:0
+				return type:0x8f51cf8
+				arguments:2
+				optionals:0
+				elipsis:0
+					index
+					option
+			overload:1
+				return type:0x8f51e20
+				arguments:2
+				optionals:1
+				elipsis:0
+					element
+					before
+						optional:1
+		remove
+			method:(nil)
+			overload:0
+				return type:0x8f52000
+				arguments:1
+				optionals:0
+				elipsis:0
+					index
+	2 attributes
+		length (nil) (nil)
+		selectedIndex (nil) (nil)
+219 NodeList
+	class:0x8f1f218
+	1 operations
+		item
+			method:0x8f22cf8
+			overload:0
+				return type:0x8f13348
+				arguments:1
+				optionals:0
+				elipsis:0
+					index
+	1 attributes
+		length 0x8f26d50
+220 RadioNodeList
+	inherit:NodeList
+	class:0x8f502e8
+	1 attributes
+		value (nil) (nil)
+221 HTMLFormControlsCollection
+	inherit:HTMLCollection
+	class:0x8f505a0
+	1 operations
+		namedItem
+			method:(nil)
+			overload:0
+				return type:0x8f51a58
+				arguments:1
+				optionals:0
+				elipsis:0
+					name
+222 HTMLAllCollection
+	class:0x8f50440
+	2 operations
+		item
+			method:(nil)
+			overload:0
+				return type:0x8f51698
+				arguments:1
+				optionals:0
+				elipsis:0
+					index
+		namedItem
+			method:(nil)
+			overload:0
+				return type:0x8f518b8
+				arguments:1
+				optionals:0
+				elipsis:0
+					name
+	1 attributes
+		length (nil)
+223 XMLSerializer
+	1 operations
+		serializeToString
+			method:(nil)
+			overload:0
+				return type:0x8f50cd8
+				arguments:1
+				optionals:0
+				elipsis:0
+					root
+224 DOMParser
+	1 operations
+		parseFromString
+			method:(nil)
+			overload:0
+				return type:0x8f10668
+				arguments:2
+				optionals:0
+				elipsis:0
+					str
+					type
+225 DOMTokenList
+	5 operations
+		item
+			method:(nil)
+			overload:0
+				return type:0x8f5e8f0
+				arguments:1
+				optionals:0
+				elipsis:0
+					index
+		contains
+			method:(nil)
+			overload:0
+				return type:0x8f5e9b0
+				arguments:1
+				optionals:0
+				elipsis:0
+					token
+		add
+			method:(nil)
+			overload:0
+				return type:0x8f5ea50
+				arguments:1
+				optionals:0
+				elipsis:1
+					tokens
+						elipsis:1
+		remove
+			method:(nil)
+			overload:0
+				return type:0x8f5eb10
+				arguments:1
+				optionals:0
+				elipsis:1
+					tokens
+						elipsis:1
+		toggle
+			method:(nil)
+			overload:0
+				return type:0x8f5ebe0
+				arguments:2
+				optionals:1
+				elipsis:0
+					token
+					force
+						optional:1
+	1 attributes
+		length (nil)
+226 DOMSettableTokenList
+	inherit:DOMTokenList
+	1 attributes
+		value (nil) (nil)
+227 NodeFilter
+	1 operations
+		acceptNode
+			method:(nil)
+			overload:0
+				return type:0x8f5e748
+				arguments:1
+				optionals:0
+				elipsis:0
+					node
+	16 constants
+		FILTER_ACCEPT
+		FILTER_REJECT
+		FILTER_SKIP
+		SHOW_ALL
+		SHOW_ELEMENT
+		SHOW_ATTRIBUTE
+		SHOW_TEXT
+		SHOW_CDATA_SECTION
+		SHOW_ENTITY_REFERENCE
+		SHOW_ENTITY
+		SHOW_PROCESSING_INSTRUCTION
+		SHOW_COMMENT
+		SHOW_DOCUMENT
+		SHOW_DOCUMENT_TYPE
+		SHOW_DOCUMENT_FRAGMENT
+		SHOW_NOTATION
+228 TreeWalker
+	7 operations
+		parentNode
+			method:(nil)
+			overload:0
+				return type:0x8f5db40
+				arguments:0
+				optionals:0
+				elipsis:0
+		firstChild
+			method:(nil)
+			overload:0
+				return type:0x8f5dbd0
+				arguments:0
+				optionals:0
+				elipsis:0
+		lastChild
+			method:(nil)
+			overload:0
+				return type:0x8f5dc60
+				arguments:0
+				optionals:0
+				elipsis:0
+		previousSibling
+			method:(nil)
+			overload:0
+				return type:0x8f5dcf8
+				arguments:0
+				optionals:0
+				elipsis:0
+		nextSibling
+			method:(nil)
+			overload:0
+				return type:0x8f5dd88
+				arguments:0
+				optionals:0
+				elipsis:0
+		previousNode
+			method:(nil)
+			overload:0
+				return type:0x8f5de20
+				arguments:0
+				optionals:0
+				elipsis:0
+		nextNode
+			method:(nil)
+			overload:0
+				return type:0x8f5deb0
+				arguments:0
+				optionals:0
+				elipsis:0
+	4 attributes
+		root (nil)
+		whatToShow (nil)
+		filter (nil)
+		currentNode (nil) (nil)
+229 NodeIterator
+	3 operations
+		nextNode
+			method:(nil)
+			overload:0
+				return type:0x8f5d6e8
+				arguments:0
+				optionals:0
+				elipsis:0
+		previousNode
+			method:(nil)
+			overload:0
+				return type:0x8f5d780
+				arguments:0
+				optionals:0
+				elipsis:0
+		detach
+			method:(nil)
+			overload:0
+				return type:0x8f5d7d0
+				arguments:0
+				optionals:0
+				elipsis:0
+	5 attributes
+		root (nil)
+		referenceNode (nil)
+		pointerBeforeReferenceNode (nil)
+		whatToShow (nil)
+		filter (nil)
+230 Range
+	21 operations
+		setStart
+			method:(nil)
+			overload:0
+				return type:0x8f5c018
+				arguments:2
+				optionals:0
+				elipsis:0
+					node
+					offset
+		setEnd
+			method:(nil)
+			overload:0
+				return type:0x8f5c148
+				arguments:2
+				optionals:0
+				elipsis:0
+					node
+					offset
+		setStartBefore
+			method:(nil)
+			overload:0
+				return type:0x8f5c278
+				arguments:1
+				optionals:0
+				elipsis:0
+					node
+		setStartAfter
+			method:(nil)
+			overload:0
+				return type:0x8f5c350
+				arguments:1
+				optionals:0
+				elipsis:0
+					node
+		setEndBefore
+			method:(nil)
+			overload:0
+				return type:0x8f5c428
+				arguments:1
+				optionals:0
+				elipsis:0
+					node
+		setEndAfter
+			method:(nil)
+			overload:0
+				return type:0x8f5c500
+				arguments:1
+				optionals:0
+				elipsis:0
+					node
+		collapse
+			method:(nil)
+			overload:0
+				return type:0x8f5c5d0
+				arguments:1
+				optionals:1
+				elipsis:0
+					toStart
+						optional:1
+		selectNode
+			method:(nil)
+			overload:0
+				return type:0x8f5c6a0
+				arguments:1
+				optionals:0
+				elipsis:0
+					node
+		selectNodeContents
+			method:(nil)
+			overload:0
+				return type:0x8f5c770
+				arguments:1
+				optionals:0
+				elipsis:0
+					node
+		compareBoundaryPoints
+			method:(nil)
+			overload:0
+				return type:0x8f5ca40
+				arguments:2
+				optionals:0
+				elipsis:0
+					how
+					sourceRange
+		deleteContents
+			method:(nil)
+			overload:0
+				return type:0x8f5cb60
+				arguments:0
+				optionals:0
+				elipsis:0
+		extractContents
+			method:(nil)
+			overload:0
+				return type:0x8f5cc38
+				arguments:0
+				optionals:0
+				elipsis:0
+		cloneContents
+			method:(nil)
+			overload:0
+				return type:0x8f5ccf8
+				arguments:0
+				optionals:0
+				elipsis:0
+		insertNode
+			method:(nil)
+			overload:0
+				return type:0x8f5cd48
+				arguments:1
+				optionals:0
+				elipsis:0
+					node
+		surroundContents
+			method:(nil)
+			overload:0
+				return type:0x8f5ce18
+				arguments:1
+				optionals:0
+				elipsis:0
+					newParent
+		cloneRange
+			method:(nil)
+			overload:0
+				return type:0x8f5cf50
+				arguments:0
+				optionals:0
+				elipsis:0
+		detach
+			method:(nil)
+			overload:0
+				return type:0x8f5cfa0
+				arguments:0
+				optionals:0
+				elipsis:0
+		isPointInRange
+			method:(nil)
+			overload:0
+				return type:0x8f5d018
+				arguments:2
+				optionals:0
+				elipsis:0
+					node
+					offset
+		comparePoint
+			method:(nil)
+			overload:0
+				return type:0x8f5d150
+				arguments:2
+				optionals:0
+				elipsis:0
+					node
+					offset
+		intersectsNode
+			method:(nil)
+			overload:0
+				return type:0x8f5d288
+				arguments:1
+				optionals:0
+				elipsis:0
+					node
+		createContextualFragment
+			method:(nil)
+			overload:0
+				return type:0x8f510f8
+				arguments:1
+				optionals:0
+				elipsis:0
+					fragment
+	6 attributes
+		startContainer (nil)
+		startOffset (nil)
+		endContainer (nil)
+		endOffset (nil)
+		collapsed (nil)
+		commonAncestorContainer (nil)
+	4 constants
+		START_TO_START
+		START_TO_END
+		END_TO_END
+		END_TO_START
+231 CharacterData
+	inherit:Node
+	class:0x8f4fd48
+	9 operations
+		substringData
+			method:(nil)
+			overload:0
+				return type:0x8f5b100
+				arguments:2
+				optionals:0
+				elipsis:0
+					offset
+					count
+		appendData
+			method:(nil)
+			overload:0
+				return type:0x8f5b210
+				arguments:1
+				optionals:0
+				elipsis:0
+					data
+		insertData
+			method:(nil)
+			overload:0
+				return type:0x8f5b2c0
+				arguments:2
+				optionals:0
+				elipsis:0
+					offset
+					data
+		deleteData
+			method:(nil)
+			overload:0
+				return type:0x8f5b3d0
+				arguments:2
+				optionals:0
+				elipsis:0
+					offset
+					count
+		replaceData
+			method:(nil)
+			overload:0
+				return type:0x8f5b4f0
+				arguments:3
+				optionals:0
+				elipsis:0
+					offset
+					count
+					data
+		before
+			method:(nil)
+			overload:0
+				return type:0x8f12d98
+				arguments:1
+				optionals:0
+				elipsis:1
+					nodes
+						elipsis:1
+		after
+			method:(nil)
+			overload:0
+				return type:0x8f12ec8
+				arguments:1
+				optionals:0
+				elipsis:1
+					nodes
+						elipsis:1
+		replaceWith
+			method:(nil)
+			overload:0
+				return type:0x8f12ff8
+				arguments:1
+				optionals:0
+				elipsis:1
+					nodes
+						elipsis:1
+		remove
+			method:(nil)
+			overload:0
+				return type:0x8f13128
+				arguments:0
+				optionals:0
+				elipsis:0
+	4 attributes
+		data (nil) (nil)
+		length (nil)
+		previousElementSibling (nil)
+		nextElementSibling (nil)
+232 Comment
+	inherit:CharacterData
+	class:0x8f4f8e8
+233 ProcessingInstruction
+	inherit:CharacterData
+	class:0x8f4fa70
+	2 attributes
+		target (nil)
+		sheet (nil)
+234 Text
+	inherit:CharacterData
+	class:0x8f4f770
+	1 operations
+		splitText
+			method:(nil)
+			overload:0
+				return type:0x8f5b848
+				arguments:1
+				optionals:0
+				elipsis:0
+					offset
+	1 attributes
+		wholeText (nil)
+235 Attr
+	9 attributes
+		namespaceURI (nil)
+		prefix (nil)
+		localName (nil)
+		name (nil)
+		value (nil) (nil)
+		nodeValue (nil) (nil)
+		textContent (nil) (nil)
+		ownerElement (nil)
+		specified (nil)
+236 NamedNodeMap
+	7 operations
+		item
+			method:(nil)
+			overload:0
+				return type:0x8f5a2c0
+				arguments:1
+				optionals:0
+				elipsis:0
+					index
+		getNamedItem
+			method:(nil)
+			overload:0
+				return type:0x8f5a3c8
+				arguments:1
+				optionals:0
+				elipsis:0
+					name
+		getNamedItemNS
+			method:(nil)
+			overload:0
+				return type:0x8f5a4b0
+				arguments:2
+				optionals:0
+				elipsis:0
+					namespace
+					localName
+		setNamedItem
+			method:(nil)
+			overload:0
+				return type:0x8f5a5f8
+				arguments:1
+				optionals:0
+				elipsis:0
+					attr
+		setNamedItemNS
+			method:(nil)
+			overload:0
+				return type:0x8f5a700
+				arguments:1
+				optionals:0
+				elipsis:0
+					attr
+		removeNamedItem
+			method:(nil)
+			overload:0
+				return type:0x8f5a7f8
+				arguments:1
+				optionals:0
+				elipsis:0
+					name
+		removeNamedItemNS
+			method:(nil)
+			overload:0
+				return type:0x8f5a8d0
+				arguments:2
+				optionals:0
+				elipsis:0
+					namespace
+					localName
+	1 attributes
+		length (nil)
+237 DOMImplementation
+	4 operations
+		createDocumentType
+			method:(nil)
+			overload:0
+				return type:0x8f58290
+				arguments:3
+				optionals:0
+				elipsis:0
+					qualifiedName
+					publicId
+					systemId
+		createDocument
+			method:(nil)
+			overload:0
+				return type:0x8f58440
+				arguments:3
+				optionals:1
+				elipsis:0
+					namespace
+					qualifiedName
+					doctype
+						optional:1
+		createHTMLDocument
+			method:(nil)
+			overload:0
+				return type:0x8f586c8
+				arguments:1
+				optionals:1
+				elipsis:0
+					title
+						optional:1
+		hasFeature
+			method:(nil)
+			overload:0
+				return type:0x8f58788
+				arguments:0
+				optionals:0
+				elipsis:0
+238 Document
+	inherit:Node
+	class:0x8f14bd8
+	40 operations
+		getElementsByTagName
+			method:0x8f16ae8
+			overload:0
+				return type:0x8f56be0
+				arguments:1
+				optionals:0
+				elipsis:0
+					localName
+		getElementsByTagNameNS
+			method:(nil)
+			overload:0
+				return type:0x8f56cc8
+				arguments:2
+				optionals:0
+				elipsis:0
+					namespace
+					localName
+		getElementsByClassName
+			method:(nil)
+			overload:0
+				return type:0x8f56e10
+				arguments:1
+				optionals:0
+				elipsis:0
+					classNames
+		createElement
+			method:0x8f15b20
+			overload:0
+				return type:0x8f56f18
+				arguments:1
+				optionals:0
+				elipsis:0
+					localName
+		createElementNS
+			method:(nil)
+			overload:0
+				return type:0x8f57020
+				arguments:2
+				optionals:0
+				elipsis:0
+					namespace
+					qualifiedName
+		createDocumentFragment
+			method:(nil)
+			overload:0
+				return type:0x8f571a0
+				arguments:0
+				optionals:0
+				elipsis:0
+		createTextNode
+			method:0x8f14e98
+			overload:0
+				return type:0x8f57258
+				arguments:1
+				optionals:0
+				elipsis:0
+					data
+		createComment
+			method:(nil)
+			overload:0
+				return type:0x8f57360
+				arguments:1
+				optionals:0
+				elipsis:0
+					data
+		createProcessingInstruction
+			method:(nil)
+			overload:0
+				return type:0x8f57480
+				arguments:2
+				optionals:0
+				elipsis:0
+					target
+					data
+		importNode
+			method:(nil)
+			overload:0
+				return type:0x8f575d0
+				arguments:2
+				optionals:1
+				elipsis:0
+					node
+					deep
+						optional:1
+		adoptNode
+			method:(nil)
+			overload:0
+				return type:0x8f57730
+				arguments:1
+				optionals:0
+				elipsis:0
+					node
+		createAttribute
+			method:(nil)
+			overload:0
+				return type:0x8f57858
+				arguments:1
+				optionals:0
+				elipsis:0
+					localName
+		createAttributeNS
+			method:(nil)
+			overload:0
+				return type:0x8f57960
+				arguments:2
+				optionals:0
+				elipsis:0
+					namespace
+					name
+		createEvent
+			method:(nil)
+			overload:0
+				return type:0x8f57ac0
+				arguments:1
+				optionals:0
+				elipsis:0
+					interface
+		createRange
+			method:(nil)
+			overload:0
+				return type:0x8f57bc0
+				arguments:0
+				optionals:0
+				elipsis:0
+		createNodeIterator
+			method:(nil)
+			overload:0
+				return type:0x8f57c80
+				arguments:3
+				optionals:2
+				elipsis:0
+					root
+					whatToShow
+						optional:1
+					filter
+						optional:1
+		createTreeWalker
+			method:(nil)
+			overload:0
+				return type:0x8f57ec8
+				arguments:3
+				optionals:2
+				elipsis:0
+					root
+					whatToShow
+						optional:1
+					filter
+						optional:1
+		getElementsByName
+			method:(nil)
+			overload:0
+				return type:0x8f52cd8
+				arguments:1
+				optionals:0
+				elipsis:0
+					name
+			overload:1
+				return type:0x8f533a8
+				arguments:1
+				optionals:0
+				elipsis:0
+					elementName
+		open
+			method:(nil)
+			overload:0
+				return type:0x8f535d8
+				arguments:2
+				optionals:2
+				elipsis:0
+					type
+						optional:1
+					replace
+						optional:1
+		close
+			method:(nil)
+			overload:0
+				return type:0x8f53908
+				arguments:0
+				optionals:0
+				elipsis:0
+		write
+			method:0x8f14dd0
+			overload:0
+				return type:0x8f53968
+				arguments:1
+				optionals:0
+				elipsis:1
+					text
+						elipsis:1
+		writeln
+			method:0x8f152b8
+			overload:0
+				return type:0x8f53a28
+				arguments:1
+				optionals:0
+				elipsis:1
+					text
+						elipsis:1
+		hasFocus
+			method:(nil)
+			overload:0
+				return type:0x8f53c20
+				arguments:0
+				optionals:0
+				elipsis:0
+		execCommand
+			method:(nil)
+			overload:0
+				return type:0x8f53cd0
+				arguments:3
+				optionals:2
+				elipsis:0
+					commandId
+					showUI
+						optional:1
+					value
+						optional:1
+		queryCommandEnabled
+			method:(nil)
+			overload:0
+				return type:0x8f53e78
+				arguments:1
+				optionals:0
+				elipsis:0
+					commandId
+		queryCommandIndeterm
+			method:(nil)
+			overload:0
+				return type:0x8f53f38
+				arguments:1
+				optionals:0
+				elipsis:0
+					commandId
+		queryCommandState
+			method:(nil)
+			overload:0
+				return type:0x8f53ff0
+				arguments:1
+				optionals:0
+				elipsis:0
+					commandId
+		queryCommandSupported
+			method:(nil)
+			overload:0
+				return type:0x8f540b0
+				arguments:1
+				optionals:0
+				elipsis:0
+					commandId
+		queryCommandValue
+			method:(nil)
+			overload:0
+				return type:0x8f54168
+				arguments:1
+				optionals:0
+				elipsis:0
+					commandId
+		clear
+			method:(nil)
+			overload:0
+				return type:0x8f94de8
+				arguments:0
+				optionals:0
+				elipsis:0
+		captureEvents
+			method:(nil)
+			overload:0
+				return type:0x8f94e48
+				arguments:0
+				optionals:0
+				elipsis:0
+		releaseEvents
+			method:(nil)
+			overload:0
+				return type:0x8f94eb0
+				arguments:0
+				optionals:0
+				elipsis:0
+		enableStyleSheetsForSet
+			method:(nil)
+			overload:0
+				return type:0x8f5ffc8
+				arguments:1
+				optionals:0
+				elipsis:0
+					name
+		getElementById
+			method:0x8f165a8
+			overload:0
+				return type:0x8f11da0
+				arguments:1
+				optionals:0
+				elipsis:0
+					elementId
+		prepend
+			method:(nil)
+			overload:0
+				return type:0x8f12280
+				arguments:1
+				optionals:0
+				elipsis:1
+					nodes
+						elipsis:1
+		append
+			method:(nil)
+			overload:0
+				return type:0x8f123b0
+				arguments:1
+				optionals:0
+				elipsis:1
+					nodes
+						elipsis:1
+		query
+			method:(nil)
+			overload:0
+				return type:0x8f12520
+				arguments:1
+				optionals:0
+				elipsis:0
+					relativeSelectors
+		queryAll
+			method:(nil)
+			overload:0
+				return type:0x8f12658
+				arguments:1
+				optionals:0
+				elipsis:0
+					relativeSelectors
+		querySelector
+			method:(nil)
+			overload:0
+				return type:0x8f12748
+				arguments:1
+				optionals:0
+				elipsis:0
+					selectors
+		querySelectorAll
+			method:(nil)
+			overload:0
+				return type:0x8f12850
+				arguments:1
+				optionals:0
+				elipsis:0
+					selectors
+	113 attributes
+		implementation (nil)
+		URL (nil)
+		documentURI (nil)
+		origin (nil)
+		compatMode (nil)
+		characterSet (nil)
+		inputEncoding (nil)
+		contentType (nil)
+		doctype (nil)
+		documentElement 0x8f167a0
+		location 0x8f162a8
+		domain (nil) (nil)
+		referrer (nil)
+		cookie 0x8f16df8 (nil)
+		lastModified (nil)
+		readyState (nil)
+		title (nil) (nil)
+		dir (nil) (nil)
+		body 0x8f16110 (nil)
+		head 0x8f15e10
+		images (nil)
+		embeds (nil)
+		plugins (nil)
+		links (nil)
+		forms (nil)
+		scripts (nil)
+		cssElementMap (nil)
+		currentScript (nil)
+		defaultView (nil)
+		activeElement (nil)
+		designMode (nil) (nil)
+		commands (nil)
+		onreadystatechange 0x8f21550 0x8f21600
+		fgColor (nil) (nil)
+		linkColor (nil) (nil)
+		vlinkColor (nil) (nil)
+		alinkColor (nil) (nil)
+		bgColor (nil) (nil)
+		anchors (nil)
+		applets (nil)
+		all (nil)
+		styleSheets (nil)
+		selectedStyleSheetSet (nil) (nil)
+		lastStyleSheetSet (nil)
+		preferredStyleSheetSet (nil)
+		styleSheetSets (nil)
+		children (nil)
+		firstElementChild (nil)
+		lastElementChild (nil)
+		childElementCount (nil)
+		onabort 0x8f16ea0 0x8f16f48
+		onautocomplete 0x8f17158 0x8f17208
+		onautocompleteerror 0x8f16ff8 0x8f170a8
+		onblur 0x8f172b0 0x8f17358
+		oncancel 0x8f17400 0x8f174a8
+		oncanplay 0x8f176b0 0x8f17758
+		oncanplaythrough 0x8f17558 0x8f17608
+		onchange 0x8f17800 0x8f178a8
+		onclick 0x8f17950 0x8f179f8
+		onclose 0x8f17aa0 0x8f17b48
+		oncontextmenu 0x8f17bf8 0x8f17ca8
+		oncuechange 0x8f17d50 0x8f17df8
+		ondblclick 0x8f17ea0 0x8f17f48
+		ondrag 0x8f187d0 0x8f18878
+		ondragend 0x8f17ff0 0x8f18098
+		ondragenter 0x8f18140 0x8f181e8
+		ondragexit 0x8f18290 0x8f18338
+		ondragleave 0x8f183e0 0x8f18488
+		ondragover 0x8f18530 0x8f185d8
+		ondragstart 0x8f18680 0x8f18728
+		ondrop 0x8f18920 0x8f189c8
+		ondurationchange 0x8f1f420 0x8f1f4d0
+		onemptied 0x8f1f578 0x8f1f620
+		onended 0x8f1f6c8 0x8f1f770
+		onerror (nil) (nil)
+		onfocus 0x8f1f818 0x8f1f8c0
+		oninput 0x8f1f968 0x8f1fa10
+		oninvalid 0x8f1fab8 0x8f1fb60
+		onkeydown 0x8f1fc08 0x8f1fcb0
+		onkeypress 0x8f1fd58 0x8f1fe00
+		onkeyup 0x8f1fea8 0x8f1ff50
+		onload 0x8f20408 0x8f204b0
+		onloadeddata 0x8f20000 0x8f200b0
+		onloadedmetadata 0x8f20160 0x8f20210
+		onloadstart 0x8f202b8 0x8f20360
+		onmousedown 0x8f20558 0x8f20600
+		onmouseenter 0x8f206b0 0x8f20760
+		onmouseleave 0x8f20810 0x8f208c0
+		onmousemove 0x8f20968 0x8f20a10
+		onmouseout 0x8f20ab8 0x8f20b60
+		onmouseover 0x8f20c08 0x8f20cb0
+		onmouseup 0x8f20d58 0x8f20e00
+		onwheel 0x8f22a78 0x8f22b20
+		onpause 0x8f20ea8 0x8f20f50
+		onplay 0x8f21148 0x8f211f0
+		onplaying 0x8f20ff8 0x8f210a0
+		onprogress 0x8f21298 0x8f21340
+		onratechange 0x8f213f0 0x8f214a0
+		onreset 0x8f216a8 0x8f21750
+		onresize 0x8f217f8 0x8f218a0
+		onscroll 0x8f21948 0x8f219f0
+		onseeked 0x8f21a98 0x8f21b40
+		onseeking 0x8f21be8 0x8f21c90
+		onselect 0x8f21d38 0x8f21de0
+		onshow 0x8f21e88 0x8f21f30
+		onsort 0x8f21fd8 0x8f22080
+		onstalled 0x8f22128 0x8f221d0
+		onsubmit 0x8f22278 0x8f22320
+		onsuspend 0x8f223c8 0x8f22470
+		ontimeupdate 0x8f22520 0x8f225d0
+		ontoggle 0x8f22678 0x8f22720
+		onvolumechange 0x8f227d0 0x8f22880
+		onwaiting 0x8f22928 0x8f229d0
+239 XMLDocument
+	inherit:Document
+	class:0x8f4fbc0
+	1 operations
+		load
+			method:(nil)
+			overload:0
+				return type:0x8f543a8
+				arguments:1
+				optionals:0
+				elipsis:0
+					url
+240 MutationRecord
+	9 attributes
+		type (nil)
+		target (nil)
+		addedNodes (nil)
+		removedNodes (nil)
+		previousSibling (nil)
+		nextSibling (nil)
+		attributeName (nil)
+		attributeNamespace (nil)
+		oldValue (nil)
+241 MutationObserver
+	3 operations
+		observe
+			method:(nil)
+			overload:0
+				return type:0x8f138d0
+				arguments:2
+				optionals:0
+				elipsis:0
+					target
+					options
+		disconnect
+			method:(nil)
+			overload:0
+				return type:0x8f13a20
+				arguments:0
+				optionals:0
+				elipsis:0
+		takeRecords
+			method:(nil)
+			overload:0
+				return type:0x8f13ad8
+				arguments:0
+				optionals:0
+				elipsis:0
+242 DocumentType
+	inherit:Node
+	class:0x8f50038
+	4 operations
+		before
+			method:(nil)
+			overload:0
+				return type:0x8f12d98
+				arguments:1
+				optionals:0
+				elipsis:1
+					nodes
+						elipsis:1
+		after
+			method:(nil)
+			overload:0
+				return type:0x8f12ec8
+				arguments:1
+				optionals:0
+				elipsis:1
+					nodes
+						elipsis:1
+		replaceWith
+			method:(nil)
+			overload:0
+				return type:0x8f12ff8
+				arguments:1
+				optionals:0
+				elipsis:1
+					nodes
+						elipsis:1
+		remove
+			method:(nil)
+			overload:0
+				return type:0x8f13128
+				arguments:0
+				optionals:0
+				elipsis:0
+	3 attributes
+		name (nil)
+		publicId (nil)
+		systemId (nil)
+243 ChildNode
+	4 operations
+		before
+			method:(nil)
+			overload:0
+				return type:0x8f12d98
+				arguments:1
+				optionals:0
+				elipsis:1
+					nodes
+						elipsis:1
+		after
+			method:(nil)
+			overload:0
+				return type:0x8f12ec8
+				arguments:1
+				optionals:0
+				elipsis:1
+					nodes
+						elipsis:1
+		replaceWith
+			method:(nil)
+			overload:0
+				return type:0x8f12ff8
+				arguments:1
+				optionals:0
+				elipsis:1
+					nodes
+						elipsis:1
+		remove
+			method:(nil)
+			overload:0
+				return type:0x8f13128
+				arguments:0
+				optionals:0
+				elipsis:0
+244 NonDocumentTypeChildNode
+	2 attributes
+		previousElementSibling (nil)
+		nextElementSibling (nil)
+245 ParentNode
+	6 operations
+		prepend
+			method:(nil)
+			overload:0
+				return type:0x8f12280
+				arguments:1
+				optionals:0
+				elipsis:1
+					nodes
+						elipsis:1
+		append
+			method:(nil)
+			overload:0
+				return type:0x8f123b0
+				arguments:1
+				optionals:0
+				elipsis:1
+					nodes
+						elipsis:1
+		query
+			method:(nil)
+			overload:0
+				return type:0x8f12520
+				arguments:1
+				optionals:0
+				elipsis:0
+					relativeSelectors
+		queryAll
+			method:(nil)
+			overload:0
+				return type:0x8f12658
+				arguments:1
+				optionals:0
+				elipsis:0
+					relativeSelectors
+		querySelector
+			method:(nil)
+			overload:0
+				return type:0x8f12748
+				arguments:1
+				optionals:0
+				elipsis:0
+					selectors
+		querySelectorAll
+			method:(nil)
+			overload:0
+				return type:0x8f12850
+				arguments:1
+				optionals:0
+				elipsis:0
+					selectors
+	4 attributes
+		children (nil)
+		firstElementChild (nil)
+		lastElementChild (nil)
+		childElementCount (nil)
+246 DocumentFragment
+	inherit:Node
+	class:0x8f4fec0
+	7 operations
+		getElementById
+			method:(nil)
+			overload:0
+				return type:0x8f11da0
+				arguments:1
+				optionals:0
+				elipsis:0
+					elementId
+		prepend
+			method:(nil)
+			overload:0
+				return type:0x8f12280
+				arguments:1
+				optionals:0
+				elipsis:1
+					nodes
+						elipsis:1
+		append
+			method:(nil)
+			overload:0
+				return type:0x8f123b0
+				arguments:1
+				optionals:0
+				elipsis:1
+					nodes
+						elipsis:1
+		query
+			method:(nil)
+			overload:0
+				return type:0x8f12520
+				arguments:1
+				optionals:0
+				elipsis:0
+					relativeSelectors
+		queryAll
+			method:(nil)
+			overload:0
+				return type:0x8f12658
+				arguments:1
+				optionals:0
+				elipsis:0
+					relativeSelectors
+		querySelector
+			method:(nil)
+			overload:0
+				return type:0x8f12748
+				arguments:1
+				optionals:0
+				elipsis:0
+					selectors
+		querySelectorAll
+			method:(nil)
+			overload:0
+				return type:0x8f12850
+				arguments:1
+				optionals:0
+				elipsis:0
+					selectors
+	4 attributes
+		children (nil)
+		firstElementChild (nil)
+		lastElementChild (nil)
+		childElementCount (nil)
+247 NonElementParentNode
+	1 operations
+		getElementById
+			method:(nil)
+			overload:0
+				return type:0x8f11da0
+				arguments:1
+				optionals:0
+				elipsis:0
+					elementId
+248 EventListener
+	1 operations
+		handleEvent
+			method:(nil)
+			overload:0
+				return type:0x8f11b90
+				arguments:1
+				optionals:0
+				elipsis:0
+					event
+249 CustomEvent
+	inherit:Event
+	class:0x8f29d70
+	1 operations
+		initCustomEvent
+			method:(nil)
+			overload:0
+				return type:0x8f11380
+				arguments:4
+				optionals:0
+				elipsis:0
+					type
+					bubbles
+					cancelable
+					detail
+			overload:1
+				return type:0x8f9bf00
+				arguments:4
+				optionals:0
+				elipsis:0
+					typeArg
+					bubblesArg
+					cancelableArg
+					detailArg
+	1 attributes
+		detail (nil)
