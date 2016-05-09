@@ -28,16 +28,19 @@
 #include <strings.h>
 #include <sys/stat.h>
 #include <sys/types.h>
-#include <sys/time.h>
 #include <regex.h>
 #include <time.h>
 #include <errno.h>
+#include <curl/curl.h>
 
 #include "utils/config.h"
 #include "utils/log.h"
 #include "utils/messages.h"
 #include "utils/utf8.h"
 #include "utils/time.h"
+#include "utils/sys_time.h"
+#include "utils/inet.h"
+#include "utils/dirent.h"
 #include "utils/utils.h"
 
 /* exported interface documented in utils/utils.h */
@@ -47,13 +50,15 @@ char *remove_underscores(const char *s, bool replacespace)
 	char *ret;
 	len = strlen(s);
 	ret = malloc(len + 1);
-	if (ret == NULL)
+	if (ret == NULL) {
 		return NULL;
+        }
 	for (i = 0, ii = 0; i < len; i++) {
-		if (s[i] != '_')
+		if (s[i] != '_') {
 			ret[ii++] = s[i];
-		else if (replacespace)
+                } else if (replacespace) {
 			ret[ii++] = ' ';
+                }
 	}
 	ret[ii] = '\0';
 	return ret;
@@ -94,11 +99,14 @@ char *cnv_space2nbsp(const char *s)
 	char *d, *d0;
 	unsigned int numNBS;
 	/* Convert space & TAB into non breaking space character (0xA0) */
-	for (numNBS = 0, srcP = (const char *)s; *srcP != '\0'; ++srcP)
-		if (*srcP == ' ' || *srcP == '\t')
+	for (numNBS = 0, srcP = (const char *)s; *srcP != '\0'; ++srcP) {
+		if (*srcP == ' ' || *srcP == '\t') {
 			++numNBS;
-	if ((d = (char *)malloc((srcP - s) + numNBS + 1)) == NULL)
+                }
+        }
+	if ((d = (char *)malloc((srcP - s) + numNBS + 1)) == NULL) {
 		return NULL;
+        }
 	for (d0 = d, srcP = (const char *)s; *srcP != '\0'; ++srcP) {
 		if (*srcP == ' ' || *srcP == '\t') {
 			*d0++ = 0xC2;
@@ -116,8 +124,9 @@ bool is_dir(const char *path)
 {
 	struct stat s;
 
-	if (stat(path, &s))
+	if (stat(path, &s)) {
 		return false;
+        }
 
 	return S_ISDIR(s.st_mode) ? true : false;
 }
@@ -227,7 +236,7 @@ nserror regcomp_wrapper(regex_t *preg, const char *regex, int cflags)
  * The size of buffers within human_friendly_bytesize.
  *
  * We can have a fairly good estimate of how long the buffer needs to
- * be.  The unsigned long can store a value representing a maximum
+ * be.	The unsigned long can store a value representing a maximum
  * size of around 4 GB.  Therefore the greatest space required is to
  * represent 1023MB.  Currently that would be represented as "1023MB"
  * so 12 including a null terminator.  Ideally we would be able to
@@ -356,47 +365,15 @@ char *strndup(const char *s, size_t n)
 #endif
 
 
-/* Exported interface, documented in utils.h */
-int dir_sort_alpha(const struct dirent **d1, const struct dirent **d2)
-{
-	const char *s1 = (*d1)->d_name;
-	const char *s2 = (*d2)->d_name;
-
-	while (*s1 != '\0' && *s2 != '\0') {
-		if ((*s1 >= '0' && *s1 <= '9') &&
-				(*s2 >= '0' && *s2 <= '9')) {
-			int n1 = 0,  n2 = 0;
-			while (*s1 >= '0' && *s1 <= '9') {
-				n1 = n1 * 10 + (*s1) - '0';
-				s1++;
-			}
-			while (*s2 >= '0' && *s2 <= '9') {
-				n2 = n2 * 10 + (*s2) - '0';
-				s2++;
-			}
-			if (n1 != n2) {
-				return n1 - n2;
-			}
-			if (*s1 == '\0' || *s2 == '\0')
-				break;
-		}
-		if (tolower(*s1) != tolower(*s2))
-			break;
-
-		s1++;
-		s2++;
-	}
-
-	return tolower(*s1) - tolower(*s2);
-}
-
-
 #ifndef HAVE_SCANDIR
+
+/* exported function documented in utils/dirent.h */
 int alphasort(const struct dirent **d1, const struct dirent **d2)
 {
 	return strcasecmp((*d1)->d_name, (*d2)->d_name);
 }
 
+/* exported function documented in utils/dirent.h */
 int scandir(const char *dir, struct dirent ***namelist,
 		int (*sel)(const struct dirent *),
 		int (*compar)(const struct dirent **, const struct dirent **))
@@ -500,7 +477,7 @@ int uname(struct utsname *buf) {
 	strcpy(buf->release,"release");
 	strcpy(buf->version,"version");
 	strcpy(buf->machine,"pc");
-	
+
 	return 0;
 }
 #endif
@@ -526,7 +503,7 @@ int inet_aton(const char *cp, struct in_addr *inp)
 	unsigned int b1, b2, b3, b4;
 	unsigned char c;
 
-	if (strspn(cp, "0123456789.") < strlen(cp)) 
+	if (strspn(cp, "0123456789.") < strlen(cp))
 		return 0;
 
 	if (sscanf(cp, "%3u.%3u.%3u.%3u%c", &b1, &b2, &b3, &b4, &c) != 4)
@@ -550,17 +527,17 @@ int inet_pton(int af, const char *src, void *dst)
 
 	if (af == AF_INET) {
 		ret = inet_aton(src, dst);
-	} 
+	}
 #if !defined(NO_IPV6)
 	else if (af == AF_INET6) {
 		/* TODO: implement v6 address support */
 		ret = -1;
-		errno = EAFNOSUPPORT; 
-	} 
+		errno = EAFNOSUPPORT;
+	}
 #endif
 	else {
 		ret = -1;
-		errno = EAFNOSUPPORT; 
+		errno = EAFNOSUPPORT;
 	}
 
 	return ret;
@@ -588,10 +565,11 @@ int nsc_sntimet(char *str, size_t size, time_t *timep)
 	}
 
 	return strftime(str, size, "%s", ltm);
-#endif 
+#endif
 }
 
-nserror nsc_snptimet(char *str, size_t size, time_t *timep)
+/* exported function documented in utils/time.h */
+nserror nsc_snptimet(const char *str, size_t size, time_t *timep)
 {
 	time_t time_out;
 
@@ -627,4 +605,21 @@ nserror nsc_snptimet(char *str, size_t size, time_t *timep)
 	*timep = time_out;
 
 	return NSERROR_OK;
+}
+
+
+/* exported function documented in utils/time.h */
+nserror nsc_strntimet(const char *str, size_t size, time_t *timep)
+{
+	time_t result;
+
+	result = curl_getdate(str, NULL);
+
+	if (result == -1) {
+		return NSERROR_INVALID;
+        }
+
+        *timep = result;
+
+        return NSERROR_OK;
 }

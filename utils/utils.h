@@ -31,7 +31,6 @@
 #include <stddef.h>
 #include <stdlib.h>
 #include <sys/types.h>
-#include <sys/time.h>
 #include <regex.h>
 #include <assert.h>
 #include <stdarg.h>
@@ -77,12 +76,22 @@ struct dirent;
 #define PRId64 "lld"
 #endif
 
-/* Windows does not have POSIX formating codes or mkdir so work around that */
+/* Windows does not have sizet formating codes or POSIX mkdir so work
+ * around that
+ */
 #if defined(_WIN32)
-#define SSIZET_FMT "Iu"
+/** windows printf formatting for size_t type */
+#define PRIsizet "Iu"
+/** windows printf formatting for ssize_t type */
+#define PRIssizet "Id"
+/** windows mkdir function */
 #define nsmkdir(dir, mode) mkdir((dir))
 #else
-#define SSIZET_FMT "zd"
+/** c99 standard printf formatting for size_t type */
+#define PRIsizet "zu"
+/** c99 standard printf formatting for ssize_t type */
+#define PRIssizet "zd"
+/** POSIX mkdir function */
 #define nsmkdir(dir, mode) mkdir((dir), (mode))
 #endif
 
@@ -107,32 +116,6 @@ struct dirent;
  * \return The length of C string without its terminator.
  */
 #define SLEN(x) (sizeof((x)) - 1)
-
-
-#ifndef timeradd
-#define timeradd(a, aa, result)						\
-	do {								\
-		(result)->tv_sec = (a)->tv_sec + (aa)->tv_sec;		\
-		(result)->tv_usec = (a)->tv_usec + (aa)->tv_usec;	\
-		if ((result)->tv_usec >= 1000000) {			\
-			++(result)->tv_sec;				\
-			(result)->tv_usec -= 1000000;			\
-		}							\
-	} while (0)
-#endif
-
-#ifndef timersub
-#define timersub(a, aa, result)						\
-	do {								\
-		(result)->tv_sec = (a)->tv_sec - (aa)->tv_sec;		\
-		(result)->tv_usec = (a)->tv_usec - (aa)->tv_usec;	\
-		if ((result)->tv_usec < 0) {				\
-			--(result)->tv_sec;				\
-			(result)->tv_usec += 1000000;			\
-		}							\
-	} while (0)
-#endif
-
 
 
 /**
@@ -194,14 +177,6 @@ nserror regcomp_wrapper(regex_t *preg, const char *regex, int cflags);
 char *human_friendly_bytesize(unsigned long bytesize);
 
 /**
- * Create an RFC 1123 compliant date string from a Unix timestamp
- *
- * \param t The timestamp to consider
- * \return Pointer to buffer containing string - invalidated by next call.
- */
-const char *rfc1123_date(time_t t);
-
-/**
  * Returns a number of centiseconds, that increases in real time, for the
  * purposes of measuring how long something takes in wall-clock terms.
  *
@@ -255,17 +230,6 @@ nserror vsnstrjoin(char **str, size_t *size, char sep, size_t nelm, va_list ap);
  *         code on faliure.
  */
 nserror snstrjoin(char **str, size_t *size, char sep, size_t nelm, ...);
-
-/**
- * Comparison function for sorting directories.
- *
- * Correctly orders non zero-padded numerical parts.
- * ie. produces "file1, file2, file10" rather than "file1, file10, file2".
- *
- * d1	first directory entry
- * d2	second directory entry
- */
-int dir_sort_alpha(const struct dirent **d1, const struct dirent **d2);
 
 /* Platform specific functions */
 void warn_user(const char *warning, const char *detail);

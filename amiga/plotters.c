@@ -188,6 +188,11 @@ void ami_init_layers(struct gui_globals *gg, ULONG width, ULONG height, bool for
 		pool_pens = ami_misc_itempool_create(sizeof(struct ami_plot_pen));
 	}
 
+	gg->apen = 0x00000000;
+	gg->open = 0x00000000;
+	gg->apen_num = -1;
+	gg->open_num = -1;
+
 	init_layers_count++;
 	LOG("Layer initialised (total: %d)", init_layers_count);
 }
@@ -269,10 +274,17 @@ void ami_plot_release_pens(struct MinList *shared_pens)
 		Remove((struct Node *)node);
 		ami_misc_itempool_free(pool_pens, node, sizeof(struct ami_plot_pen));
 	} while((node = nnode));
+
+	glob->apen = 0x00000000;
+	glob->open = 0x00000000;
+	glob->apen_num = -1;
+	glob->open_num = -1;
 }
 
 static void ami_plot_setapen(struct RastPort *rp, ULONG colr)
 {
+	if(glob->apen == colr) return;
+
 #ifdef __amigaos4__
 	if(glob->palette_mapped == false) {
 		SetRPAttrs(rp, RPTAG_APenColor,
@@ -282,12 +294,16 @@ static void ami_plot_setapen(struct RastPort *rp, ULONG colr)
 #endif
 	{
 		LONG pen = ami_plot_obtain_pen(glob->shared_pens, colr);
-		if(pen != -1) SetAPen(rp, pen);
+		if((pen != -1) && (pen != glob->apen_num)) SetAPen(rp, pen);
 	}
+
+	glob->apen = colr;
 }
 
 static void ami_plot_setopen(struct RastPort *rp, ULONG colr)
 {
+	if(glob->open == colr) return;
+
 #ifdef __amigaos4__
 	if(glob->palette_mapped == false) {
 		SetRPAttrs(rp, RPTAG_OPenColor,
@@ -297,8 +313,10 @@ static void ami_plot_setopen(struct RastPort *rp, ULONG colr)
 #endif
 	{
 		LONG pen = ami_plot_obtain_pen(glob->shared_pens, colr);
-		if(pen != -1) SetOPen(rp, pen);
+		if((pen != -1) && (pen != glob->open_num)) SetOPen(rp, pen);
 	}
+
+	glob->open = colr;
 }
 
 void ami_plot_clear_bbox(struct RastPort *rp, struct IBox *bbox)
@@ -567,7 +585,7 @@ static bool ami_bitmap(int x, int y, int width, int height, struct bitmap *bitma
 		
 		if(glob->palette_mapped == false) {
 			tag = BLITA_UseSrcAlpha;
-			tag_data = !bitmap->opaque;
+			tag_data = !amiga_bitmap_get_opaque(bitmap);
 			minterm = 0xc0;
 		} else {
 			tag = BLITA_MaskPlane;
@@ -595,7 +613,8 @@ static bool ami_bitmap(int x, int y, int width, int height, struct bitmap *bitma
 #endif
 	}
 
-	if((bitmap->dto == NULL) && (tbm != bitmap->nativebm)) {
+	if((ami_bitmap_has_dto(bitmap) == false) && (ami_bitmap_is_nativebm(bitmap, tbm) == false)) {
+		/**\todo is this logic logical? */
 		ami_rtg_freebitmap(tbm);
 	}
 
@@ -623,7 +642,8 @@ static bool ami_bitmap_tile(int x, int y, int width, int height,
 		return ami_bitmap(x, y, width, height, bitmap);
 
 	/* If it is a one pixel transparent image, we are wasting our time */
-	if((bitmap->opaque == false) && (bitmap->width == 1) && (bitmap->height == 1))
+	if((amiga_bitmap_get_opaque(bitmap) == false) &&
+		(bitmap_get_width(bitmap) == 1) && (bitmap_get_height(bitmap) == 1))
 		return true;
 
 	tbm = ami_bitmap_get_native(bitmap,width,height,glob->rp->BitMap);
@@ -665,7 +685,7 @@ static bool ami_bitmap_tile(int x, int y, int width, int height,
 		ym = y;
 	}
 #ifdef __amigaos4__
-	if(bitmap->opaque)
+	if(amiga_bitmap_get_opaque(bitmap))
 	{
 		bfh = CreateBackFillHook(BFHA_BitMap,tbm,
 							BFHA_Width,width,
@@ -694,12 +714,13 @@ static bool ami_bitmap_tile(int x, int y, int width, int height,
 	InstallLayerHook(glob->rp->Layer,LAYERS_NOBACKFILL);
 
 #ifdef __amigaos4__
-	if(bitmap->opaque) DeleteBackFillHook(bfh);
+	if(amiga_bitmap_get_opaque(bitmap)) DeleteBackFillHook(bfh);
 		else
 #endif
 		FreeVec(bfh);
 
-	if((bitmap->dto == NULL) && (tbm != bitmap->nativebm)) {
+	if((ami_bitmap_has_dto(bitmap) == false) && (ami_bitmap_is_nativebm(bitmap, tbm) == false)) {
+		/**\todo is this logic logical? */
 		ami_rtg_freebitmap(tbm);
 	}
 

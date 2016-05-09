@@ -34,6 +34,10 @@ struct gui_globals
 	struct Rectangle rect;
 	struct MinList *shared_pens;
 	bool palette_mapped;
+	ULONG apen;
+	ULONG open;
+	LONG apen_num;
+	LONG open_num;
 	int width;  /* size of bm and    */
 	int height; /* associated memory */
 };

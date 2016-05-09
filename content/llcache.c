@@ -37,7 +37,6 @@
 #include <strings.h>
 #include <inttypes.h>
 
-#include <curl/curl.h>
 #include <nsutils/time.h>
 
 #include "utils/config.h"
@@ -590,59 +589,79 @@ static nserror llcache_fetch_split_header(const uint8_t *data, size_t len,
 static nserror llcache_fetch_parse_header(llcache_object *object,
 		const uint8_t *data, size_t len, char **name, char **value)
 {
-	nserror error;
+	nserror res;
 
 	/* Set fetch response time if not already set */
-	if (object->cache.res_time == 0)
+	if (object->cache.res_time == 0) {
 		object->cache.res_time = time(NULL);
+        }
 
 	/* Decompose header into name-value pair */
-	error = llcache_fetch_split_header(data, len, name, value);
-	if (error != NSERROR_OK)
-		return error;
+	res = llcache_fetch_split_header(data, len, name, value);
+	if (res != NSERROR_OK) {
+		return res;
+        }
 
 	/* Parse cache headers to populate cache control data */
-#define SKIP_ST(p) while (*p != '\0' && (*p == ' ' || *p == '\t')) p++
 
-	if (5 < len && strcasecmp(*name, "Date") == 0) {
+	if ((5 < len) &&
+            strcasecmp(*name, "Date") == 0) {
 		/* extract Date header */
-		object->cache.date = curl_getdate(*value, NULL);
-	} else if (4 < len && strcasecmp(*name, "Age") == 0) {
+                nsc_strntimet(*value,
+                              strlen(*value),
+                              &object->cache.date);
+	} else if ((4 < len) &&
+                   strcasecmp(*name, "Age") == 0) {
 		/* extract Age header */
-		if ('0' <= **value && **value <= '9')
+		if ('0' <= **value && **value <= '9') {
 			object->cache.age = atoi(*value);
-	} else if (8 < len && strcasecmp(*name, "Expires") == 0) {
+                }
+	} else if ((8 < len) &&
+                   strcasecmp(*name, "Expires") == 0) {
 		/* extract Expires header */
-		object->cache.expires = curl_getdate(*value, NULL);
-	} else if (14 < len && strcasecmp(*name, "Cache-Control") == 0) {
+                res = nsc_strntimet(*value,
+                                    strlen(*value),
+                                    &object->cache.expires);
+                if (res != NSERROR_OK) {
+                        object->cache.expires = (time_t)0x7fffffff;
+                }
+	} else if ((14 < len) &&
+                   strcasecmp(*name, "Cache-Control") == 0) {
 		/* extract and parse Cache-Control header */
 		const char *start = *value;
 		const char *comma = *value;
 
 		while (*comma != '\0') {
-			while (*comma != '\0' && *comma != ',')
+			while (*comma != '\0' && *comma != ',') {
 				comma++;
+                        }
 
-			if (8 < comma - start && (strncasecmp(start,
-					"no-cache", 8) == 0 ||
-					strncasecmp(start, "no-store", 8) == 0))
-				/* When we get a disk cache we should
-				 * distinguish between these two */
+			if ((8 < comma - start) &&
+                            (strncasecmp(start,	"no-cache", 8) == 0 ||
+                             strncasecmp(start, "no-store", 8) == 0)) {
+				/**
+                                 * \todo When we get a disk cache we should
+                                 *  distinguish between these two.
+                                 */
 				object->cache.no_cache = LLCACHE_VALIDATE_ALWAYS;
-			else if (7 < comma - start &&
-					strncasecmp(start, "max-age", 7) == 0) {
+			} else if ((7 < comma - start) &&
+                                   strncasecmp(start, "max-age", 7) == 0) {
 				/* Find '=' */
-				while (start < comma && *start != '=')
+				while (start < comma && *start != '=') {
 					start++;
+                                }
 
 				/* Skip over it */
 				start++;
 
+#define SKIP_ST(p) while (*p != '\0' && (*p == ' ' || *p == '\t')) p++
+
 				/* Skip whitespace */
 				SKIP_ST(start);
 
-				if (start < comma)
+				if (start < comma) {
 					object->cache.max_age = atoi(start);
+                                }
 			}
 
 			if (*comma != '\0') {
@@ -652,10 +671,13 @@ static nserror llcache_fetch_parse_header(llcache_object *object,
 				SKIP_ST(comma);
 			}
 
+#undef SKIP_ST
+
 			/* Set start for next token */
 			start = comma;
 		}
-	} else if (5 < len && strcasecmp(*name, "ETag") == 0) {
+	} else if ((5 < len) &&
+                   (strcasecmp(*name, "ETag") == 0)) {
 		/* extract ETag header */
 		free(object->cache.etag);
 		object->cache.etag = strdup(*value);
@@ -664,12 +686,14 @@ static nserror llcache_fetch_parse_header(llcache_object *object,
 			free(*value);
 			return NSERROR_NOMEM;
 		}
-	} else if (14 < len && strcasecmp(*name, "Last-Modified") == 0) {
+	} else if ((14 < len) &&
+                   (strcasecmp(*name, "Last-Modified") == 0)) {
 		/* extract Last-Modified header */
-		object->cache.last_modified = curl_getdate(*value, NULL);
+                nsc_strntimet(*value,
+                              strlen(*value),
+                              &object->cache.last_modified);
 	}
 
-#undef SKIP_ST
 
 	return NSERROR_OK;
 }
@@ -1239,7 +1263,7 @@ llcache_serialise_metadata(llcache_object *object,
 	datasize -= use;
 
 	/* object size */
-	use = snprintf(op, datasize, "%zu", object->source_len);
+	use = snprintf(op, datasize, "%" PRIsizet, object->source_len);
 	if (use < 0) {
 		goto operror;
 	}
@@ -1274,7 +1298,7 @@ llcache_serialise_metadata(llcache_object *object,
 	datasize -= use;
 
 	/* number of headers */
-	use = snprintf(op, datasize, "%zu", object->num_headers);
+	use = snprintf(op, datasize, "%" PRIsizet, object->num_headers);
 	if (use < 0) {
 		goto operror;
 	}
@@ -1386,7 +1410,8 @@ llcache_process_metadata(llcache_object *object)
 		 * by simply skipping caching of this object.
 		 */
 
-		LOG("Got metadata for %s instead of %s", nsurl_access(metadataurl), nsurl_access(object->url));
+		LOG("Got metadata for %s instead of %s",
+		    nsurl_access(metadataurl), nsurl_access(object->url));
 
 		nsurl_unref(metadataurl);
 
@@ -1402,7 +1427,7 @@ llcache_process_metadata(llcache_object *object)
 	ln += lnsize + 1;
 	lnsize = strlen(ln);
 
-	if ((lnsize < 1) || (sscanf(ln, "%zu", &source_length) != 1)) {
+	if ((lnsize < 1) || (sscanf(ln, "%" PRIsizet, &source_length) != 1)) {
 		res = NSERROR_INVALID;
 		goto format_error;
 	}
@@ -1443,7 +1468,7 @@ llcache_process_metadata(llcache_object *object)
 	ln += lnsize + 1;
 	lnsize = strlen(ln);
 
-	if ((lnsize < 1) || (sscanf(ln, "%zu", &num_headers) != 1)) {
+	if ((lnsize < 1) || (sscanf(ln, "%" PRIsizet, &num_headers) != 1)) {
 		res = NSERROR_INVALID;
 		goto format_error;
 	}
@@ -2461,7 +2486,7 @@ static void llcache_persist_slowcheck(void *p)
 		total_bandwidth = (llcache->total_written * 1000) / llcache->total_elapsed;
 
 		if (total_bandwidth < llcache->minimum_bandwidth) {
-			LOG("Current bandwidth %"PRIu64" less than minimum %zd",
+			LOG("Current bandwidth %" PRIu64 " less than minimum %" PRIsizet,
 			    total_bandwidth, llcache->minimum_bandwidth);
 			guit->llcache->finalise();
 		}
@@ -2528,7 +2553,7 @@ static void llcache_persist(void *p)
 				 *  Schedule a check in the future to see if
 				 *  overall performance is too slow to be useful.
 				 */
-				guit->browser->schedule(
+				guit->misc->schedule(
 						llcache->time_quantum * 100,
 						llcache_persist_slowcheck,
 						NULL);
@@ -2581,7 +2606,7 @@ static void llcache_persist(void *p)
 	     total_written, total_elapsed, total_bandwidth);
 
 	LLCACHE_LOG("Rescheduling writeout in %dms", next);
-	guit->browser->schedule(next, llcache_persist, NULL);
+	guit->misc->schedule(next, llcache_persist, NULL);
 }
 
 
@@ -2656,7 +2681,7 @@ static void llcache_fetch_callback(const fetch_msg *msg, void *p)
 		/* record when the fetch finished */
 		object->cache.fin_time = time(NULL);
 
-		guit->browser->schedule(5000, llcache_persist, NULL);
+		guit->misc->schedule(5000, llcache_persist, NULL);
 	}
 		break;
 
@@ -3439,7 +3464,7 @@ static void llcache_users_not_caught_up(void)
 {
 	if (llcache->all_caught_up) {
 		llcache->all_caught_up = false;
-		guit->browser->schedule(0, llcache_catch_up_all_users, NULL);
+		guit->misc->schedule(0, llcache_catch_up_all_users, NULL);
 	}
 }
 

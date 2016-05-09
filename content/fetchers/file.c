@@ -24,6 +24,7 @@
 
 #include "utils/config.h"
 
+#include <ctype.h>
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <fcntl.h>
@@ -36,7 +37,6 @@
 #include <strings.h>
 #include <time.h>
 #include <stdio.h>
-#include <dirent.h>
 #include <limits.h>
 #include <stdarg.h>
 
@@ -46,6 +46,7 @@
 
 #include <libwapcaplet/libwapcaplet.h>
 
+#include "utils/dirent.h"
 #include "utils/corestrings.h"
 #include "utils/nsoption.h"
 #include "utils/errors.h"
@@ -313,18 +314,21 @@ static void fetch_file_process_plain(struct fetch_file_context *ctx,
 
 	/* content type */
 	if (fetch_file_send_header(ctx, "Content-Type: %s", 
-			guit->fetch->filetype(ctx->path)))
+				   guit->fetch->filetype(ctx->path))) {
 		goto fetch_file_process_aborted;
+	}
 
 	/* content length */
-	if (fetch_file_send_header(ctx, "Content-Length: %"SSIZET_FMT, fdstat->st_size))
+	if (fetch_file_send_header(ctx, "Content-Length: %" PRIsizet,
+				   fdstat->st_size)) {
 		goto fetch_file_process_aborted;
+	}
 
 	/* create etag */
 	if (fetch_file_send_header(ctx, "ETag: \"%10" PRId64 "\"",
-			(int64_t) fdstat->st_mtime))
+				   (int64_t) fdstat->st_mtime)) {
 		goto fetch_file_process_aborted;
-
+	}
 
 	msg.type = FETCH_DATA;
 	msg.data.header_or_data.buf = (const uint8_t *) buf;
@@ -393,17 +397,21 @@ fetch_file_process_aborted:
 
 	/* content type */
 	if (fetch_file_send_header(ctx, "Content-Type: %s", 
-			guit->fetch->filetype(ctx->path)))
+				   guit->fetch->filetype(ctx->path))) {
 		goto fetch_file_process_aborted;
+	}
 
 	/* content length */
-	if (fetch_file_send_header(ctx, "Content-Length: %"SSIZET_FMT, fdstat->st_size))
+	if (fetch_file_send_header(ctx, "Content-Length: %" PRIsizet,
+				   fdstat->st_size)) {
 		goto fetch_file_process_aborted;
+	}
 
 	/* create etag */
 	if (fetch_file_send_header(ctx, "ETag: \"%10" PRId64 "\"", 
-			(int64_t) fdstat->st_mtime))
+				   (int64_t) fdstat->st_mtime)) {
 		goto fetch_file_process_aborted;
+	}
 
 	/* main data loop */
 	while (tot_read < fdstat->st_size) {
@@ -592,6 +600,48 @@ process_dir_ent(struct fetch_file_context *ctx,
 	free(urlpath);
 
 	return NSERROR_OK;
+}
+
+/**
+ * Comparison function for sorting directories.
+ *
+ * Correctly orders non zero-padded numerical parts.
+ * ie. produces "file1, file2, file10" rather than "file1, file10, file2".
+ *
+ * \param d1 first directory entry
+ * \param d2 second directory entry
+ */
+static int dir_sort_alpha(const struct dirent **d1, const struct dirent **d2)
+{
+	const char *s1 = (*d1)->d_name;
+	const char *s2 = (*d2)->d_name;
+
+	while (*s1 != '\0' && *s2 != '\0') {
+		if ((*s1 >= '0' && *s1 <= '9') &&
+				(*s2 >= '0' && *s2 <= '9')) {
+			int n1 = 0,  n2 = 0;
+			while (*s1 >= '0' && *s1 <= '9') {
+				n1 = n1 * 10 + (*s1) - '0';
+				s1++;
+			}
+			while (*s2 >= '0' && *s2 <= '9') {
+				n2 = n2 * 10 + (*s2) - '0';
+				s2++;
+			}
+			if (n1 != n2) {
+				return n1 - n2;
+			}
+			if (*s1 == '\0' || *s2 == '\0')
+				break;
+		}
+		if (tolower(*s1) != tolower(*s2))
+			break;
+
+		s1++;
+		s2++;
+	}
+
+	return tolower(*s1) - tolower(*s2);
 }
 
 static void fetch_file_process_dir(struct fetch_file_context *ctx,

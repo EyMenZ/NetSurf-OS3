@@ -8,7 +8,7 @@
 !define DESCRIPTION "Web Browser"
 # These three must be integers
 !define VERSIONMAJOR 3
-!define VERSIONMINOR 0
+!define VERSIONMINOR 6
 !define VERSIONBUILD 1
 # These will be displayed by the "Click here for support information" link in "Add/Remove Programs"
 # It is possible to use "mailto:" links in here to open the email client
@@ -59,9 +59,14 @@ section "install"
 	file "NetSurf.exe" 
 	file /oname=NetSurf.ico "windows\res\NetSurf.ico"
 	file /oname=default.css "windows\res\default.css"
+	file /oname=internal.css "windows\res\internal.css"
+	file /oname=adblock.css "windows\res\adblock.css"
 	file /oname=welcome.html "windows\res\welcome.html"
+	file /oname=credits.html "windows\res\credits.html"
+	file /oname=licence.html "windows\res\licence.html"
 	file /oname=netsurf.png "windows\res\netsurf.png"
 	file /oname=messages "build-Linux-windows\messages"
+	file /oname=ca-bundle.crt "windows\res\ca-bundle.crt"
 	# Add any other files for the install directory (license files, app data, etc) here
  
 	# Uninstaller - See function un.onInit and section "uninstall" for configuration
@@ -116,9 +121,14 @@ section "uninstall"
 	delete $INSTDIR\libcares-2.dll
 	delete $INSTDIR\libgnurx-0.dll
 	delete $INSTDIR\default.css
+	delete $INSTDIR\internal.css
+	delete $INSTDIR\adblock.css
 	delete $INSTDIR\welcome.html
+	delete $INSTDIR\credits.html
+	delete $INSTDIR\licence.html
 	delete $INSTDIR\netsurf.png
 	delete $INSTDIR\messages
+	delete $INSTDIR\ca-bundle.crt
 
 	# Always delete uninstaller as the last action
 	delete $INSTDIR\uninstall.exe

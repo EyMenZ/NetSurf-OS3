@@ -20,7 +20,6 @@
 #define _NETSURF_UTILS_CONFIG_H_
 
 #include <stddef.h>
-#include <dirent.h>
 
 /* Try to detect which features the target OS supports */
 
@@ -61,24 +60,16 @@ char *strchrnul(const char *s, int c);
 
 #define HAVE_SYS_SELECT
 #define HAVE_INETATON
+#define HAVE_POSIX_INET_HEADERS
 #if (defined(_WIN32))
 #undef HAVE_INETATON
 #undef HAVE_SYS_SELECT
-#include <winsock2.h>
-#ifndef EAFNOSUPPORT
-#define EAFNOSUPPORT WSAEAFNOSUPPORT
-#endif
-int inet_aton(const char *cp, struct in_addr *inp);
-#else
-#include <netinet/in.h>
-#include <arpa/inet.h>
-#include <sys/select.h>
+#undef HAVE_POSIX_INET_HEADERS
 #endif
 
 #define HAVE_INETPTON
 #if (defined(_WIN32))
 #undef HAVE_INETPTON
-int inet_pton(int af, const char *src, void *dst);
 #endif
 
 #define HAVE_UTSNAME
@@ -115,10 +106,6 @@ char *realpath(const char *path, char *resolved_path);
 #define HAVE_SCANDIR
 #if (defined(_WIN32))
 #undef HAVE_SCANDIR
-int alphasort(const struct dirent **d1, const struct dirent **d2);
-int scandir(const char *dir, struct dirent ***namelist,
-		int (*sel)(const struct dirent *),
-		int (*compar)(const struct dirent **, const struct dirent **));
 #endif
 
 /* This section toggles build options on and off.
@@ -144,11 +131,6 @@ int scandir(const char *dir, struct dirent ***namelist,
 #else
     /* We're likely to have a working mmap() */
     #define WITH_MMAP
-#endif
-
-/* gtk */
-#if defined(gtk)
-	#define WITH_THEME_INSTALL
 #endif
 
 /* amiga */

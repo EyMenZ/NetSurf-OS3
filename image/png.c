@@ -172,7 +172,10 @@ static void info_callback(png_structp png_s, png_infop info)
 	png_c->rowbytes = png_get_rowbytes(png_s, info);
 	png_c->interlace = (interlace == PNG_INTERLACE_ADAM7);
 
-	LOG("size %li * %li, rowbytes %zu", (unsigned long)width, (unsigned long)height, png_c->rowbytes);
+	LOG("size %li * %li, rowbytes %" PRIsizet, 
+	    (unsigned long)width,
+	    (unsigned long)height,
+	    png_c->rowbytes);
 }
 
 static void row_callback(png_structp png_s, png_bytep new_row,
@@ -276,7 +279,7 @@ static nserror nspng_create_png_data(nspng_content *png_c)
 }
 
 static nserror nspng_create(const content_handler *handler,
-		lwc_string *imime_type, const http_parameter *params,
+		lwc_string *imime_type, const struct http_parameter *params,
 		llcache_handle *llcache, const char *fallback_charset,
 		bool quirks, struct content **c)
 {

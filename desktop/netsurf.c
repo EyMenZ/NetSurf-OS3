@@ -106,14 +106,14 @@ static nserror netsurf_llcache_query_handler(const llcache_query *query,
 {
 	switch (query->type) {
 	case LLCACHE_QUERY_AUTH:
-		guit->browser->login(query->url, query->data.auth.realm, cb, cbpw);
+		guit->misc->login(query->url, query->data.auth.realm, cb, cbpw);
 		break;
 	case LLCACHE_QUERY_REDIRECT:
 		/** \todo Need redirect query dialog */
 		/* For now, do nothing, as this query type isn't emitted yet */
 		break;
 	case LLCACHE_QUERY_SSL:
-		guit->browser->cert_verify(query->url, query->data.ssl.certs,
+		guit->misc->cert_verify(query->url, query->data.ssl.certs,
 				query->data.ssl.num, cb, cbpw);
 		break;
 	}
@@ -161,7 +161,8 @@ nserror netsurf_init(const char *store_path)
 
 	if (hlcache_parameters.llcache.limit < MINIMUM_MEMORY_CACHE_SIZE) {
 		hlcache_parameters.llcache.limit = MINIMUM_MEMORY_CACHE_SIZE;
-		LOG("Setting minimum memory cache size %zd", hlcache_parameters.llcache.limit);
+		LOG("Setting minimum memory cache size %" PRIsizet,
+		    hlcache_parameters.llcache.limit);
 	} 
 
 	/* Set up the max attempts made to fetch a timing out resource */
@@ -244,7 +245,7 @@ void netsurf_exit(void)
 	hlcache_stop();
 	
 	LOG("Closing GUI");
-	guit->browser->quit();
+	guit->misc->quit();
 	
 	LOG("Finalising JavaScript");
 	js_finalise();

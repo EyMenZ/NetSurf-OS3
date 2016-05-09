@@ -21,6 +21,7 @@
 #include <limits.h>
 #include <stdbool.h>
 #include <windows.h>
+#include <io.h>
 
 #include "utils/utils.h"
 #include "utils/log.h"
@@ -98,6 +99,33 @@ static nserror set_defaults(struct nsoption_s *defaults)
 {
 	/* Set defaults for absent option strings */
 
+	/* locate CA bundle and set as default, cannot rely on curl
+	 * compiled in default on windows.
+	 */
+	DWORD res_len;
+	DWORD buf_tchar_size = PATH_MAX + 1;
+	DWORD buf_bytes_size = sizeof(TCHAR) * buf_tchar_size;
+	char *ptr = NULL;
+
+	char *buf;
+
+	buf = malloc(buf_bytes_size);
+	if (buf== NULL) {
+		return NSERROR_NOMEM;
+	}
+	buf[0] = '\0';
+
+	res_len = SearchPathA(NULL,
+			      "ca-bundle.crt",
+			      NULL,
+			      buf_tchar_size,
+			      buf,
+			      &ptr);
+	if (res_len > 0) {
+		nsoption_setnull_charp(ca_bundle, strdup(buf));
+	}
+	free(buf);
+	
 	/* ensure homepage option has a default */
 	nsoption_setnull_charp(homepage_url, strdup(NETSURF_HOMEPAGE));
 
@@ -105,7 +133,7 @@ static nserror set_defaults(struct nsoption_s *defaults)
 }
 
 
-static struct gui_browser_table win32_browser_table = {
+static struct gui_misc_table win32_misc_table = {
 	.schedule = win32_schedule,
 };
 
@@ -125,7 +153,7 @@ WinMain(HINSTANCE hInstance, HINSTANCE hLastInstance, LPSTR lpcli, int ncmd)
 	const char *addr;
 	nsurl *url;
 	struct netsurf_table win32_table = {
-		.browser = &win32_browser_table,
+		.misc = &win32_misc_table,
 		.window = win32_window_table,
 		.clipboard = win32_clipboard_table,
 		.download = win32_download_table,

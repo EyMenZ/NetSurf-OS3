@@ -35,6 +35,7 @@
 #include "assert.h"
 
 #include "utils/nsoption.h"
+#include "utils/nsurl.h"
 #include "utils/messages.h"
 #include "desktop/mouse.h"
 #include "desktop/gui_window.h"
@@ -45,6 +46,22 @@
 #include "amiga/download.h"
 #include "amiga/misc.h"
 #include "amiga/rtg.h"
+
+struct bitmap {
+	int width;
+	int height;
+	UBYTE *pixdata;
+	bool opaque;
+	int native;
+	struct BitMap *nativebm;
+	int nativebmwidth;
+	int nativebmheight;
+	PLANEPTR native_mask;
+	Object *dto;
+	struct nsurl *url;   /* temporary storage space */
+	char *title; /* temporary storage space */
+	ULONG *icondata; /* for appicons */
+};
 
 enum {
 	AMI_NSBM_NONE = 0,
@@ -126,10 +143,16 @@ void amiga_bitmap_destroy(void *bitmap)
 
 		if(bm->native_mask) FreeRaster(bm->native_mask, bm->width, bm->height);
 		FreeVec(bm->pixdata);
+
+		if(bm->url) nsurl_unref(bm->url);
+		if(bm->title) free(bm->title);
+
 		bm->pixdata = NULL;
 		bm->nativebm = NULL;
 		bm->native_mask = NULL;
 		bm->dto = NULL;
+		bm->url = NULL;
+		bm->title = NULL;
 	
 		ami_misc_itempool_free(pool_bitmap, bm, sizeof(struct bitmap));
 		bm = NULL;
@@ -194,7 +217,7 @@ bool amiga_bitmap_test_opaque(void *bitmap)
 	struct bitmap *bm = bitmap;
 	uint32 p = bm->width * bm->height;
 	uint32 a = 0;
-	uint32 *bmi = (uint32 *) bm->pixdata;
+	uint32 *bmi = (uint32 *)amiga_bitmap_get_buffer(bm);
 
 	assert(bitmap);
 
@@ -218,7 +241,7 @@ bool amiga_bitmap_get_opaque(void *bitmap)
 /**
  * get width of a bitmap.
  */
-static int bitmap_get_width(void *bitmap)
+int bitmap_get_width(void *bitmap)
 {
 	struct bitmap *bm = bitmap;
 
@@ -235,7 +258,7 @@ static int bitmap_get_width(void *bitmap)
 /**
  * get height of a bitmap.
  */
-static int bitmap_get_height(void *bitmap)
+int bitmap_get_height(void *bitmap)
 {
 	struct bitmap *bm = bitmap;
 
@@ -279,7 +302,7 @@ static void ami_bitmap_argb_to_rgba(struct bitmap *bm)
 void bitmap_dump(struct bitmap *bitmap)
 {
 	int x,y;
-	ULONG *bm = (ULONG *)bitmap->pixdata;
+	ULONG *bm = (ULONG *)amiga_bitmap_get_buffer(bitmap);
 
 	printf("Width=%ld, Height=%ld, Opaque=%s\nnativebm=%lx, width=%ld, height=%ld\n",
 		bitmap->width, bitmap->height, bitmap->opaque ? "true" : "false",
@@ -315,7 +338,7 @@ Object *ami_datatype_object_from_bitmap(struct bitmap *bitmap)
 		}
 
 		SetDTAttrs(dto,NULL,NULL,
-					DTA_ObjName,bitmap->url,
+					DTA_ObjName, bitmap->url ? nsurl_access(bitmap->url) : "",
 					DTA_ObjAnnotation,bitmap->title,
 					DTA_ObjAuthor,messages_get("NetSurf"),
 					DTA_NominalHoriz,bitmap_get_width(bitmap),
@@ -392,8 +415,9 @@ static inline struct BitMap *ami_bitmap_get_truecolour(struct bitmap *bitmap,int
 	{
 		if((tbm = ami_rtg_allocbitmap(bitmap->width, bitmap->height, 32, 0,
 								friendbm, AMI_BITMAP_FORMAT))) {
-			ami_rtg_writepixelarray(bitmap->pixdata, tbm, bitmap->width, bitmap->height,
-				bitmap->width * 4, AMI_BITMAP_FORMAT);
+			ami_rtg_writepixelarray(amiga_bitmap_get_buffer(bitmap),
+								tbm, bitmap->width, bitmap->height,
+								bitmap->width * 4, AMI_BITMAP_FORMAT);
 		}
 
 		if(nsoption_int(cache_bitmaps) == 2)
@@ -471,7 +495,7 @@ static inline struct BitMap *ami_bitmap_get_truecolour(struct bitmap *bitmap,int
 PLANEPTR ami_bitmap_get_mask(struct bitmap *bitmap, int width,
 			int height, struct BitMap *n_bm)
 {
-	uint32 *bmi = (uint32 *) bitmap->pixdata;
+	uint32 *bmi = (uint32 *) amiga_bitmap_get_buffer(bitmap);
 	UBYTE maskbit = 0;
 	ULONG bm_width;
 	int y, x, bpr;
@@ -598,7 +622,7 @@ static nserror bitmap_render(struct bitmap *bitmap, hlcache_handle *content)
 					BLITA_Height, bitmap->height,
 					BLITA_Source, bm_globals.bm,
 					BLITA_SrcType, BLITT_BITMAP,
-					BLITA_Dest, bitmap->pixdata,
+					BLITA_Dest, amiga_bitmap_get_buffer(bitmap),
 					BLITA_DestType, BLITT_ARGB32,
 					BLITA_DestBytesPerRow, 4 * bitmap->width,
 					BLITA_DestX, 0,
@@ -624,6 +648,41 @@ static nserror bitmap_render(struct bitmap *bitmap, hlcache_handle *content)
 
 	return NSERROR_OK;
 }
+
+void ami_bitmap_set_url(struct bitmap *bm, struct nsurl *url)
+{
+	if(bm->url != NULL) return;
+	bm->url = nsurl_ref(url);
+}
+
+void ami_bitmap_set_title(struct bitmap *bm, const char *title)
+{
+	if(bm->title != NULL) return;
+	bm->title = strdup(title);
+}
+
+ULONG *ami_bitmap_get_icondata(struct bitmap *bm)
+{
+	return bm->icondata;
+}
+
+void ami_bitmap_set_icondata(struct bitmap *bm, ULONG *icondata)
+{
+	bm->icondata = icondata;
+}
+
+bool ami_bitmap_has_dto(struct bitmap *bm)
+{
+	if(bm->dto) return true;
+		else return false;
+}
+
+bool ami_bitmap_is_nativebm(struct bitmap *bm, struct BitMap *nbm)
+{
+	if(bm->nativebm == nbm) return true;
+		else return false;
+}
+
 
 static struct gui_bitmap_table bitmap_table = {
 	.create = amiga_bitmap_create,

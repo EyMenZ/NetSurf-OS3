@@ -95,6 +95,7 @@ static struct nsgtk_resource_s pixbuf_resource[] = {
 	RES_ENTRY("favicon.png"),
 	RES_ENTRY("netsurf.xpm"),
 	RES_ENTRY("menu_cursor.png"),
+	RES_ENTRY("arrow_down_8x32.png"),
 	RES_ENTRY("throbber/throbber0.png"),
 	RES_ENTRY("throbber/throbber1.png"),
 	RES_ENTRY("throbber/throbber2.png"),
@@ -483,10 +484,16 @@ nsgdk_pixbuf_new_from_resname(const char *resname, GdkPixbuf **pixbuf_out)
 		/* pixbuf resources are not currently direct */
 		break;
 	}
+
 	if (new_pixbuf == NULL) {
-		LOG("Unable to create pixbuf from file for %s with path %s \"%s\"",
+		if (error != NULL) {
+			LOG("Unable to create pixbuf from file for %s with path %s \"%s\"",
 			    resource->name, resource->path, error->message);
-		g_error_free(error);
+			g_error_free(error);
+		} else {
+			LOG("Unable to create pixbuf from file for %s with path %s",
+			    resource->name, resource->path);
+		}
 		return NSERROR_INIT_FAILED;
 	}
 	*pixbuf_out = new_pixbuf;
