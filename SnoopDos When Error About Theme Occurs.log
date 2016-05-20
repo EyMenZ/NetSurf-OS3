@@ -1,0 +1,909 @@
+Process Name       Action       Target Name                                                        Options     Res. 
+------------       ------       -----------                                                        -------     ---- 
+KingCON DOS-proces ChangeDir    WinDH_C:cygwin/home/Administrator/netsurf                                           
+KingCON DOS-proces Lock         ""                                                                 Read        OK   
+KingCON DOS-proces *Lock        ""                                                                 Read        OK   
+KingCON DOS-proces ChangeDir    SYS:                                                                                
+[17] Shell Process FindVar      NetSurf                                                            Alias       Fail 
+[17] Shell Process GetVar       _pchar                                                             Local       Fail 
+[17] Shell Process GetVar       _mchar                                                             Local       Fail 
+[17] Shell Process ChangeDir    WinDH_C:cygwin/home/Administrator/netsurf                                           
+[17] Shell Process Lock         NetSurf                                                            Read        OK   
+[17] Shell Process *Lock        NetSurf                                                            Read        OK   
+[17] Shell Process Load         NetSurf                                                                        OK   
+[17] Shell Process *Open        NetSurf                                                            Read        OK   
+[17] Shell Process Lock         NetSurf                                                            Read        OK   
+[17] Shell Process *Lock        NetSurf                                                            Read        OK   
+[17] Shell Process ChangeDir    WinDH_C:cygwin/home/Administrator/netsurf                                           
+[17] NetSurf       RunCommand                                                                      8192        ---- 
+[17] NetSurf       OpenLib      utility.library                                                    Ver 37      OK   
+[17] NetSurf       Open         CONSOLE:                                                           Write       OK   
+[17] NetSurf       OpenLib      mathieeesingbas.library                                            Ver 33      OK   
+[17] NetSurf       OpenLib      mathieeedoubbas.library                                            Ver 33      OK   
+[17] NetSurf       OpenLib      mathieeedoubtrans.library                                          Ver 33      OK   
+[17] NetSurf       OpenLib      bsdsocket.library                                                  Ver 3       OK   
+[17] NetSurf       OpenDev      timer.device                                                       Unit 1      OK   
+[17] NetSurf       FindSem      NSDPatch (8.3.2002)                                                            OK   
+[17] NetSurf       OpenLib      locale.library                                                     Ver 38      OK   
+[17] NetSurf       OpenLib      usergroup.library                                                  Ver 0       OK   
+[17] NetSurf       OpenLib      utility.library                                                    Ver 37      OK   
+[17] NetSurf       OpenDev      timer.device                                                       Unit 1      OK   
+[17] NetSurf       FindSem      NSDPatch (8.3.2002)                                                            OK   
+[17] NetSurf       OpenLib      locale.library                                                     Ver 38      OK   
+[17] NetSurf       OpenRes      credential.resource                                                            OK   
+[17] NetSurf       OpenLib      version.library                                                    Ver 0       OK   
+ramlib             Load         LIBS:version.library                                                           OK   
+ramlib             *Open        LIBS:version.library                                               Read        OK   
+[17] NetSurf       OpenLib      utility.library                                                    Ver 37      OK   
+[17] NetSurf       OpenLib      asl.library                                                        Ver 37      OK   
+[17] NetSurf       OpenLib      datatypes.library                                                  Ver 39      OK   
+[17] NetSurf       OpenLib      diskfont.library                                                   Ver 40      OK   
+[17] NetSurf       OpenLib      gadtools.library                                                   Ver 37      OK   
+[17] NetSurf       OpenLib      graphics.library                                                   Ver 40      OK   
+[17] NetSurf       OpenLib      icon.library                                                       Ver 44      OK   
+[17] NetSurf       OpenLib      iffparse.library                                                   Ver 37      OK   
+[17] NetSurf       OpenLib      intuition.library                                                  Ver 40      OK   
+[17] NetSurf       OpenLib      keymap.library                                                     Ver 37      OK   
+[17] NetSurf       OpenLib      layers.library                                                     Ver 37      OK   
+[17] NetSurf       OpenLib      locale.library                                                     Ver 38      OK   
+[17] NetSurf       OpenLib      workbench.library                                                  Ver 37      OK   
+[17] NetSurf       OpenLib      Picasso96API.library                                               Ver 0       OK   
+[17] NetSurf       OpenLib      arexx.class                                                        Ver 44      OK   
+ramlib             Load         LIBS:arexx.class                                                               OK   
+ramlib             *Open        LIBS:arexx.class                                                   Read        Fail 
+ramlib             *Open        LIBS:arexx.class                                                   Read        OK   
+ramlib             OpenLib      intuition.library                                                  Ver 36      OK   
+ramlib             OpenLib      utility.library                                                    Ver 36      OK   
+[17] NetSurf       OpenLib      rexxsyslib.library                                                 Ver 0       OK   
+[17] NetSurf       OpenLib      images/bevel.image                                                 Ver 44      OK   
+[17] NetSurf       OpenLib      images/bitmap.image                                                Ver 44      OK   
+[17] NetSurf       OpenLib      gadgets/button.gadget                                              Ver 44      OK   
+[17] NetSurf       OpenLib      gadgets/checkbox.gadget                                            Ver 44      OK   
+[17] NetSurf       OpenLib      gadgets/chooser.gadget                                             Ver 44      OK   
+[17] NetSurf       OpenLib      gadgets/clicktab.gadget                                            Ver 44      OK   
+[17] NetSurf       OpenLib      gadgets/fuelgauge.gadget                                           Ver 44      OK   
+ramlib             Load         LIBS:gadgets/fuelgauge.gadget                                                  OK   
+ramlib             *Open        LIBS:gadgets/fuelgauge.gadget                                      Read        Fail 
+ramlib             *Open        LIBS:gadgets/fuelgauge.gadget                                      Read        OK   
+ramlib             OpenLib      intuition.library                                                  Ver 36      OK   
+ramlib             OpenLib      graphics.library                                                   Ver 36      OK   
+ramlib             OpenLib      utility.library                                                    Ver 36      OK   
+ramlib             OpenLib      layers.library                                                     Ver 36      OK   
+[17] NetSurf       OpenLib      diskfont.library                                                   Ver 36      OK   
+[17] NetSurf       OpenLib      images/bevel.image                                                 Ver 41      OK   
+[17] NetSurf       OpenLib      gadgets/getfile.gadget                                             Ver 44      OK   
+ramlib             Load         LIBS:gadgets/getfile.gadget                                                    OK   
+ramlib             *Open        LIBS:gadgets/getfile.gadget                                        Read        Fail 
+ramlib             *Open        LIBS:gadgets/getfile.gadget                                        Read        OK   
+ramlib             OpenLib      intuition.library                                                  Ver 36      OK   
+ramlib             OpenLib      graphics.library                                                   Ver 36      OK   
+ramlib             OpenLib      utility.library                                                    Ver 36      OK   
+ramlib             OpenLib      layers.library                                                     Ver 36      OK   
+[17] NetSurf       OpenLib      diskfont.library                                                   Ver 36      OK   
+[17] NetSurf       OpenLib      asl.library                                                        Ver 36      OK   
+[17] NetSurf       OpenLib      gadgets/string.gadget                                              Ver 41      OK   
+[17] NetSurf       OpenLib      gadgets/button.gadget                                              Ver 41      OK   
+[17] NetSurf       OpenLib      gadgets/listbrowser.gadget                                         Ver 41      OK   
+[17] NetSurf       FindTask     input.device                                                                   OK   
+[17] NetSurf       OpenLib      gadgets/getfont.gadget                                             Ver 44      OK   
+ramlib             Load         LIBS:gadgets/getfont.gadget                                                    OK   
+ramlib             *Open        LIBS:gadgets/getfont.gadget                                        Read        Fail 
+ramlib             *Open        LIBS:gadgets/getfont.gadget                                        Read        OK   
+ramlib             OpenLib      graphics.library                                                   Ver 36      OK   
+ramlib             OpenLib      intuition.library                                                  Ver 36      OK   
+ramlib             OpenLib      utility.library                                                    Ver 36      OK   
+ramlib             OpenLib      asl.library                                                        Ver 36      OK   
+ramlib             OpenLib      gadgets/button.gadget                                              Ver 36      OK   
+[17] NetSurf       OpenLib      gadgets/getscreenmode.gadget                                       Ver 44      OK   
+ramlib             Load         LIBS:gadgets/getscreenmode.gadget                                              OK   
+ramlib             *Open        LIBS:gadgets/getscreenmode.gadget                                  Read        Fail 
+ramlib             *Open        LIBS:gadgets/getscreenmode.gadget                                  Read        OK   
+[17] NetSurf       OpenLib      intuition.library                                                  Ver 36      OK   
+[17] NetSurf       OpenLib      graphics.library                                                   Ver 36      OK   
+[17] NetSurf       OpenLib      utility.library                                                    Ver 36      OK   
+[17] NetSurf       OpenLib      asl.library                                                        Ver 44      OK   
+[17] NetSurf       OpenLib      gadgets/button.gadget                                              Ver 41      OK   
+[17] NetSurf       OpenLib      gadgets/integer.gadget                                             Ver 44      OK   
+[17] NetSurf       OpenLib      images/label.image                                                 Ver 44      OK   
+[17] NetSurf       OpenLib      diskfont.library                                                   Ver 36      OK   
+[17] NetSurf       FindTask     input.device                                                                   OK   
+[17] NetSurf       OpenLib      gadgets/layout.gadget                                              Ver 44      OK   
+[17] NetSurf       FindTask     input.device                                                                   OK   
+[17] NetSurf       FindSem      REACTION-PREFS                                                                 OK   
+[17] NetSurf       OpenLib      gadgets/listbrowser.gadget                                         Ver 44      OK   
+[17] NetSurf       OpenLib      gadgets/radiobutton.gadget                                         Ver 44      OK   
+[17] NetSurf       OpenLib      gadgets/scroller.gadget                                            Ver 44      OK   
+[17] NetSurf       OpenLib      gadgets/space.gadget                                               Ver 44      OK   
+ramlib             Load         LIBS:gadgets/space.gadget                                                      OK   
+ramlib             *Open        LIBS:gadgets/space.gadget                                          Read        Fail 
+ramlib             *Open        LIBS:gadgets/space.gadget                                          Read        OK   
+ramlib             OpenLib      intuition.library                                                  Ver 36      OK   
+ramlib             OpenLib      graphics.library                                                   Ver 36      OK   
+ramlib             OpenLib      utility.library                                                    Ver 36      OK   
+ramlib             OpenLib      layers.library                                                     Ver 36      OK   
+[17] NetSurf       OpenLib      images/bevel.image                                                 Ver 41      OK   
+[17] NetSurf       OpenLib      gadgets/speedbar.gadget                                            Ver 44      OK   
+[17] NetSurf       OpenLib      gadgets/string.gadget                                              Ver 44      OK   
+[17] NetSurf       OpenLib      window.class                                                       Ver 44      OK   
+[17] NetSurf       OpenLib      diskfont.library                                                   Ver 36      OK   
+[17] NetSurf       OpenLib      icon.library                                                       Ver 44      OK   
+[17] NetSurf       OpenLib      workbench.library                                                  Ver 44      OK   
+[17] NetSurf       OpenLib      gadtools.library                                                   Ver 39      OK   
+[17] NetSurf       OpenLib      images/drawlist.image                                              Ver 42      OK   
+[17] NetSurf       OpenLib      gadgets/layout.gadget                                              Ver 42      OK   
+[17] NetSurf       OpenLib      gadgets/scroller.gadget                                            Ver 42      OK   
+[17] NetSurf       FindSem      REACTION-PREFS                                                                 OK   
+[17] NetSurf       OpenFont     RAfallback.font                                                    Size 8      OK   
+[17] NetSurf       FindSem      REACTION-PREFS                                                                 OK   
+[17] NetSurf       OpenFont     RAfallback.font                                                    Size 8      OK   
+[17] NetSurf       LockScreen   Workbench                                                                      OK   
+[17] NetSurf       Lock         PROGDIR:Resources/splash.png                                       Read        Fail 
+[17] NetSurf       *Lock        PROGDIR:Resources/splash.png                                       Read        Fail 
+[17] NetSurf       FindSem      REACTION-PREFS                                                                 OK   
+[17] NetSurf       OpenFont     ruby.font                                                          Size 24     Fail 
+[17] NetSurf       Lock         PROGDIR:Fonts/                                                     Read        OK   
+[17] NetSurf       *Lock        PROGDIR:Fonts/                                                     Read        OK   
+[17] NetSurf       ChangeDir    WinDH_C:cygwin/home/Administrator/netsurf/Fonts                                     
+[17] NetSurf       Open         fontcache                                                          Read        OK   
+[17] NetSurf       *Open        fontcache                                                          Read        OK   
+[17] NetSurf       Open         fontcache                                                          Write       OK   
+[17] NetSurf       *Open        fontcache                                                          Write       OK   
+[17] NetSurf       Open         fontcache                                                          Read        OK   
+[17] NetSurf       *Open        fontcache                                                          Read        OK   
+[17] NetSurf       ChangeDir    WinDH_C:cygwin/home/Administrator/netsurf                                           
+[17] NetSurf       ChangeDir    AmiKit:Fonts                                                                        
+[17] NetSurf       ChangeDir    AmiKit:Fonts                                                                        
+[17] NetSurf       ChangeDir    WinDH_C:cygwin/home/Administrator/netsurf                                           
+[17] NetSurf       ChangeDir    AmiKit:Utilities/PerfectPaint/FONTS                                                 
+[17] NetSurf       ChangeDir    AmiKit:Utilities/PerfectPaint/FONTS                                                 
+[17] NetSurf       ChangeDir    WinDH_C:cygwin/home/Administrator/netsurf                                           
+[17] NetSurf       ChangeDir    AmiKit:Fonts                                                                        
+[17] NetSurf       Open         ruby.font                                                          Read        OK   
+[17] NetSurf       *Open        ruby.font                                                          Read        OK   
+[17] NetSurf       Load         ruby/15                                                                        OK   
+[17] NetSurf       *Open        ruby/15                                                            Read        OK   
+[17] NetSurf       ChangeDir    WinDH_C:cygwin/home/Administrator/netsurf                                           
+[17] NetSurf       OpenFont     helvetica.font                                                     Size 16     OK   
+[17] NetSurf       Lock         PROGDIR:Fonts/                                                     Read        OK   
+[17] NetSurf       *Lock        PROGDIR:Fonts/                                                     Read        OK   
+[17] NetSurf       ChangeDir    WinDH_C:cygwin/home/Administrator/netsurf/Fonts                                     
+[17] NetSurf       Open         fontcache                                                          Read        OK   
+[17] NetSurf       *Open        fontcache                                                          Read        OK   
+[17] NetSurf       Open         fontcache                                                          Write       OK   
+[17] NetSurf       *Open        fontcache                                                          Write       OK   
+[17] NetSurf       Open         fontcache                                                          Read        OK   
+[17] NetSurf       *Open        fontcache                                                          Read        OK   
+[17] NetSurf       ChangeDir    WinDH_C:cygwin/home/Administrator/netsurf                                           
+[17] NetSurf       ChangeDir    AmiKit:Fonts                                                                        
+[17] NetSurf       ChangeDir    AmiKit:Fonts                                                                        
+[17] NetSurf       ChangeDir    WinDH_C:cygwin/home/Administrator/netsurf                                           
+[17] NetSurf       ChangeDir    AmiKit:Utilities/PerfectPaint/FONTS                                                 
+[17] NetSurf       ChangeDir    AmiKit:Utilities/PerfectPaint/FONTS                                                 
+[17] NetSurf       ChangeDir    WinDH_C:cygwin/home/Administrator/netsurf                                           
+[17] NetSurf       ChangeDir    AmiKit:Fonts                                                                        
+[17] NetSurf       Open         helvetica.font                                                     Read        OK   
+[17] NetSurf       *Open        helvetica.font                                                     Read        OK   
+[17] NetSurf       Load         helvetica/15                                                                   OK   
+[17] NetSurf       *Open        helvetica/15                                                       Read        OK   
+[17] NetSurf       ChangeDir    WinDH_C:cygwin/home/Administrator/netsurf                                           
+[17] NetSurf       OpenDev      timer.device                                                       Unit 3      OK   
+[17] NetSurf       FindSem      NSDPatch (8.3.2002)                                                            OK   
+[17] NetSurf       GetVar       user                                                               Global      Fail 
+[17] NetSurf       *Lock        ENV:                                                               Read        OK   
+[17] NetSurf       *Open        user                                                               Read        Fail 
+[17] NetSurf       MakeDir      PROGDIR:Users/Default                                                          OK   
+[17] NetSurf       *MakeDir     PROGDIR:Users/Default                                                          OK   
+[17] NetSurf       MakeDir      PROGDIR:Users/Default/Cache                                                    OK   
+[17] NetSurf       *MakeDir     PROGDIR:Users/Default/Cache                                                    OK   
+[17] NetSurf       MakeDir      PROGDIR:Users/Default/IconCache                                                OK   
+[17] NetSurf       *MakeDir     PROGDIR:Users/Default/IconCache                                                OK   
+[17] NetSurf       Open         PROGDIR:Resources/mimetypes                                        Read        Fail 
+[17] NetSurf       *Open        PROGDIR:Resources/mimetypes                                        Read        Fail 
+[17] NetSurf       Open         PROGDIR:Users/Default/mimetypes.user                               Read        Fail 
+[17] NetSurf       *Open        PROGDIR:Users/Default/mimetypes.user                               Read        Fail 
+[17] NetSurf       Open         PROGDIR:Resources/LangNames                                        Read        OK   
+[17] NetSurf       *Open        PROGDIR:Resources/LangNames                                        Read        OK   
+[17] NetSurf       Lock         FONTS:Code2000.otag                                                Read        Fail 
+[17] NetSurf       *Lock        FONTS:Code2000.otag                                                Read        Fail 
+[17] NetSurf       *Lock        FONTS:Code2000.otag                                                Read        Fail 
+[17] NetSurf       Lock         FONTS:Bitstream Cyberbit.otag                                      Read        Fail 
+[17] NetSurf       *Lock        FONTS:Bitstream Cyberbit.otag                                      Read        Fail 
+[17] NetSurf       *Lock        FONTS:Bitstream Cyberbit.otag                                      Read        Fail 
+[17] NetSurf       Lock         FONTS:Symbola.otag                                                 Read        Fail 
+[17] NetSurf       *Lock        FONTS:Symbola.otag                                                 Read        Fail 
+[17] NetSurf       *Lock        FONTS:Symbola.otag                                                 Read        Fail 
+[17] NetSurf       Open         PROGDIR:Users/Default/Choices                                      Read        Fail 
+[17] NetSurf       *Open        PROGDIR:Users/Default/Choices                                      Read        Fail 
+[17] NetSurf       Open         PROGDIR:Users/Default/Resource.map                                 Read        Fail 
+[17] NetSurf       *Open        PROGDIR:Users/Default/Resource.map                                 Read        Fail 
+[17] NetSurf       Lock         PROGDIR:Users/Default/Messages                                     Read        Fail 
+[17] NetSurf       *Lock        PROGDIR:Users/Default/Messages                                     Read        Fail 
+[17] NetSurf       Open         PROGDIR:Resources/Themes/Default/Resource.map                      Read        Fail 
+[17] NetSurf       *Open        PROGDIR:Resources/Themes/Default/Resource.map                      Read        Fail 
+[17] NetSurf       Lock         PROGDIR:Resources/Themes/Default/Messages                          Read        Fail 
+[17] NetSurf       *Lock        PROGDIR:Resources/Themes/Default/Messages                          Read        Fail 
+[17] NetSurf       Open         PROGDIR:Resources/LangNames                                        Read        OK   
+[17] NetSurf       *Open        PROGDIR:Resources/LangNames                                        Read        OK   
+[17] NetSurf       Open         PROGDIR:Resources/fr/Resource.map                                  Read        Fail 
+[17] NetSurf       *Open        PROGDIR:Resources/fr/Resource.map                                  Read        Fail 
+[17] NetSurf       Lock         PROGDIR:Resources/fr/Messages                                      Read        OK   
+[17] NetSurf       *Lock        PROGDIR:Resources/fr/Messages                                      Read        OK   
+[17] NetSurf       Open         PROGDIR:Resources/fr/Messages                                      Read        OK   
+[17] NetSurf       *Open        PROGDIR:Resources/fr/Messages                                      Read        OK   
+[17] NetSurf       GetVar       OPENSSL_CONF                                                       Any         OK   
+[17] NetSurf       *Lock        ENV:                                                               Read        OK   
+[17] NetSurf       *Open        OPENSSL_CONF                                                       Read        OK   
+[17] NetSurf       Open         SSLROOT:openssl.cnf                                                Read        OK   
+[17] NetSurf       *Open        SSLROOT:openssl.cnf                                                Read        OK   
+[17] NetSurf       OpenLib      version.library                                                    Ver 0       OK   
+ramlib             Load         LIBS:version.library                                                           OK   
+ramlib             *Open        LIBS:version.library                                               Read        OK   
+[17] NetSurf       Open         PROGDIR:Users/Default/Resource.map                                 Read        Fail 
+[17] NetSurf       *Open        PROGDIR:Users/Default/Resource.map                                 Read        Fail 
+[17] NetSurf       Lock         PROGDIR:Users/Default/adblock.css                                  Read        Fail 
+[17] NetSurf       *Lock        PROGDIR:Users/Default/adblock.css                                  Read        Fail 
+[17] NetSurf       Open         PROGDIR:Resources/Themes/Default/Resource.map                      Read        Fail 
+[17] NetSurf       *Open        PROGDIR:Resources/Themes/Default/Resource.map                      Read        Fail 
+[17] NetSurf       Lock         PROGDIR:Resources/Themes/Default/adblock.css                       Read        Fail 
+[17] NetSurf       *Lock        PROGDIR:Resources/Themes/Default/adblock.css                       Read        Fail 
+[17] NetSurf       Open         PROGDIR:Resources/LangNames                                        Read        OK   
+[17] NetSurf       *Open        PROGDIR:Resources/LangNames                                        Read        OK   
+[17] NetSurf       Open         PROGDIR:Resources/fr/Resource.map                                  Read        Fail 
+[17] NetSurf       *Open        PROGDIR:Resources/fr/Resource.map                                  Read        Fail 
+[17] NetSurf       Lock         PROGDIR:Resources/fr/adblock.css                                   Read        Fail 
+[17] NetSurf       *Lock        PROGDIR:Resources/fr/adblock.css                                   Read        Fail 
+[17] NetSurf       Open         PROGDIR:Resources/en/Resource.map                                  Read        Fail 
+[17] NetSurf       *Open        PROGDIR:Resources/en/Resource.map                                  Read        Fail 
+[17] NetSurf       Lock         PROGDIR:Resources/en/adblock.css                                   Read        Fail 
+[17] NetSurf       *Lock        PROGDIR:Resources/en/adblock.css                                   Read        Fail 
+[17] NetSurf       Open         PROGDIR:Resources/Resource.map                                     Read        OK   
+[17] NetSurf       *Open        PROGDIR:Resources/Resource.map                                     Read        OK   
+[17] NetSurf       Lock         PROGDIR:Resources/adblock.css                                      Read        OK   
+[17] NetSurf       *Lock        PROGDIR:Resources/adblock.css                                      Read        OK   
+[17] NetSurf       Lock         PROGDIR:Resources/adblock.css                                      Read        OK   
+[17] NetSurf       *Lock        PROGDIR:Resources/adblock.css                                      Read        OK   
+[17] NetSurf       Open         PROGDIR:Users/Default/Resource.map                                 Read        Fail 
+[17] NetSurf       *Open        PROGDIR:Users/Default/Resource.map                                 Read        Fail 
+[17] NetSurf       Lock         PROGDIR:Users/Default/default.css                                  Read        Fail 
+[17] NetSurf       *Lock        PROGDIR:Users/Default/default.css                                  Read        Fail 
+[17] NetSurf       Open         PROGDIR:Resources/Themes/Default/Resource.map                      Read        Fail 
+[17] NetSurf       *Open        PROGDIR:Resources/Themes/Default/Resource.map                      Read        Fail 
+[17] NetSurf       Lock         PROGDIR:Resources/Themes/Default/default.css                       Read        Fail 
+[17] NetSurf       *Lock        PROGDIR:Resources/Themes/Default/default.css                       Read        Fail 
+[17] NetSurf       Open         PROGDIR:Resources/LangNames                                        Read        OK   
+[17] NetSurf       *Open        PROGDIR:Resources/LangNames                                        Read        OK   
+[17] NetSurf       Open         PROGDIR:Resources/fr/Resource.map                                  Read        Fail 
+[17] NetSurf       *Open        PROGDIR:Resources/fr/Resource.map                                  Read        Fail 
+[17] NetSurf       Lock         PROGDIR:Resources/fr/default.css                                   Read        Fail 
+[17] NetSurf       *Lock        PROGDIR:Resources/fr/default.css                                   Read        Fail 
+[17] NetSurf       Open         PROGDIR:Resources/en/Resource.map                                  Read        Fail 
+[17] NetSurf       *Open        PROGDIR:Resources/en/Resource.map                                  Read        Fail 
+[17] NetSurf       Lock         PROGDIR:Resources/en/default.css                                   Read        Fail 
+[17] NetSurf       *Lock        PROGDIR:Resources/en/default.css                                   Read        Fail 
+[17] NetSurf       Open         PROGDIR:Resources/Resource.map                                     Read        OK   
+[17] NetSurf       *Open        PROGDIR:Resources/Resource.map                                     Read        OK   
+[17] NetSurf       Lock         PROGDIR:Resources/default.css                                      Read        OK   
+[17] NetSurf       *Lock        PROGDIR:Resources/default.css                                      Read        OK   
+[17] NetSurf       Lock         PROGDIR:Resources/default.css                                      Read        OK   
+[17] NetSurf       *Lock        PROGDIR:Resources/default.css                                      Read        OK   
+[17] NetSurf       Open         PROGDIR:Users/Default/Resource.map                                 Read        Fail 
+[17] NetSurf       *Open        PROGDIR:Users/Default/Resource.map                                 Read        Fail 
+[17] NetSurf       Lock         PROGDIR:Users/Default/internal.css                                 Read        Fail 
+[17] NetSurf       *Lock        PROGDIR:Users/Default/internal.css                                 Read        Fail 
+[17] NetSurf       Open         PROGDIR:Resources/Themes/Default/Resource.map                      Read        Fail 
+[17] NetSurf       *Open        PROGDIR:Resources/Themes/Default/Resource.map                      Read        Fail 
+[17] NetSurf       Lock         PROGDIR:Resources/Themes/Default/internal.css                      Read        Fail 
+[17] NetSurf       *Lock        PROGDIR:Resources/Themes/Default/internal.css                      Read        Fail 
+[17] NetSurf       Open         PROGDIR:Resources/LangNames                                        Read        OK   
+[17] NetSurf       *Open        PROGDIR:Resources/LangNames                                        Read        OK   
+[17] NetSurf       Open         PROGDIR:Resources/fr/Resource.map                                  Read        Fail 
+[17] NetSurf       *Open        PROGDIR:Resources/fr/Resource.map                                  Read        Fail 
+[17] NetSurf       Lock         PROGDIR:Resources/fr/internal.css                                  Read        Fail 
+[17] NetSurf       *Lock        PROGDIR:Resources/fr/internal.css                                  Read        Fail 
+[17] NetSurf       Open         PROGDIR:Resources/en/Resource.map                                  Read        Fail 
+[17] NetSurf       *Open        PROGDIR:Resources/en/Resource.map                                  Read        Fail 
+[17] NetSurf       Lock         PROGDIR:Resources/en/internal.css                                  Read        Fail 
+[17] NetSurf       *Lock        PROGDIR:Resources/en/internal.css                                  Read        Fail 
+[17] NetSurf       Open         PROGDIR:Resources/Resource.map                                     Read        OK   
+[17] NetSurf       *Open        PROGDIR:Resources/Resource.map                                     Read        OK   
+[17] NetSurf       Lock         PROGDIR:Resources/internal.css                                     Read        OK   
+[17] NetSurf       *Lock        PROGDIR:Resources/internal.css                                     Read        OK   
+[17] NetSurf       Lock         PROGDIR:Resources/internal.css                                     Read        OK   
+[17] NetSurf       *Lock        PROGDIR:Resources/internal.css                                     Read        OK   
+[17] NetSurf       Open         PROGDIR:Users/Default/Resource.map                                 Read        Fail 
+[17] NetSurf       *Open        PROGDIR:Users/Default/Resource.map                                 Read        Fail 
+[17] NetSurf       Lock         PROGDIR:Users/Default/quirks.css                                   Read        Fail 
+[17] NetSurf       *Lock        PROGDIR:Users/Default/quirks.css                                   Read        Fail 
+[17] NetSurf       Open         PROGDIR:Resources/Themes/Default/Resource.map                      Read        Fail 
+[17] NetSurf       *Open        PROGDIR:Resources/Themes/Default/Resource.map                      Read        Fail 
+[17] NetSurf       Lock         PROGDIR:Resources/Themes/Default/quirks.css                        Read        Fail 
+[17] NetSurf       *Lock        PROGDIR:Resources/Themes/Default/quirks.css                        Read        Fail 
+[17] NetSurf       Open         PROGDIR:Resources/LangNames                                        Read        OK   
+[17] NetSurf       *Open        PROGDIR:Resources/LangNames                                        Read        OK   
+[17] NetSurf       Open         PROGDIR:Resources/fr/Resource.map                                  Read        Fail 
+[17] NetSurf       *Open        PROGDIR:Resources/fr/Resource.map                                  Read        Fail 
+[17] NetSurf       Lock         PROGDIR:Resources/fr/quirks.css                                    Read        Fail 
+[17] NetSurf       *Lock        PROGDIR:Resources/fr/quirks.css                                    Read        Fail 
+[17] NetSurf       Open         PROGDIR:Resources/en/Resource.map                                  Read        Fail 
+[17] NetSurf       *Open        PROGDIR:Resources/en/Resource.map                                  Read        Fail 
+[17] NetSurf       Lock         PROGDIR:Resources/en/quirks.css                                    Read        Fail 
+[17] NetSurf       *Lock        PROGDIR:Resources/en/quirks.css                                    Read        Fail 
+[17] NetSurf       Open         PROGDIR:Resources/Resource.map                                     Read        OK   
+[17] NetSurf       *Open        PROGDIR:Resources/Resource.map                                     Read        OK   
+[17] NetSurf       Lock         PROGDIR:Resources/quirks.css                                       Read        OK   
+[17] NetSurf       *Lock        PROGDIR:Resources/quirks.css                                       Read        OK   
+[17] NetSurf       Lock         PROGDIR:Resources/quirks.css                                       Read        OK   
+[17] NetSurf       *Lock        PROGDIR:Resources/quirks.css                                       Read        OK   
+[17] NetSurf       Open         PROGDIR:Users/Default/Resource.map                                 Read        Fail 
+[17] NetSurf       *Open        PROGDIR:Users/Default/Resource.map                                 Read        Fail 
+[17] NetSurf       Lock         PROGDIR:Users/Default/user.css                                     Read        Fail 
+[17] NetSurf       *Lock        PROGDIR:Users/Default/user.css                                     Read        Fail 
+[17] NetSurf       Open         PROGDIR:Resources/Themes/Default/Resource.map                      Read        Fail 
+[17] NetSurf       *Open        PROGDIR:Resources/Themes/Default/Resource.map                      Read        Fail 
+[17] NetSurf       Lock         PROGDIR:Resources/Themes/Default/user.css                          Read        Fail 
+[17] NetSurf       *Lock        PROGDIR:Resources/Themes/Default/user.css                          Read        Fail 
+[17] NetSurf       Open         PROGDIR:Resources/LangNames                                        Read        OK   
+[17] NetSurf       *Open        PROGDIR:Resources/LangNames                                        Read        OK   
+[17] NetSurf       Open         PROGDIR:Resources/fr/Resource.map                                  Read        Fail 
+[17] NetSurf       *Open        PROGDIR:Resources/fr/Resource.map                                  Read        Fail 
+[17] NetSurf       Lock         PROGDIR:Resources/fr/user.css                                      Read        Fail 
+[17] NetSurf       *Lock        PROGDIR:Resources/fr/user.css                                      Read        Fail 
+[17] NetSurf       Open         PROGDIR:Resources/en/Resource.map                                  Read        Fail 
+[17] NetSurf       *Open        PROGDIR:Resources/en/Resource.map                                  Read        Fail 
+[17] NetSurf       Lock         PROGDIR:Resources/en/user.css                                      Read        Fail 
+[17] NetSurf       *Lock        PROGDIR:Resources/en/user.css                                      Read        Fail 
+[17] NetSurf       Open         PROGDIR:Resources/Resource.map                                     Read        OK   
+[17] NetSurf       *Open        PROGDIR:Resources/Resource.map                                     Read        OK   
+[17] NetSurf       Lock         PROGDIR:Resources/user.css                                         Read        Fail 
+[17] NetSurf       *Lock        PROGDIR:Resources/user.css                                         Read        Fail 
+[17] NetSurf       Open         PROGDIR:Users/Default/Resource.map                                 Read        Fail 
+[17] NetSurf       *Open        PROGDIR:Users/Default/Resource.map                                 Read        Fail 
+[17] NetSurf       Lock         PROGDIR:Users/Default/credits.html                                 Read        Fail 
+[17] NetSurf       *Lock        PROGDIR:Users/Default/credits.html                                 Read        Fail 
+[17] NetSurf       Open         PROGDIR:Resources/Themes/Default/Resource.map                      Read        Fail 
+[17] NetSurf       *Open        PROGDIR:Resources/Themes/Default/Resource.map                      Read        Fail 
+[17] NetSurf       Lock         PROGDIR:Resources/Themes/Default/credits.html                      Read        Fail 
+[17] NetSurf       *Lock        PROGDIR:Resources/Themes/Default/credits.html                      Read        Fail 
+[17] NetSurf       Open         PROGDIR:Resources/LangNames                                        Read        OK   
+[17] NetSurf       *Open        PROGDIR:Resources/LangNames                                        Read        OK   
+[17] NetSurf       Open         PROGDIR:Resources/fr/Resource.map                                  Read        Fail 
+[17] NetSurf       *Open        PROGDIR:Resources/fr/Resource.map                                  Read        Fail 
+[17] NetSurf       Lock         PROGDIR:Resources/fr/credits.html                                  Read        Fail 
+[17] NetSurf       *Lock        PROGDIR:Resources/fr/credits.html                                  Read        Fail 
+[17] NetSurf       Open         PROGDIR:Resources/en/Resource.map                                  Read        Fail 
+[17] NetSurf       *Open        PROGDIR:Resources/en/Resource.map                                  Read        Fail 
+[17] NetSurf       Lock         PROGDIR:Resources/en/credits.html                                  Read        Fail 
+[17] NetSurf       *Lock        PROGDIR:Resources/en/credits.html                                  Read        Fail 
+[17] NetSurf       Open         PROGDIR:Resources/Resource.map                                     Read        OK   
+[17] NetSurf       *Open        PROGDIR:Resources/Resource.map                                     Read        OK   
+[17] NetSurf       Lock         PROGDIR:Resources/credits.html                                     Read        Fail 
+[17] NetSurf       *Lock        PROGDIR:Resources/credits.html                                     Read        Fail 
+[17] NetSurf       Open         PROGDIR:Users/Default/Resource.map                                 Read        Fail 
+[17] NetSurf       *Open        PROGDIR:Users/Default/Resource.map                                 Read        Fail 
+[17] NetSurf       Lock         PROGDIR:Users/Default/credits.html,faf                             Read        Fail 
+[17] NetSurf       *Lock        PROGDIR:Users/Default/credits.html,faf                             Read        Fail 
+[17] NetSurf       Open         PROGDIR:Resources/Themes/Default/Resource.map                      Read        Fail 
+[17] NetSurf       *Open        PROGDIR:Resources/Themes/Default/Resource.map                      Read        Fail 
+[17] NetSurf       Lock         PROGDIR:Resources/Themes/Default/credits.html,faf                  Read        Fail 
+[17] NetSurf       *Lock        PROGDIR:Resources/Themes/Default/credits.html,faf                  Read        Fail 
+[17] NetSurf       Open         PROGDIR:Resources/LangNames                                        Read        OK   
+[17] NetSurf       *Open        PROGDIR:Resources/LangNames                                        Read        OK   
+[17] NetSurf       Open         PROGDIR:Resources/fr/Resource.map                                  Read        Fail 
+[17] NetSurf       *Open        PROGDIR:Resources/fr/Resource.map                                  Read        Fail 
+[17] NetSurf       Lock         PROGDIR:Resources/fr/credits.html,faf                              Read        Fail 
+[17] NetSurf       *Lock        PROGDIR:Resources/fr/credits.html,faf                              Read        Fail 
+[17] NetSurf       Open         PROGDIR:Resources/en/Resource.map                                  Read        Fail 
+[17] NetSurf       *Open        PROGDIR:Resources/en/Resource.map                                  Read        Fail 
+[17] NetSurf       Lock         PROGDIR:Resources/en/credits.html,faf                              Read        OK   
+[17] NetSurf       *Lock        PROGDIR:Resources/en/credits.html,faf                              Read        OK   
+[17] NetSurf       Lock         PROGDIR:Resources/en/credits.html,faf                              Read        OK   
+[17] NetSurf       *Lock        PROGDIR:Resources/en/credits.html,faf                              Read        OK   
+[17] NetSurf       Open         PROGDIR:Users/Default/Resource.map                                 Read        Fail 
+[17] NetSurf       *Open        PROGDIR:Users/Default/Resource.map                                 Read        Fail 
+[17] NetSurf       Lock         PROGDIR:Users/Default/licence.html                                 Read        Fail 
+[17] NetSurf       *Lock        PROGDIR:Users/Default/licence.html                                 Read        Fail 
+[17] NetSurf       Open         PROGDIR:Resources/Themes/Default/Resource.map                      Read        Fail 
+[17] NetSurf       *Open        PROGDIR:Resources/Themes/Default/Resource.map                      Read        Fail 
+[17] NetSurf       Lock         PROGDIR:Resources/Themes/Default/licence.html                      Read        Fail 
+[17] NetSurf       *Lock        PROGDIR:Resources/Themes/Default/licence.html                      Read        Fail 
+[17] NetSurf       Open         PROGDIR:Resources/LangNames                                        Read        OK   
+[17] NetSurf       *Open        PROGDIR:Resources/LangNames                                        Read        OK   
+[17] NetSurf       Open         PROGDIR:Resources/fr/Resource.map                                  Read        Fail 
+[17] NetSurf       *Open        PROGDIR:Resources/fr/Resource.map                                  Read        Fail 
+[17] NetSurf       Lock         PROGDIR:Resources/fr/licence.html                                  Read        Fail 
+[17] NetSurf       *Lock        PROGDIR:Resources/fr/licence.html                                  Read        Fail 
+[17] NetSurf       Open         PROGDIR:Resources/en/Resource.map                                  Read        Fail 
+[17] NetSurf       *Open        PROGDIR:Resources/en/Resource.map                                  Read        Fail 
+[17] NetSurf       Lock         PROGDIR:Resources/en/licence.html                                  Read        Fail 
+[17] NetSurf       *Lock        PROGDIR:Resources/en/licence.html                                  Read        Fail 
+[17] NetSurf       Open         PROGDIR:Resources/Resource.map                                     Read        OK   
+[17] NetSurf       *Open        PROGDIR:Resources/Resource.map                                     Read        OK   
+[17] NetSurf       Lock         PROGDIR:Resources/licence.html                                     Read        Fail 
+[17] NetSurf       *Lock        PROGDIR:Resources/licence.html                                     Read        Fail 
+[17] NetSurf       Open         PROGDIR:Users/Default/Resource.map                                 Read        Fail 
+[17] NetSurf       *Open        PROGDIR:Users/Default/Resource.map                                 Read        Fail 
+[17] NetSurf       Lock         PROGDIR:Users/Default/licence.html,faf                             Read        Fail 
+[17] NetSurf       *Lock        PROGDIR:Users/Default/licence.html,faf                             Read        Fail 
+[17] NetSurf       Open         PROGDIR:Resources/Themes/Default/Resource.map                      Read        Fail 
+[17] NetSurf       *Open        PROGDIR:Resources/Themes/Default/Resource.map                      Read        Fail 
+[17] NetSurf       Lock         PROGDIR:Resources/Themes/Default/licence.html,faf                  Read        Fail 
+[17] NetSurf       *Lock        PROGDIR:Resources/Themes/Default/licence.html,faf                  Read        Fail 
+[17] NetSurf       Open         PROGDIR:Resources/LangNames                                        Read        OK   
+[17] NetSurf       *Open        PROGDIR:Resources/LangNames                                        Read        OK   
+[17] NetSurf       Open         PROGDIR:Resources/fr/Resource.map                                  Read        Fail 
+[17] NetSurf       *Open        PROGDIR:Resources/fr/Resource.map                                  Read        Fail 
+[17] NetSurf       Lock         PROGDIR:Resources/fr/licence.html,faf                              Read        Fail 
+[17] NetSurf       *Lock        PROGDIR:Resources/fr/licence.html,faf                              Read        Fail 
+[17] NetSurf       Open         PROGDIR:Resources/en/Resource.map                                  Read        Fail 
+[17] NetSurf       *Open        PROGDIR:Resources/en/Resource.map                                  Read        Fail 
+[17] NetSurf       Lock         PROGDIR:Resources/en/licence.html,faf                              Read        OK   
+[17] NetSurf       *Lock        PROGDIR:Resources/en/licence.html,faf                              Read        OK   
+[17] NetSurf       Lock         PROGDIR:Resources/en/licence.html,faf                              Read        OK   
+[17] NetSurf       *Lock        PROGDIR:Resources/en/licence.html,faf                              Read        OK   
+[17] NetSurf       Open         PROGDIR:Users/Default/Resource.map                                 Read        Fail 
+[17] NetSurf       *Open        PROGDIR:Users/Default/Resource.map                                 Read        Fail 
+[17] NetSurf       Lock         PROGDIR:Users/Default/welcome.html                                 Read        Fail 
+[17] NetSurf       *Lock        PROGDIR:Users/Default/welcome.html                                 Read        Fail 
+[17] NetSurf       Open         PROGDIR:Resources/Themes/Default/Resource.map                      Read        Fail 
+[17] NetSurf       *Open        PROGDIR:Resources/Themes/Default/Resource.map                      Read        Fail 
+[17] NetSurf       Lock         PROGDIR:Resources/Themes/Default/welcome.html                      Read        Fail 
+[17] NetSurf       *Lock        PROGDIR:Resources/Themes/Default/welcome.html                      Read        Fail 
+[17] NetSurf       Open         PROGDIR:Resources/LangNames                                        Read        OK   
+[17] NetSurf       *Open        PROGDIR:Resources/LangNames                                        Read        OK   
+[17] NetSurf       Open         PROGDIR:Resources/fr/Resource.map                                  Read        Fail 
+[17] NetSurf       *Open        PROGDIR:Resources/fr/Resource.map                                  Read        Fail 
+[17] NetSurf       Lock         PROGDIR:Resources/fr/welcome.html                                  Read        Fail 
+[17] NetSurf       *Lock        PROGDIR:Resources/fr/welcome.html                                  Read        Fail 
+[17] NetSurf       Open         PROGDIR:Resources/en/Resource.map                                  Read        Fail 
+[17] NetSurf       *Open        PROGDIR:Resources/en/Resource.map                                  Read        Fail 
+[17] NetSurf       Lock         PROGDIR:Resources/en/welcome.html                                  Read        Fail 
+[17] NetSurf       *Lock        PROGDIR:Resources/en/welcome.html                                  Read        Fail 
+[17] NetSurf       Open         PROGDIR:Resources/Resource.map                                     Read        OK   
+[17] NetSurf       *Open        PROGDIR:Resources/Resource.map                                     Read        OK   
+[17] NetSurf       Lock         PROGDIR:Resources/welcome.html                                     Read        Fail 
+[17] NetSurf       *Lock        PROGDIR:Resources/welcome.html                                     Read        Fail 
+[17] NetSurf       Open         PROGDIR:Users/Default/Resource.map                                 Read        Fail 
+[17] NetSurf       *Open        PROGDIR:Users/Default/Resource.map                                 Read        Fail 
+[17] NetSurf       Lock         PROGDIR:Users/Default/welcome.html,faf                             Read        Fail 
+[17] NetSurf       *Lock        PROGDIR:Users/Default/welcome.html,faf                             Read        Fail 
+[17] NetSurf       Open         PROGDIR:Resources/Themes/Default/Resource.map                      Read        Fail 
+[17] NetSurf       *Open        PROGDIR:Resources/Themes/Default/Resource.map                      Read        Fail 
+[17] NetSurf       Lock         PROGDIR:Resources/Themes/Default/welcome.html,faf                  Read        Fail 
+[17] NetSurf       *Lock        PROGDIR:Resources/Themes/Default/welcome.html,faf                  Read        Fail 
+[17] NetSurf       Open         PROGDIR:Resources/LangNames                                        Read        OK   
+[17] NetSurf       *Open        PROGDIR:Resources/LangNames                                        Read        OK   
+[17] NetSurf       Open         PROGDIR:Resources/fr/Resource.map                                  Read        Fail 
+[17] NetSurf       *Open        PROGDIR:Resources/fr/Resource.map                                  Read        Fail 
+[17] NetSurf       Lock         PROGDIR:Resources/fr/welcome.html,faf                              Read        Fail 
+[17] NetSurf       *Lock        PROGDIR:Resources/fr/welcome.html,faf                              Read        Fail 
+[17] NetSurf       Open         PROGDIR:Resources/en/Resource.map                                  Read        Fail 
+[17] NetSurf       *Open        PROGDIR:Resources/en/Resource.map                                  Read        Fail 
+[17] NetSurf       Lock         PROGDIR:Resources/en/welcome.html,faf                              Read        OK   
+[17] NetSurf       *Lock        PROGDIR:Resources/en/welcome.html,faf                              Read        OK   
+[17] NetSurf       Lock         PROGDIR:Resources/en/welcome.html,faf                              Read        OK   
+[17] NetSurf       *Lock        PROGDIR:Resources/en/welcome.html,faf                              Read        OK   
+[17] NetSurf       Open         PROGDIR:Users/Default/Resource.map                                 Read        Fail 
+[17] NetSurf       *Open        PROGDIR:Users/Default/Resource.map                                 Read        Fail 
+[17] NetSurf       Lock         PROGDIR:Users/Default/maps.html                                    Read        Fail 
+[17] NetSurf       *Lock        PROGDIR:Users/Default/maps.html                                    Read        Fail 
+[17] NetSurf       Open         PROGDIR:Resources/Themes/Default/Resource.map                      Read        Fail 
+[17] NetSurf       *Open        PROGDIR:Resources/Themes/Default/Resource.map                      Read        Fail 
+[17] NetSurf       Lock         PROGDIR:Resources/Themes/Default/maps.html                         Read        Fail 
+[17] NetSurf       *Lock        PROGDIR:Resources/Themes/Default/maps.html                         Read        Fail 
+[17] NetSurf       Open         PROGDIR:Resources/LangNames                                        Read        OK   
+[17] NetSurf       *Open        PROGDIR:Resources/LangNames                                        Read        OK   
+[17] NetSurf       Open         PROGDIR:Resources/fr/Resource.map                                  Read        Fail 
+[17] NetSurf       *Open        PROGDIR:Resources/fr/Resource.map                                  Read        Fail 
+[17] NetSurf       Lock         PROGDIR:Resources/fr/maps.html                                     Read        Fail 
+[17] NetSurf       *Lock        PROGDIR:Resources/fr/maps.html                                     Read        Fail 
+[17] NetSurf       Open         PROGDIR:Resources/en/Resource.map                                  Read        Fail 
+[17] NetSurf       *Open        PROGDIR:Resources/en/Resource.map                                  Read        Fail 
+[17] NetSurf       Lock         PROGDIR:Resources/en/maps.html                                     Read        Fail 
+[17] NetSurf       *Lock        PROGDIR:Resources/en/maps.html                                     Read        Fail 
+[17] NetSurf       Open         PROGDIR:Resources/Resource.map                                     Read        OK   
+[17] NetSurf       *Open        PROGDIR:Resources/Resource.map                                     Read        OK   
+[17] NetSurf       Lock         PROGDIR:Resources/maps.html                                        Read        Fail 
+[17] NetSurf       *Lock        PROGDIR:Resources/maps.html                                        Read        Fail 
+[17] NetSurf       Open         PROGDIR:Users/Default/Resource.map                                 Read        Fail 
+[17] NetSurf       *Open        PROGDIR:Users/Default/Resource.map                                 Read        Fail 
+[17] NetSurf       Lock         PROGDIR:Users/Default/maps.html,faf                                Read        Fail 
+[17] NetSurf       *Lock        PROGDIR:Users/Default/maps.html,faf                                Read        Fail 
+[17] NetSurf       Open         PROGDIR:Resources/Themes/Default/Resource.map                      Read        Fail 
+[17] NetSurf       *Open        PROGDIR:Resources/Themes/Default/Resource.map                      Read        Fail 
+[17] NetSurf       Lock         PROGDIR:Resources/Themes/Default/maps.html,faf                     Read        Fail 
+[17] NetSurf       *Lock        PROGDIR:Resources/Themes/Default/maps.html,faf                     Read        Fail 
+[17] NetSurf       Open         PROGDIR:Resources/LangNames                                        Read        OK   
+[17] NetSurf       *Open        PROGDIR:Resources/LangNames                                        Read        OK   
+[17] NetSurf       Open         PROGDIR:Resources/fr/Resource.map                                  Read        Fail 
+[17] NetSurf       *Open        PROGDIR:Resources/fr/Resource.map                                  Read        Fail 
+[17] NetSurf       Lock         PROGDIR:Resources/fr/maps.html,faf                                 Read        Fail 
+[17] NetSurf       *Lock        PROGDIR:Resources/fr/maps.html,faf                                 Read        Fail 
+[17] NetSurf       Open         PROGDIR:Resources/en/Resource.map                                  Read        Fail 
+[17] NetSurf       *Open        PROGDIR:Resources/en/Resource.map                                  Read        Fail 
+[17] NetSurf       Lock         PROGDIR:Resources/en/maps.html,faf                                 Read        OK   
+[17] NetSurf       *Lock        PROGDIR:Resources/en/maps.html,faf                                 Read        OK   
+[17] NetSurf       Lock         PROGDIR:Resources/en/maps.html,faf                                 Read        OK   
+[17] NetSurf       *Lock        PROGDIR:Resources/en/maps.html,faf                                 Read        OK   
+[17] NetSurf       Open         PROGDIR:Users/Default/Resource.map                                 Read        Fail 
+[17] NetSurf       *Open        PROGDIR:Users/Default/Resource.map                                 Read        Fail 
+[17] NetSurf       Lock         PROGDIR:Users/Default/favicon.ico                                  Read        Fail 
+[17] NetSurf       *Lock        PROGDIR:Users/Default/favicon.ico                                  Read        Fail 
+[17] NetSurf       Open         PROGDIR:Resources/Themes/Default/Resource.map                      Read        Fail 
+[17] NetSurf       *Open        PROGDIR:Resources/Themes/Default/Resource.map                      Read        Fail 
+[17] NetSurf       Lock         PROGDIR:Resources/Themes/Default/favicon.ico                       Read        Fail 
+[17] NetSurf       *Lock        PROGDIR:Resources/Themes/Default/favicon.ico                       Read        Fail 
+[17] NetSurf       Open         PROGDIR:Resources/LangNames                                        Read        OK   
+[17] NetSurf       *Open        PROGDIR:Resources/LangNames                                        Read        OK   
+[17] NetSurf       Open         PROGDIR:Resources/fr/Resource.map                                  Read        Fail 
+[17] NetSurf       *Open        PROGDIR:Resources/fr/Resource.map                                  Read        Fail 
+[17] NetSurf       Lock         PROGDIR:Resources/fr/favicon.ico                                   Read        Fail 
+[17] NetSurf       *Lock        PROGDIR:Resources/fr/favicon.ico                                   Read        Fail 
+[17] NetSurf       Open         PROGDIR:Resources/en/Resource.map                                  Read        Fail 
+[17] NetSurf       *Open        PROGDIR:Resources/en/Resource.map                                  Read        Fail 
+[17] NetSurf       Lock         PROGDIR:Resources/en/favicon.ico                                   Read        Fail 
+[17] NetSurf       *Lock        PROGDIR:Resources/en/favicon.ico                                   Read        Fail 
+[17] NetSurf       Open         PROGDIR:Resources/Resource.map                                     Read        OK   
+[17] NetSurf       *Open        PROGDIR:Resources/Resource.map                                     Read        OK   
+[17] NetSurf       Lock         PROGDIR:Resources/favicon.png                                      Read        Fail 
+[17] NetSurf       *Lock        PROGDIR:Resources/favicon.png                                      Read        Fail 
+[17] NetSurf       Open         PROGDIR:Users/Default/Resource.map                                 Read        Fail 
+[17] NetSurf       *Open        PROGDIR:Users/Default/Resource.map                                 Read        Fail 
+[17] NetSurf       Lock         PROGDIR:Users/Default/default.ico                                  Read        Fail 
+[17] NetSurf       *Lock        PROGDIR:Users/Default/default.ico                                  Read        Fail 
+[17] NetSurf       Open         PROGDIR:Resources/Themes/Default/Resource.map                      Read        Fail 
+[17] NetSurf       *Open        PROGDIR:Resources/Themes/Default/Resource.map                      Read        Fail 
+[17] NetSurf       Lock         PROGDIR:Resources/Themes/Default/default.ico                       Read        Fail 
+[17] NetSurf       *Lock        PROGDIR:Resources/Themes/Default/default.ico                       Read        Fail 
+[17] NetSurf       Open         PROGDIR:Resources/LangNames                                        Read        OK   
+[17] NetSurf       *Open        PROGDIR:Resources/LangNames                                        Read        OK   
+[17] NetSurf       Open         PROGDIR:Resources/fr/Resource.map                                  Read        Fail 
+[17] NetSurf       *Open        PROGDIR:Resources/fr/Resource.map                                  Read        Fail 
+[17] NetSurf       Lock         PROGDIR:Resources/fr/default.ico                                   Read        Fail 
+[17] NetSurf       *Lock        PROGDIR:Resources/fr/default.ico                                   Read        Fail 
+[17] NetSurf       Open         PROGDIR:Resources/en/Resource.map                                  Read        Fail 
+[17] NetSurf       *Open        PROGDIR:Resources/en/Resource.map                                  Read        Fail 
+[17] NetSurf       Lock         PROGDIR:Resources/en/default.ico                                   Read        Fail 
+[17] NetSurf       *Lock        PROGDIR:Resources/en/default.ico                                   Read        Fail 
+[17] NetSurf       Open         PROGDIR:Resources/Resource.map                                     Read        OK   
+[17] NetSurf       *Open        PROGDIR:Resources/Resource.map                                     Read        OK   
+[17] NetSurf       Lock         PROGDIR:Resources/icons/search.png                                 Read        OK   
+[17] NetSurf       *Lock        PROGDIR:Resources/icons/search.png                                 Read        OK   
+[17] NetSurf       Lock         PROGDIR:Resources/icons/search.png                                 Read        OK   
+[17] NetSurf       *Lock        PROGDIR:Resources/icons/search.png                                 Read        OK   
+[17] NetSurf       Open         PROGDIR:Users/Default/Resource.map                                 Read        Fail 
+[17] NetSurf       *Open        PROGDIR:Users/Default/Resource.map                                 Read        Fail 
+[17] NetSurf       Lock         PROGDIR:Users/Default/netsurf.png                                  Read        Fail 
+[17] NetSurf       *Lock        PROGDIR:Users/Default/netsurf.png                                  Read        Fail 
+[17] NetSurf       Open         PROGDIR:Resources/Themes/Default/Resource.map                      Read        Fail 
+[17] NetSurf       *Open        PROGDIR:Resources/Themes/Default/Resource.map                      Read        Fail 
+[17] NetSurf       Lock         PROGDIR:Resources/Themes/Default/netsurf.png                       Read        Fail 
+[17] NetSurf       *Lock        PROGDIR:Resources/Themes/Default/netsurf.png                       Read        Fail 
+[17] NetSurf       Open         PROGDIR:Resources/LangNames                                        Read        OK   
+[17] NetSurf       *Open        PROGDIR:Resources/LangNames                                        Read        OK   
+[17] NetSurf       Open         PROGDIR:Resources/fr/Resource.map                                  Read        Fail 
+[17] NetSurf       *Open        PROGDIR:Resources/fr/Resource.map                                  Read        Fail 
+[17] NetSurf       Lock         PROGDIR:Resources/fr/netsurf.png                                   Read        Fail 
+[17] NetSurf       *Lock        PROGDIR:Resources/fr/netsurf.png                                   Read        Fail 
+[17] NetSurf       Open         PROGDIR:Resources/en/Resource.map                                  Read        Fail 
+[17] NetSurf       *Open        PROGDIR:Resources/en/Resource.map                                  Read        Fail 
+[17] NetSurf       Lock         PROGDIR:Resources/en/netsurf.png                                   Read        Fail 
+[17] NetSurf       *Lock        PROGDIR:Resources/en/netsurf.png                                   Read        Fail 
+[17] NetSurf       Open         PROGDIR:Resources/Resource.map                                     Read        OK   
+[17] NetSurf       *Open        PROGDIR:Resources/Resource.map                                     Read        OK   
+[17] NetSurf       Lock         PROGDIR:Resources/netsurf.png                                      Read        OK   
+[17] NetSurf       *Lock        PROGDIR:Resources/netsurf.png                                      Read        OK   
+[17] NetSurf       Lock         PROGDIR:Resources/netsurf.png                                      Read        OK   
+[17] NetSurf       *Lock        PROGDIR:Resources/netsurf.png                                      Read        OK   
+[17] NetSurf       Open         PROGDIR:Users/Default/Resource.map                                 Read        Fail 
+[17] NetSurf       *Open        PROGDIR:Users/Default/Resource.map                                 Read        Fail 
+[17] NetSurf       Lock         PROGDIR:Users/Default/icons/arrow-l.png                            Read        Fail 
+[17] NetSurf       *Lock        PROGDIR:Users/Default/icons/arrow-l.png                            Read        Fail 
+[17] NetSurf       Open         PROGDIR:Resources/Themes/Default/Resource.map                      Read        Fail 
+[17] NetSurf       *Open        PROGDIR:Resources/Themes/Default/Resource.map                      Read        Fail 
+[17] NetSurf       Lock         PROGDIR:Resources/Themes/Default/icons/arrow-l.png                 Read        Fail 
+[17] NetSurf       *Lock        PROGDIR:Resources/Themes/Default/icons/arrow-l.png                 Read        Fail 
+[17] NetSurf       Open         PROGDIR:Resources/LangNames                                        Read        OK   
+[17] NetSurf       *Open        PROGDIR:Resources/LangNames                                        Read        OK   
+[17] NetSurf       Open         PROGDIR:Resources/fr/Resource.map                                  Read        Fail 
+[17] NetSurf       *Open        PROGDIR:Resources/fr/Resource.map                                  Read        Fail 
+[17] NetSurf       Lock         PROGDIR:Resources/fr/icons/arrow-l.png                             Read        Fail 
+[17] NetSurf       *Lock        PROGDIR:Resources/fr/icons/arrow-l.png                             Read        Fail 
+[17] NetSurf       Open         PROGDIR:Resources/en/Resource.map                                  Read        Fail 
+[17] NetSurf       *Open        PROGDIR:Resources/en/Resource.map                                  Read        Fail 
+[17] NetSurf       Lock         PROGDIR:Resources/en/icons/arrow-l.png                             Read        Fail 
+[17] NetSurf       *Lock        PROGDIR:Resources/en/icons/arrow-l.png                             Read        Fail 
+[17] NetSurf       Open         PROGDIR:Resources/Resource.map                                     Read        OK   
+[17] NetSurf       *Open        PROGDIR:Resources/Resource.map                                     Read        OK   
+[17] NetSurf       Lock         PROGDIR:Resources/icons/arrow-l.png                                Read        OK   
+[17] NetSurf       *Lock        PROGDIR:Resources/icons/arrow-l.png                                Read        OK   
+[17] NetSurf       Lock         PROGDIR:Resources/icons/arrow-l.png                                Read        OK   
+[17] NetSurf       *Lock        PROGDIR:Resources/icons/arrow-l.png                                Read        OK   
+[17] NetSurf       Open         PROGDIR:Users/Default/Resource.map                                 Read        Fail 
+[17] NetSurf       *Open        PROGDIR:Users/Default/Resource.map                                 Read        Fail 
+[17] NetSurf       Lock         PROGDIR:Users/Default/icons/content.png                            Read        Fail 
+[17] NetSurf       *Lock        PROGDIR:Users/Default/icons/content.png                            Read        Fail 
+[17] NetSurf       Open         PROGDIR:Resources/Themes/Default/Resource.map                      Read        Fail 
+[17] NetSurf       *Open        PROGDIR:Resources/Themes/Default/Resource.map                      Read        Fail 
+[17] NetSurf       Lock         PROGDIR:Resources/Themes/Default/icons/content.png                 Read        Fail 
+[17] NetSurf       *Lock        PROGDIR:Resources/Themes/Default/icons/content.png                 Read        Fail 
+[17] NetSurf       Open         PROGDIR:Resources/LangNames                                        Read        OK   
+[17] NetSurf       *Open        PROGDIR:Resources/LangNames                                        Read        OK   
+[17] NetSurf       Open         PROGDIR:Resources/fr/Resource.map                                  Read        Fail 
+[17] NetSurf       *Open        PROGDIR:Resources/fr/Resource.map                                  Read        Fail 
+[17] NetSurf       Lock         PROGDIR:Resources/fr/icons/content.png                             Read        Fail 
+[17] NetSurf       *Lock        PROGDIR:Resources/fr/icons/content.png                             Read        Fail 
+[17] NetSurf       Open         PROGDIR:Resources/en/Resource.map                                  Read        Fail 
+[17] NetSurf       *Open        PROGDIR:Resources/en/Resource.map                                  Read        Fail 
+[17] NetSurf       Lock         PROGDIR:Resources/en/icons/content.png                             Read        Fail 
+[17] NetSurf       *Lock        PROGDIR:Resources/en/icons/content.png                             Read        Fail 
+[17] NetSurf       Open         PROGDIR:Resources/Resource.map                                     Read        OK   
+[17] NetSurf       *Open        PROGDIR:Resources/Resource.map                                     Read        OK   
+[17] NetSurf       Lock         PROGDIR:Resources/icons/content.png                                Read        OK   
+[17] NetSurf       *Lock        PROGDIR:Resources/icons/content.png                                Read        OK   
+[17] NetSurf       Lock         PROGDIR:Resources/icons/content.png                                Read        OK   
+[17] NetSurf       *Lock        PROGDIR:Resources/icons/content.png                                Read        OK   
+[17] NetSurf       Open         PROGDIR:Users/Default/Resource.map                                 Read        Fail 
+[17] NetSurf       *Open        PROGDIR:Users/Default/Resource.map                                 Read        Fail 
+[17] NetSurf       Lock         PROGDIR:Users/Default/icons/directory.png                          Read        Fail 
+[17] NetSurf       *Lock        PROGDIR:Users/Default/icons/directory.png                          Read        Fail 
+[17] NetSurf       Open         PROGDIR:Resources/Themes/Default/Resource.map                      Read        Fail 
+[17] NetSurf       *Open        PROGDIR:Resources/Themes/Default/Resource.map                      Read        Fail 
+[17] NetSurf       Lock         PROGDIR:Resources/Themes/Default/icons/directory.png               Read        Fail 
+[17] NetSurf       *Lock        PROGDIR:Resources/Themes/Default/icons/directory.png               Read        Fail 
+[17] NetSurf       Open         PROGDIR:Resources/LangNames                                        Read        OK   
+[17] NetSurf       *Open        PROGDIR:Resources/LangNames                                        Read        OK   
+[17] NetSurf       Open         PROGDIR:Resources/fr/Resource.map                                  Read        Fail 
+[17] NetSurf       *Open        PROGDIR:Resources/fr/Resource.map                                  Read        Fail 
+[17] NetSurf       Lock         PROGDIR:Resources/fr/icons/directory.png                           Read        Fail 
+[17] NetSurf       *Lock        PROGDIR:Resources/fr/icons/directory.png                           Read        Fail 
+[17] NetSurf       Open         PROGDIR:Resources/en/Resource.map                                  Read        Fail 
+[17] NetSurf       *Open        PROGDIR:Resources/en/Resource.map                                  Read        Fail 
+[17] NetSurf       Lock         PROGDIR:Resources/en/icons/directory.png                           Read        Fail 
+[17] NetSurf       *Lock        PROGDIR:Resources/en/icons/directory.png                           Read        Fail 
+[17] NetSurf       Open         PROGDIR:Resources/Resource.map                                     Read        OK   
+[17] NetSurf       *Open        PROGDIR:Resources/Resource.map                                     Read        OK   
+[17] NetSurf       Lock         PROGDIR:Resources/icons/directory.png                              Read        OK   
+[17] NetSurf       *Lock        PROGDIR:Resources/icons/directory.png                              Read        OK   
+[17] NetSurf       Lock         PROGDIR:Resources/icons/directory.png                              Read        OK   
+[17] NetSurf       *Lock        PROGDIR:Resources/icons/directory.png                              Read        OK   
+[17] NetSurf       Open         PROGDIR:Users/Default/Resource.map                                 Read        Fail 
+[17] NetSurf       *Open        PROGDIR:Users/Default/Resource.map                                 Read        Fail 
+[17] NetSurf       Lock         PROGDIR:Users/Default/icons/directory2.png                         Read        Fail 
+[17] NetSurf       *Lock        PROGDIR:Users/Default/icons/directory2.png                         Read        Fail 
+[17] NetSurf       Open         PROGDIR:Resources/Themes/Default/Resource.map                      Read        Fail 
+[17] NetSurf       *Open        PROGDIR:Resources/Themes/Default/Resource.map                      Read        Fail 
+[17] NetSurf       Lock         PROGDIR:Resources/Themes/Default/icons/directory2.png              Read        Fail 
+[17] NetSurf       *Lock        PROGDIR:Resources/Themes/Default/icons/directory2.png              Read        Fail 
+[17] NetSurf       Open         PROGDIR:Resources/LangNames                                        Read        OK   
+[17] NetSurf       *Open        PROGDIR:Resources/LangNames                                        Read        OK   
+[17] NetSurf       Open         PROGDIR:Resources/fr/Resource.map                                  Read        Fail 
+[17] NetSurf       *Open        PROGDIR:Resources/fr/Resource.map                                  Read        Fail 
+[17] NetSurf       Lock         PROGDIR:Resources/fr/icons/directory2.png                          Read        Fail 
+[17] NetSurf       *Lock        PROGDIR:Resources/fr/icons/directory2.png                          Read        Fail 
+[17] NetSurf       Open         PROGDIR:Resources/en/Resource.map                                  Read        Fail 
+[17] NetSurf       *Open        PROGDIR:Resources/en/Resource.map                                  Read        Fail 
+[17] NetSurf       Lock         PROGDIR:Resources/en/icons/directory2.png                          Read        Fail 
+[17] NetSurf       *Lock        PROGDIR:Resources/en/icons/directory2.png                          Read        Fail 
+[17] NetSurf       Open         PROGDIR:Resources/Resource.map                                     Read        OK   
+[17] NetSurf       *Open        PROGDIR:Resources/Resource.map                                     Read        OK   
+[17] NetSurf       Lock         PROGDIR:Resources/icons/directory2.png                             Read        OK   
+[17] NetSurf       *Lock        PROGDIR:Resources/icons/directory2.png                             Read        OK   
+[17] NetSurf       Lock         PROGDIR:Resources/icons/directory2.png                             Read        OK   
+[17] NetSurf       *Lock        PROGDIR:Resources/icons/directory2.png                             Read        OK   
+[17] NetSurf       Open         PROGDIR:Users/Default/Resource.map                                 Read        Fail 
+[17] NetSurf       *Open        PROGDIR:Users/Default/Resource.map                                 Read        Fail 
+[17] NetSurf       Lock         PROGDIR:Users/Default/icons/hotlist-add.png                        Read        Fail 
+[17] NetSurf       *Lock        PROGDIR:Users/Default/icons/hotlist-add.png                        Read        Fail 
+[17] NetSurf       Open         PROGDIR:Resources/Themes/Default/Resource.map                      Read        Fail 
+[17] NetSurf       *Open        PROGDIR:Resources/Themes/Default/Resource.map                      Read        Fail 
+[17] NetSurf       Lock         PROGDIR:Resources/Themes/Default/icons/hotlist-add.png             Read        Fail 
+[17] NetSurf       *Lock        PROGDIR:Resources/Themes/Default/icons/hotlist-add.png             Read        Fail 
+[17] NetSurf       Open         PROGDIR:Resources/LangNames                                        Read        OK   
+[17] NetSurf       *Open        PROGDIR:Resources/LangNames                                        Read        OK   
+[17] NetSurf       Open         PROGDIR:Resources/fr/Resource.map                                  Read        Fail 
+[17] NetSurf       *Open        PROGDIR:Resources/fr/Resource.map                                  Read        Fail 
+[17] NetSurf       Lock         PROGDIR:Resources/fr/icons/hotlist-add.png                         Read        Fail 
+[17] NetSurf       *Lock        PROGDIR:Resources/fr/icons/hotlist-add.png                         Read        Fail 
+[17] NetSurf       Open         PROGDIR:Resources/en/Resource.map                                  Read        Fail 
+[17] NetSurf       *Open        PROGDIR:Resources/en/Resource.map                                  Read        Fail 
+[17] NetSurf       Lock         PROGDIR:Resources/en/icons/hotlist-add.png                         Read        Fail 
+[17] NetSurf       *Lock        PROGDIR:Resources/en/icons/hotlist-add.png                         Read        Fail 
+[17] NetSurf       Open         PROGDIR:Resources/Resource.map                                     Read        OK   
+[17] NetSurf       *Open        PROGDIR:Resources/Resource.map                                     Read        OK   
+[17] NetSurf       Lock         PROGDIR:Resources/icons/hotlist-add.png                            Read        OK   
+[17] NetSurf       *Lock        PROGDIR:Resources/icons/hotlist-add.png                            Read        OK   
+[17] NetSurf       Lock         PROGDIR:Resources/icons/hotlist-add.png                            Read        OK   
+[17] NetSurf       *Lock        PROGDIR:Resources/icons/hotlist-add.png                            Read        OK   
+[17] NetSurf       Open         PROGDIR:Users/Default/Resource.map                                 Read        Fail 
+[17] NetSurf       *Open        PROGDIR:Users/Default/Resource.map                                 Read        Fail 
+[17] NetSurf       Lock         PROGDIR:Users/Default/icons/hotlist-rmv.png                        Read        Fail 
+[17] NetSurf       *Lock        PROGDIR:Users/Default/icons/hotlist-rmv.png                        Read        Fail 
+[17] NetSurf       Open         PROGDIR:Resources/Themes/Default/Resource.map                      Read        Fail 
+[17] NetSurf       *Open        PROGDIR:Resources/Themes/Default/Resource.map                      Read        Fail 
+[17] NetSurf       Lock         PROGDIR:Resources/Themes/Default/icons/hotlist-rmv.png             Read        Fail 
+[17] NetSurf       *Lock        PROGDIR:Resources/Themes/Default/icons/hotlist-rmv.png             Read        Fail 
+[17] NetSurf       Open         PROGDIR:Resources/LangNames                                        Read        OK   
+[17] NetSurf       *Open        PROGDIR:Resources/LangNames                                        Read        OK   
+[17] NetSurf       Open         PROGDIR:Resources/fr/Resource.map                                  Read        Fail 
+[17] NetSurf       *Open        PROGDIR:Resources/fr/Resource.map                                  Read        Fail 
+[17] NetSurf       Lock         PROGDIR:Resources/fr/icons/hotlist-rmv.png                         Read        Fail 
+[17] NetSurf       *Lock        PROGDIR:Resources/fr/icons/hotlist-rmv.png                         Read        Fail 
+[17] NetSurf       Open         PROGDIR:Resources/en/Resource.map                                  Read        Fail 
+[17] NetSurf       *Open        PROGDIR:Resources/en/Resource.map                                  Read        Fail 
+[17] NetSurf       Lock         PROGDIR:Resources/en/icons/hotlist-rmv.png                         Read        Fail 
+[17] NetSurf       *Lock        PROGDIR:Resources/en/icons/hotlist-rmv.png                         Read        Fail 
+[17] NetSurf       Open         PROGDIR:Resources/Resource.map                                     Read        OK   
+[17] NetSurf       *Open        PROGDIR:Resources/Resource.map                                     Read        OK   
+[17] NetSurf       Lock         PROGDIR:Resources/icons/hotlist-rmv.png                            Read        OK   
+[17] NetSurf       *Lock        PROGDIR:Resources/icons/hotlist-rmv.png                            Read        OK   
+[17] NetSurf       Lock         PROGDIR:Resources/icons/hotlist-rmv.png                            Read        OK   
+[17] NetSurf       *Lock        PROGDIR:Resources/icons/hotlist-rmv.png                            Read        OK   
+[17] NetSurf       Open         PROGDIR:Users/Default/Resource.map                                 Read        Fail 
+[17] NetSurf       *Open        PROGDIR:Users/Default/Resource.map                                 Read        Fail 
+[17] NetSurf       Lock         PROGDIR:Users/Default/icons/search.png                             Read        Fail 
+[17] NetSurf       *Lock        PROGDIR:Users/Default/icons/search.png                             Read        Fail 
+[17] NetSurf       Open         PROGDIR:Resources/Themes/Default/Resource.map                      Read        Fail 
+[17] NetSurf       *Open        PROGDIR:Resources/Themes/Default/Resource.map                      Read        Fail 
+[17] NetSurf       Lock         PROGDIR:Resources/Themes/Default/icons/search.png                  Read        Fail 
+[17] NetSurf       *Lock        PROGDIR:Resources/Themes/Default/icons/search.png                  Read        Fail 
+[17] NetSurf       Open         PROGDIR:Resources/LangNames                                        Read        OK   
+[17] NetSurf       *Open        PROGDIR:Resources/LangNames                                        Read        OK   
+[17] NetSurf       Open         PROGDIR:Resources/fr/Resource.map                                  Read        Fail 
+[17] NetSurf       *Open        PROGDIR:Resources/fr/Resource.map                                  Read        Fail 
+[17] NetSurf       Lock         PROGDIR:Resources/fr/icons/search.png                              Read        Fail 
+[17] NetSurf       *Lock        PROGDIR:Resources/fr/icons/search.png                              Read        Fail 
+[17] NetSurf       Open         PROGDIR:Resources/en/Resource.map                                  Read        Fail 
+[17] NetSurf       *Open        PROGDIR:Resources/en/Resource.map                                  Read        Fail 
+[17] NetSurf       Lock         PROGDIR:Resources/en/icons/search.png                              Read        Fail 
+[17] NetSurf       *Lock        PROGDIR:Resources/en/icons/search.png                              Read        Fail 
+[17] NetSurf       Open         PROGDIR:Resources/Resource.map                                     Read        OK   
+[17] NetSurf       *Open        PROGDIR:Resources/Resource.map                                     Read        OK   
+[17] NetSurf       Lock         PROGDIR:Resources/icons/search.png                                 Read        OK   
+[17] NetSurf       *Lock        PROGDIR:Resources/icons/search.png                                 Read        OK   
+[17] NetSurf       Lock         PROGDIR:Resources/icons/search.png                                 Read        OK   
+[17] NetSurf       *Lock        PROGDIR:Resources/icons/search.png                                 Read        OK   
+[17] NetSurf       Open         PROGDIR:Users/Default/Cache/control                                Read        Fail 
+[17] NetSurf       *Open        PROGDIR:Users/Default/Cache/control                                Read        Fail 
+[17] NetSurf       Lock         PROGDIR:Users/Default/Cache                                        Read        OK   
+[17] NetSurf       *Lock        PROGDIR:Users/Default/Cache                                        Read        OK   
+[17] NetSurf       Lock         PROGDIR:Users/Default/Cache/control                                Read        Fail 
+[17] NetSurf       *Lock        PROGDIR:Users/Default/Cache/control                                Read        Fail 
+[17] NetSurf       Open         PROGDIR:Users/Default/Cache/control                                Modify      OK   
+[17] NetSurf       *Open        PROGDIR:Users/Default/Cache/control                                Modify      OK   
+[17] NetSurf       ChangeDir    WinDH_C:cygwin/home/Administrator/netsurf/Users/Default/Cache                       
+[17] NetSurf       ChangeDir    WinDH_C:cygwin/home/Administrator/netsurf                                           
+[17] NetSurf       Delete       PROGDIR:Users/Default/Cache/entries                                            Fail 
+[17] NetSurf       *Delete      PROGDIR:Users/Default/Cache/entries                                            Fail 
+[17] NetSurf       Lock         PROGDIR:Users/Default/Cache/CACHEDIR.TAG                           Read        Fail 
+[17] NetSurf       *Lock        PROGDIR:Users/Default/Cache/CACHEDIR.TAG                           Read        Fail 
+[17] NetSurf       Open         PROGDIR:Users/Default/Cache/CACHEDIR.TAG                           Modify      OK   
+[17] NetSurf       *Open        PROGDIR:Users/Default/Cache/CACHEDIR.TAG                           Modify      OK   
+[17] NetSurf       ChangeDir    WinDH_C:cygwin/home/Administrator/netsurf/Users/Default/Cache                       
+[17] NetSurf       ChangeDir    WinDH_C:cygwin/home/Administrator/netsurf                                           
+[17] NetSurf       Open         PROGDIR:Users/Default/Cache/entries                                Read        Fail 
+[17] NetSurf       *Open        PROGDIR:Users/Default/Cache/entries                                Read        Fail 
+[17] NetSurf       Open         PROGDIR:Users/Default/Cache/blocks                                 Read        Fail 
+[17] NetSurf       *Open        PROGDIR:Users/Default/Cache/blocks                                 Read        Fail 
+[17] NetSurf       Open         PROGDIR:Resources/SearchEngines                                    Read        OK   
+[17] NetSurf       *Open        PROGDIR:Resources/SearchEngines                                    Read        OK   
+[17] NetSurf       OpenDev      clipboard.device                                                   Unit 0      OK   
+[17] NetSurf       FindSem      NSDPatch (8.3.2002)                                                            OK   
+[17] NetSurf       OpenLib      openurl.library                                                    Ver 0       OK   
+ramlib             Load         LIBS:openurl.library                                                           OK   
+ramlib             *Open        LIBS:openurl.library                                               Read        OK   
+ramlib             OpenLib      utility.library                                                    Ver 37      OK   
+ramlib             OpenLib      iffparse.library                                                   Ver 37      OK   
+ramlib             OpenLib      rexxsyslib.library                                                 Ver 36      OK   
+ramlib             Open         ENV:OpenURL.prefs                                                  Read        OK   
+ramlib             *Open        ENV:OpenURL.prefs                                                  Read        OK   
+[17] NetSurf       Lock         ENVARC:AppPaths                                                    Read        OK   
+[17] NetSurf       *Lock        ENVARC:AppPaths                                                    Read        OK   
+[17] NetSurf       Lock         PROGDIR:                                                           Read        OK   
+[17] NetSurf       *Lock        PROGDIR:                                                           Read        OK   
+[17] NetSurf       Open         ENVARC:AppPaths/NetSurf                                            Write       OK   
+[17] NetSurf       *Open        ENVARC:AppPaths/NetSurf                                            Write       OK   
+[17] NetSurf       Lock         PROGDIR:Resources/Themes/Default/Theme                             Read        Fail 
+[17] NetSurf       *Lock        PROGDIR:Resources/Themes/Default/Theme                             Read        Fail 
+[17] NetSurf       OpenLib      locale.library                                                     Ver 0       OK   
+[17] NetSurf       Lock         PROGDIR:                                                           Read        OK   
+[17] NetSurf       *Lock        PROGDIR:                                                           Read        OK   
+[17] NetSurf       OpenLib      iffparse.library                                                   Ver 37      OK   
+[17] NetSurf       Open         PROGDIR:Catalogs/français/reqchangelib.catalog                     Read        Fail 
+[17] NetSurf       *Open        PROGDIR:Catalogs/français/reqchangelib.catalog                     Read        Fail 
+[17] NetSurf       OpenLib      iffparse.library                                                   Ver 37      OK   
+[17] NetSurf       Open         LOCALE:Catalogs/français/reqchangelib.catalog                      Read        OK   
+[17] NetSurf       *Open        LOCALE:Catalogs/français/reqchangelib.catalog                      Read        OK   
+ReqAttack          Open         AnimLogos/fuzzy.datatypeabout                                      Read        OK   
+ReqAttack          *Open        AnimLogos/fuzzy.datatypeabout                                      Read        OK   
+ReqAttack          Open         Buttons/fuzzy.small_OK                                             Read        OK   
+ReqAttack          *Open        Buttons/fuzzy.small_OK                                             Read        OK   
+ReqAttack          Lock         Buttons/fuzzy.small_OK                                             Read        OK   
+ReqAttack          *Lock        Buttons/fuzzy.small_OK                                             Read        OK   
+ReqAttack          OpenLib      datatypes/ilbm.datatype                                            Ver 0       OK   
+ReqAttack          Open         Buttons/fuzzy.small_OK                                             Read        OK   
+ReqAttack          *Open        Buttons/fuzzy.small_OK                                             Read        OK   
+ReqAttack          GetVar       datatypes/ilbmdt44.prefs                                           Any         Fail 
+ReqAttack          *Lock        ENV:                                                               Read        OK   
+ReqAttack          *Open        datatypes/ilbmdt44.prefs                                           Read        Fail 
+ReqAttack          GetVar       classes/datatypes/ilbmdt44.prefs                                   Any         Fail 
+ReqAttack          *Lock        ENV:                                                               Read        OK   
+ReqAttack          *Open        classes/datatypes/ilbmdt44.prefs                                   Read        Fail 
+ReqAttack          Open         SYS:Prefs/Presets/Patterns/SliderBlue-Dark.png                     Read        OK   
+ReqAttack          *Open        SYS:Prefs/Presets/Patterns/SliderBlue-Dark.png                     Read        OK   
+ReqAttack          Lock         SYS:Prefs/Presets/Patterns/SliderBlue-Dark.png                     Read        OK   
+ReqAttack          *Lock        SYS:Prefs/Presets/Patterns/SliderBlue-Dark.png                     Read        OK   
+ReqAttack          OpenLib      mpega.library                                                      Ver 0       OK   
+ramlib             Load         LIBS:mpega.library                                                             OK   
+ramlib             *Open        LIBS:mpega.library                                                 Read        OK   
+ReqAttack          Open         AmiKit:Prefs/Presets/Patterns/SliderBlue-Dark.png                  Read        OK   
+ReqAttack          *Open        AmiKit:Prefs/Presets/Patterns/SliderBlue-Dark.png                  Read        OK   
+ReqAttack          OpenLib      datatypes/akPNG.datatype                                           Ver 0       OK   
+ReqAttack          Open         SYS:Prefs/Presets/Patterns/SliderBlue-Dark.png                     Read        OK   
+ReqAttack          *Open        SYS:Prefs/Presets/Patterns/SliderBlue-Dark.png                     Read        OK   
+ReqAttack          Open         ENV:Datatypes/akPNG.prefs_Tasks/ReqAttack                          Read        OK   
+ReqAttack          *Open        ENV:Datatypes/akPNG.prefs_Tasks/ReqAttack                          Read        OK   
+ReqAttack          Open         SYS:Prefs/Presets/Patterns/SliderBlue-Dark.png                     Read        OK   
+ReqAttack          *Open        SYS:Prefs/Presets/Patterns/SliderBlue-Dark.png                     Read        OK   
+ReqAttack          Open         SYS:Prefs/Presets/Patterns/SliderBlue-Dark.png                     Read        OK   
+ReqAttack          *Open        SYS:Prefs/Presets/Patterns/SliderBlue-Dark.png                     Read        OK   
+ReqAttack          OpenLib      cybergraphics.library                                              Ver 40      OK   
+ReqAttack          Open         SYS:Prefs/Presets/Patterns/SliderBlue-Light.png                    Read        OK   
+ReqAttack          *Open        SYS:Prefs/Presets/Patterns/SliderBlue-Light.png                    Read        OK   
+ReqAttack          Lock         SYS:Prefs/Presets/Patterns/SliderBlue-Light.png                    Read        OK   
+ReqAttack          *Lock        SYS:Prefs/Presets/Patterns/SliderBlue-Light.png                    Read        OK   
+ReqAttack          OpenLib      mpega.library                                                      Ver 0       OK   
+ReqAttack          Open         AmiKit:Prefs/Presets/Patterns/SliderBlue-Light.png                 Read        OK   
+ReqAttack          *Open        AmiKit:Prefs/Presets/Patterns/SliderBlue-Light.png                 Read        OK   
+ReqAttack          OpenLib      datatypes/akPNG.datatype                                           Ver 0       OK   
+ReqAttack          Open         SYS:Prefs/Presets/Patterns/SliderBlue-Light.png                    Read        OK   
+ReqAttack          *Open        SYS:Prefs/Presets/Patterns/SliderBlue-Light.png                    Read        OK   
+ReqAttack          Open         ENV:Datatypes/akPNG.prefs_Tasks/ReqAttack                          Read        OK   
+ReqAttack          *Open        ENV:Datatypes/akPNG.prefs_Tasks/ReqAttack                          Read        OK   
+ReqAttack          Open         SYS:Prefs/Presets/Patterns/SliderBlue-Light.png                    Read        OK   
+ReqAttack          *Open        SYS:Prefs/Presets/Patterns/SliderBlue-Light.png                    Read        OK   
+ReqAttack          Open         SYS:Prefs/Presets/Patterns/SliderBlue-Light.png                    Read        OK   
+ReqAttack          *Open        SYS:Prefs/Presets/Patterns/SliderBlue-Light.png                    Read        OK   
+ReqAttack          OpenLib      cybergraphics.library                                              Ver 40      OK   
+ReqAttack          Open         SYS:Prefs/Presets/MUI/CoolMUI/button/softgrey_default              Read        OK   
+ReqAttack          *Open        SYS:Prefs/Presets/MUI/CoolMUI/button/softgrey_default              Read        OK   
+ReqAttack          Lock         SYS:Prefs/Presets/MUI/CoolMUI/button/softgrey_default              Read        OK   
+ReqAttack          *Lock        SYS:Prefs/Presets/MUI/CoolMUI/button/softgrey_default              Read        OK   
+ReqAttack          OpenLib      datatypes/ilbm.datatype                                            Ver 0       OK   
+ReqAttack          Open         SYS:Prefs/Presets/MUI/CoolMUI/button/softgrey_default              Read        OK   
+ReqAttack          *Open        SYS:Prefs/Presets/MUI/CoolMUI/button/softgrey_default              Read        OK   
+ReqAttack          GetVar       datatypes/ilbmdt44.prefs                                           Any         Fail 
+ReqAttack          *Lock        ENV:                                                               Read        OK   
+ReqAttack          *Open        datatypes/ilbmdt44.prefs                                           Read        Fail 
+ReqAttack          GetVar       classes/datatypes/ilbmdt44.prefs                                   Any         Fail 
+ReqAttack          *Lock        ENV:                                                               Read        OK   
+ReqAttack          *Open        classes/datatypes/ilbmdt44.prefs                                   Read        Fail 
+[17] NetSurf       OpenFont     AfA AmiKit Mono.font                                               Size 13     OK   
+[17] NetSurf       FindRes      MorphOS                                                                        Fail 
+[17] NetSurf       FindRes      MorphOS                                                                        Fail 
+dopus_janitor      Lock         t:                                                                 Read        OK   
+dopus_janitor      *Lock        t:                                                                 Read        OK   
+dopus_janitor      ChangeDir    Ram:T                                                                               
+dopus_janitor      *Lock        T:                                                                 Read        OK   
+dopus_janitor      *Lock        T:                                                                 Read        OK   
+dopus_janitor      ChangeDir    AmiKit:                                                                             
+MagicMenu          OpenFont     AfA AmiKit.font                                                    Size 13     OK   
+MagicMenu          OpenFont     AfA AmiKit Mono.font                                               Size 13     OK   
+MagicMenu          OpenFont     AfA AmiKit Mono.font                                               Size 13     OK   
+MagicMenu          OpenFont     AfA AmiKit.font                                                    Size 13     OK   
+MagicMenu          OpenFont     AfA AmiKit.font                                                    Size 13     OK   
+MagicMenu          OpenFont     AfA AmiKit.font                                                    Size 13     OK   
+MagicMenu          OpenFont     AfA AmiKit.font                                                    Size 13     OK   
+MagicMenu          OpenFont     AfA AmiKit.font                                                    Size 13     OK   
+MagicMenu          OpenFont     AfA AmiKit.font                                                    Size 13     OK   
+MagicMenu          OpenFont     AfA AmiKit.font                                                    Size 13     OK   
+MagicMenu          OpenFont     AfA AmiKit.font                                                    Size 13     OK   
+MagicMenu          OpenFont     AfA AmiKit.font                                                    Size 13     OK   
+MagicMenu          OpenFont     AfA AmiKit.font                                                    Size 13     OK   
+MagicMenu          OpenFont     AfA AmiKit.font                                                    Size 13     OK   
+MagicMenu          OpenFont     AfA AmiKit.font                                                    Size 13     OK   
+MagicMenu          OpenFont     AfA AmiKit.font                                                    Size 13     OK   
+MagicMenu          OpenFont     AfA AmiKit.font                                                    Size 13     OK   
+MagicMenu          OpenFont     AfA AmiKit.font                                                    Size 13     OK   
+MagicMenu          OpenFont     AfA AmiKit.font                                                    Size 13     OK   
+MagicMenu          OpenFont     AfA AmiKit.font                                                    Size 13     OK   
+MagicMenu          OpenFont     AfA AmiKit.font                                                    Size 13     OK   

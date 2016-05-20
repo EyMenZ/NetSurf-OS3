@@ -1,0 +1,676 @@
+$ make TARGET=amigaos3 install > netsurf_make.txt
+utils/utils.c: In function `nsc_strntimet':
+utils/utils.c:618: warning: comparison between signed and unsigned
+render/layout.c: In function `layout_find_dimensions':
+render/layout.c:1668: warning: 'cbhtype' might be used uninitialized in this function
+render/html_interaction.c: In function `html__image_coords_dom_user_data_handler':
+render/html_interaction.c:271: warning: dereferencing type-punned pointer will break strict-aliasing rules
+render/html_interaction.c: In function `html_mouse_action':
+render/html_interaction.c:708: warning: dereferencing type-punned pointer will break strict-aliasing rules
+In file included from render/html_forms.c:22:
+./desktop/browser.h:677: warning: parameter has incomplete type
+./desktop/browser.h:686: warning: parameter has incomplete type
+render/html.c: In function `html__dom_user_data_handler':
+render/html.c:1884: warning: dereferencing type-punned pointer will break strict-aliasing rules
+render/html.c: In function `html__set_file_gadget_filename':
+render/html.c:1926: warning: dereferencing type-punned pointer will break strict-aliasing rules
+render/form.c: In function `form_successful_controls_dom':
+render/form.c:646: warning: dereferencing type-punned pointer will break strict-aliasing rules
+render/form.c:747: warning: dereferencing type-punned pointer will break strict-aliasing rules
+In file included from render/box_textarea.c:25:
+./desktop/browser.h:677: warning: parameter has incomplete type
+./desktop/browser.h:686: warning: parameter has incomplete type
+In file included from desktop/textarea.c:34:
+./desktop/browser.h:677: warning: parameter has incomplete type
+./desktop/browser.h:686: warning: parameter has incomplete type
+desktop/textarea.c: In function `textarea_redraw':
+desktop/textarea.c:2099: warning: 'b_len_part' might be used uninitialized in this function
+In file included from desktop/scrollbar.c:33:
+./desktop/browser.h:677: warning: parameter has incomplete type
+./desktop/browser.h:686: warning: parameter has incomplete type
+In file included from desktop/mouse.c:23:
+./desktop/browser.h:677: warning: parameter has incomplete type
+./desktop/browser.h:686: warning: parameter has incomplete type
+In file included from desktop/hotlist.c:29:
+./desktop/hotlist.h:188: warning: parameter has incomplete type
+In file included from desktop/hotlist.c:31:
+./desktop/browser.h:677: warning: parameter has incomplete type
+./desktop/browser.h:686: warning: parameter has incomplete type
+In file included from desktop/global_history.c:30:
+./desktop/global_history.h:97: warning: parameter has incomplete type
+In file included from desktop/global_history.c:32:
+./desktop/browser.h:677: warning: parameter has incomplete type
+./desktop/browser.h:686: warning: parameter has incomplete type
+desktop/global_history.c: In function `global_history_initialise_time':
+desktop/global_history.c:596: warning: comparison between signed and unsigned
+desktop/global_history.c:607: warning: comparison between signed and unsigned
+In file included from desktop/cookie_manager.c:32:
+./desktop/cookie_manager.h:97: warning: parameter has incomplete type
+In file included from content/urldb.c:108:
+./desktop/cookie_manager.h:97: warning: parameter has incomplete type
+content/urldb.c: In function `urldb_insert_cookie':
+content/urldb.c:1953: warning: comparison between signed and unsigned
+content/urldb.c: In function `urldb_save_cookie_paths':
+content/urldb.c:2244: warning: comparison between signed and unsigned
+content/urldb.c: In function `urldb_get_cookie':
+content/urldb.c:3525: warning: comparison between signed and unsigned
+content/urldb.c:3565: warning: comparison between signed and unsigned
+content/urldb.c:3605: warning: comparison between signed and unsigned
+content/urldb.c:3640: warning: comparison between signed and unsigned
+content/llcache.c: In function `llcache_object_rfc2616_remaining_lifetime':
+content/llcache.c:1038: warning: comparison of unsigned expression < 0 is always false
+content/fs_backing_store.c: In function `store_write_block':
+content/fs_backing_store.c:1664: warning: signed size_t format, ssize_t arg (arg 5)
+content/fs_backing_store.c:1674: warning: signed size_t format, ssize_t arg (arg 5)
+content/fs_backing_store.c: In function `store_write_file':
+content/fs_backing_store.c:1711: warning: signed size_t format, ssize_t arg (arg 5)
+content/fs_backing_store.c:1721: warning: signed size_t format, ssize_t arg (arg 5)
+content/fs_backing_store.c: In function `store_read_block':
+content/fs_backing_store.c:1832: warning: signed size_t format, ssize_t arg (arg 5)
+content/fs_backing_store.c:1842: warning: signed size_t format, ssize_t arg (arg 5)
+content/fs_backing_store.c: In function `store_read_file':
+content/fs_backing_store.c:1881: warning: signed size_t format, ssize_t arg (arg 5)
+content/fetchers/file.c: In function `fetch_file_process_dir':
+content/fetchers/file.c:661: warning: implicit declaration of function `scandir'
+content/fetchers/file.c:661: warning: nested extern declaration of `scandir'
+In file included from /opt/netsurf/m68k-unknown-amigaos/env/include/openssl/ssl.h:1518,
+                 from content/fetchers/curl.c:41:
+/opt/netsurf/m68k-unknown-amigaos/env/include/openssl/srtp.h:140: warning: redundant redeclaration of 'SSL_get_selected_srtp_profile'
+/opt/netsurf/m68k-unknown-amigaos/env/include/openssl/srtp.h:137: warning: previous declaration of 'SSL_get_selected_srtp_profile' was here
+In file included from content/content.c:31:
+./desktop/browser.h:677: warning: parameter has incomplete type
+./desktop/browser.h:686: warning: parameter has incomplete type
+amiga/tree.c:921:2: warning: #warning FIXME not reading qualifiers on OS3
+In file included from amiga/tree.c:57:
+./desktop/browser.h:677: warning: parameter has incomplete type
+./desktop/browser.h:686: warning: parameter has incomplete type
+amiga/tree.c: In function `ami_tree_redraw_req_dr':
+amiga/tree.c:230: warning: dereferencing type-punned pointer will break strict-aliasing rules
+amiga/tree.c:231: warning: dereferencing type-punned pointer will break strict-aliasing rules
+amiga/tree.c: In function `ami_tree_redraw_req':
+amiga/tree.c:289: warning: dereferencing type-punned pointer will break strict-aliasing rules
+amiga/tree.c:290: warning: dereferencing type-punned pointer will break strict-aliasing rules
+amiga/tree.c: In function `ami_tree_draw':
+amiga/tree.c:375: warning: dereferencing type-punned pointer will break strict-aliasing rules
+amiga/tree.c:376: warning: dereferencing type-punned pointer will break strict-aliasing rules
+amiga/tree.c: In function `ami_tree_scroll_visible':
+amiga/tree.c:401: warning: dereferencing type-punned pointer will break strict-aliasing rules
+amiga/tree.c: In function `ami_tree_scroll':
+amiga/tree.c:429: warning: dereferencing type-punned pointer will break strict-aliasing rules
+amiga/tree.c:430: warning: dereferencing type-punned pointer will break strict-aliasing rules
+amiga/tree.c: In function `ami_tree_scroller_hook':
+amiga/tree.c:531: warning: unused variable `wheel'
+amiga/tree.c: In function `ami_tree_menu':
+amiga/tree.c:573: warning: assignment discards qualifiers from pointer target type
+amiga/tree.c:585: warning: assignment discards qualifiers from pointer target type
+amiga/tree.c:610: warning: assignment discards qualifiers from pointer target type
+amiga/tree.c:631: warning: assignment discards qualifiers from pointer target type
+amiga/tree.c:640: warning: assignment discards qualifiers from pointer target type
+amiga/tree.c:652: warning: assignment discards qualifiers from pointer target type
+amiga/tree.c:660: warning: assignment discards qualifiers from pointer target type
+amiga/tree.c:668: warning: assignment discards qualifiers from pointer target type
+amiga/tree.c: In function `ami_tree_close':
+amiga/tree.c:895: warning: comparison of distinct pointer types lacks a cast
+amiga/tree.c: In function `ami_tree_event':
+amiga/tree.c:986: warning: dereferencing type-punned pointer will break strict-aliasing rules
+amiga/tree.c:989: warning: dereferencing type-punned pointer will break strict-aliasing rules
+amiga/tree.c:1052: warning: dereferencing type-punned pointer will break strict-aliasing rules
+amiga/tree.c:1054: warning: dereferencing type-punned pointer will break strict-aliasing rules
+amiga/tree.c:1177: warning: dereferencing type-punned pointer will break strict-aliasing rules
+amiga/tree.c:1200: warning: initialization makes integer from pointer without a cast
+amiga/tree.c:1200: warning: initialization makes integer from pointer without a cast
+amiga/tree.c:1200: warning: initialization makes integer from pointer without a cast
+amiga/tree.c:1200: warning: initialization makes integer from pointer without a cast
+amiga/theme.c: In function `ami_update_pointer':
+amiga/theme.c:252: warning: initialization makes integer from pointer without a cast
+amiga/theme.c:263: warning: initialization makes integer from pointer without a cast
+amiga/theme.c: In function `ami_init_mouse_pointers':
+amiga/theme.c:289: warning: unused variable `dobj'
+amiga/theme.c:290: warning: unused variable `format'
+amiga/stringview/stringview.c: In function `myStringOpenListview':
+amiga/stringview/stringview.c:72: warning: initialization makes integer from pointer without a cast
+amiga/stringview/stringview.c: In function `myStringSearch':
+amiga/stringview/stringview.c:151: warning: initialization from incompatible pointer type
+amiga/stringview/stringview.c:164: warning: comparison between signed and unsigned
+amiga/stringview/stringview.c:203: warning: initialization makes integer from pointer without a cast
+amiga/stringview/stringview.c: In function `myStringArrowUp':
+amiga/stringview/stringview.c:258: warning: comparison between signed and unsigned
+amiga/stringview/stringview.c: In function `myStringArrowDown':
+amiga/stringview/stringview.c:306: warning: comparison between signed and unsigned
+amiga/stringview/stringview.c: In function `myStringClass_GM_HandleInput':
+amiga/stringview/stringview.c:625: warning: dereferencing type-punned pointer will break strict-aliasing rules
+amiga/stringview/stringview.c:625: warning: initialization from incompatible pointer type
+amiga/stringview/stringview.c:628: warning: initialization makes integer from pointer without a cast
+amiga/stringview/stringview.c:629: warning: initialization makes integer from pointer without a cast
+amiga/stringview/stringview.c:642: warning: initialization from incompatible pointer type
+amiga/stringview/stringview.c:646: warning: initialization from incompatible pointer type
+amiga/stringview/stringview.c: In function `MakeStringClass':
+amiga/stringview/stringview.c:851: warning: function declaration isn't a prototype
+amiga/stringview/stringview.c:851: warning: assignment from incompatible pointer type
+amiga/search.c: In function `ami_search_string':
+amiga/search.c:280: warning: dereferencing type-punned pointer will break strict-aliasing rules
+amiga/schedule.c: In function `ami_schedule_add_timer_event':
+amiga/schedule.c:93: warning: initialization from incompatible pointer type
+amiga/schedule.c:94: warning: initialization from incompatible pointer type
+amiga/schedule.c:94: warning: initialization from incompatible pointer type
+amiga/schedule.c: In function `ami_schedule_locate':
+amiga/schedule.c:131: warning: comparison between pointer and integer
+amiga/schedule.c: In function `schedule_remove_all':
+amiga/schedule.c:197: warning: comparison between pointer and integer
+amiga/schedule.c: In function `ami_schedule_compare':
+amiga/schedule.c:212: warning: initialization from incompatible pointer type
+amiga/schedule.c:212: warning: initialization from incompatible pointer type
+amiga/schedule.c: In function `ami_scheduler_run':
+amiga/schedule.c:231: warning: comparison between pointer and integer
+amiga/schedule.c:237: warning: initialization from incompatible pointer type
+amiga/schedule.c:238: warning: initialization from incompatible pointer type
+amiga/schedule.c:238: warning: initialization from incompatible pointer type
+amiga/schedule.c: In function `ami_schedule_create':
+amiga/schedule.c:290: warning: comparison between pointer and integer
+amiga/print.c: In function `ami_print_readunit':
+amiga/print.c:152: warning: long int format, int arg (arg 4)
+amiga/print.c: In function `ami_print_event':
+amiga/print.c:353: warning: dereferencing type-punned pointer will break strict-aliasing rules
+amiga/print.c:355: warning: dereferencing type-punned pointer will break strict-aliasing rules
+amiga/print.c:357: warning: dereferencing type-punned pointer will break strict-aliasing rules
+amiga/plugin_hack.c: In function `amiga_plugin_hack_execute':
+amiga/plugin_hack.c:244: warning: unused variable `in'
+amiga/plugin_hack.c:244: warning: unused variable `out'
+amiga/plotters.c:111:2: warning: #warning OS3 locked to palette-mapped modes
+amiga/plotters.c: In function `ami_bitmap':
+amiga/plotters.c:609: warning: initialization makes pointer from integer without a cast
+amiga/plotters.c: In function `ami_bitmap_tile_hook':
+amiga/plotters.c:782: warning: initialization makes pointer from integer without a cast
+amiga/os3support.c: In function `OpenOutlineFont':
+amiga/os3support.c:60: warning: suggest parentheses around assignment used as truth value
+amiga/os3support.c:99: warning: assignment from incompatible pointer type
+amiga/os3support.c:111: warning: cast increases required alignment of target type
+amiga/os3support.c:120: warning: suggest parentheses around assignment used as truth value
+amiga/os3support.c:122: warning: assignment makes integer from pointer without a cast
+amiga/os3support.c:127: warning: initialization from incompatible pointer type
+amiga/os3support.c:127: warning: suggest parentheses around assignment used as truth value
+amiga/os3support.c:128: warning: format argument is not a pointer (arg 5)
+amiga/os3support.c:137: warning: assignment from incompatible pointer type
+amiga/os3support.c:150: warning: initialization makes integer from pointer without a cast
+amiga/os3support.c:150: warning: initialization makes integer from pointer without a cast
+amiga/os3support.c:161: warning: assignment from incompatible pointer type
+amiga/os3support.c: In function `CloseOutlineFont':
+amiga/os3support.c:171: warning: initialization from incompatible pointer type
+amiga/os3support.c: At top level:
+amiga/os3support.c:324: warning: no previous prototype for 'VSPrintfN'
+amiga/os3support.c: In function `VSPrintfN':
+amiga/os3support.c:342: warning: function declaration isn't a prototype
+amiga/os3support.c:342: warning: function declaration isn't a prototype
+amiga/os3support.c: At top level:
+amiga/os3support.c:357: warning: no previous prototype for 'SPrintfN'
+amiga/os3support.c: In function `strlwr':
+amiga/os3support.c:399: warning: implicit declaration of function `tolower'
+amiga/os3support.c:399: warning: nested extern declaration of `tolower'
+amiga/os3support.c: At top level:
+amiga/os3support.c:405: warning: no previous prototype for 'strsep'
+amiga/os3support.c:419: warning: "struct dirent" declared inside parameter list
+amiga/os3support.c:419: warning: its scope is only this definition or declaration, which is probably not what you want
+amiga/os3support.c:420: warning: no previous prototype for 'scandir'
+amiga/os3support.c:426: warning: no previous prototype for 'strtoll'
+amiga/os3support.c: In function `strtoll':
+amiga/os3support.c:427: warning: implicit declaration of function `strtol'
+amiga/os3support.c:427: warning: nested extern declaration of `strtol'
+amiga/os3support.c: In function `RefreshSetGadgetAttrsA':
+amiga/os3support.c:255: warning: 'disabled' might be used uninitialized in this function
+In file included from amiga/misc.c:35:
+./desktop/gui_window.h:210: warning: parameter has incomplete type
+amiga/misc.c: In function `ami_misc_req':
+amiga/misc.c:110: warning: initialization discards qualifiers from pointer target type
+amiga/misc.c:111: warning: initialization discards qualifiers from pointer target type
+amiga/misc.c:112: warning: initialization discards qualifiers from pointer target type
+amiga/misc.c: In function `ami_warn_user_multi':
+amiga/misc.c:159: warning: initialization discards qualifiers from pointer target type
+In file included from amiga/menu.c:48:
+./desktop/hotlist.h:188: warning: parameter has incomplete type
+In file included from amiga/menu.c:49:
+./desktop/browser.h:677: warning: parameter has incomplete type
+./desktop/browser.h:686: warning: parameter has incomplete type
+amiga/menu.c: In function `ami_menu_item_project_newtab':
+amiga/menu.c:124: warning: dereferencing type-punned pointer will break strict-aliasing rules
+amiga/menu.c: In function `ami_menu_item_project_open':
+amiga/menu.c:131: warning: dereferencing type-punned pointer will break strict-aliasing rules
+amiga/menu.c: In function `ami_menu_item_project_save':
+amiga/menu.c:141: warning: dereferencing type-punned pointer will break strict-aliasing rules
+amiga/menu.c: In function `ami_menu_item_project_closetab':
+amiga/menu.c:149: warning: dereferencing type-punned pointer will break strict-aliasing rules
+amiga/menu.c: In function `ami_menu_item_project_closewin':
+amiga/menu.c:157: warning: dereferencing type-punned pointer will break strict-aliasing rules
+amiga/menu.c: In function `ami_menu_item_project_print':
+amiga/menu.c:165: warning: dereferencing type-punned pointer will break strict-aliasing rules
+amiga/menu.c: In function `ami_menu_item_project_about':
+amiga/menu.c:180: warning: dereferencing type-punned pointer will break strict-aliasing rules
+amiga/menu.c:203: warning: initialization discards qualifiers from pointer target type
+amiga/menu.c:204: warning: initialization discards qualifiers from pointer target type
+amiga/menu.c:208: warning: initialization makes integer from pointer without a cast
+amiga/menu.c:208: warning: initialization makes integer from pointer without a cast
+amiga/menu.c: In function `ami_menu_item_edit_cut':
+amiga/menu.c:243: warning: dereferencing type-punned pointer will break strict-aliasing rules
+amiga/menu.c: In function `ami_menu_item_edit_copy':
+amiga/menu.c:252: warning: dereferencing type-punned pointer will break strict-aliasing rules
+amiga/menu.c: In function `ami_menu_item_edit_paste':
+amiga/menu.c:277: warning: dereferencing type-punned pointer will break strict-aliasing rules
+amiga/menu.c: In function `ami_menu_item_edit_selectall':
+amiga/menu.c:285: warning: dereferencing type-punned pointer will break strict-aliasing rules
+amiga/menu.c: In function `ami_menu_item_edit_clearsel':
+amiga/menu.c:294: warning: dereferencing type-punned pointer will break strict-aliasing rules
+amiga/menu.c: In function `ami_menu_item_edit_undo':
+amiga/menu.c:302: warning: dereferencing type-punned pointer will break strict-aliasing rules
+amiga/menu.c: In function `ami_menu_item_edit_redo':
+amiga/menu.c:310: warning: dereferencing type-punned pointer will break strict-aliasing rules
+amiga/menu.c: In function `ami_menu_item_browser_find':
+amiga/menu.c:318: warning: dereferencing type-punned pointer will break strict-aliasing rules
+amiga/menu.c: In function `ami_menu_item_browser_localhistory':
+amiga/menu.c:326: warning: dereferencing type-punned pointer will break strict-aliasing rules
+amiga/menu.c: In function `ami_menu_item_browser_foreimg':
+amiga/menu.c:346: warning: dereferencing type-punned pointer will break strict-aliasing rules
+amiga/menu.c: In function `ami_menu_item_browser_backimg':
+amiga/menu.c:358: warning: dereferencing type-punned pointer will break strict-aliasing rules
+amiga/menu.c: In function `ami_menu_item_browser_enablejs':
+amiga/menu.c:370: warning: dereferencing type-punned pointer will break strict-aliasing rules
+amiga/menu.c: In function `ami_menu_item_browser_scale_decrease':
+amiga/menu.c:380: warning: dereferencing type-punned pointer will break strict-aliasing rules
+amiga/menu.c: In function `ami_menu_item_browser_scale_normal':
+amiga/menu.c:388: warning: dereferencing type-punned pointer will break strict-aliasing rules
+amiga/menu.c: In function `ami_menu_item_browser_scale_increase':
+amiga/menu.c:396: warning: dereferencing type-punned pointer will break strict-aliasing rules
+amiga/menu.c: In function `ami_menu_item_browser_redraw':
+amiga/menu.c:404: warning: dereferencing type-punned pointer will break strict-aliasing rules
+amiga/menu.c: In function `ami_menu_item_hotlist_add':
+amiga/menu.c:414: warning: dereferencing type-punned pointer will break strict-aliasing rules
+amiga/menu.c: In function `ami_menu_item_hotlist_entries':
+amiga/menu.c:434: warning: dereferencing type-punned pointer will break strict-aliasing rules
+amiga/menu.c: In function `ami_menu_item_settings_snapshot':
+amiga/menu.c:455: warning: dereferencing type-punned pointer will break strict-aliasing rules
+amiga/menu.c: In function `ami_menu_item_arexx_execute':
+amiga/menu.c:472: warning: dereferencing type-punned pointer will break strict-aliasing rules
+amiga/menu.c:474: warning: initialization makes integer from pointer without a cast
+amiga/menu.c:474: warning: initialization makes integer from pointer without a cast
+amiga/menu.c:474: warning: initialization makes integer from pointer without a cast
+amiga/menu.c:474: warning: initialization makes integer from pointer without a cast
+amiga/menu.c:474: warning: initialization makes integer from pointer without a cast
+amiga/menu.c: In function `ami_menu_item_arexx_entries':
+amiga/menu.c:497: warning: dereferencing type-punned pointer will break strict-aliasing rules
+amiga/menu.c: In function `ami_free_menulabs':
+amiga/menu.c:521: warning: comparison of distinct pointer types lacks a cast
+amiga/menu.c: In function `ami_menu_alloc_item':
+amiga/menu.c:550: warning: comparison of distinct pointer types lacks a cast
+amiga/menu.c:546: warning: unused variable `menu_icon'
+amiga/menu.c: In function `ami_menu_refresh':
+amiga/menu.c:712: warning: initialization makes integer from pointer without a cast
+amiga/menu.c:726: warning: initialization makes integer from pointer without a cast
+amiga/menu.c: In function `ami_menu_layout':
+amiga/menu.c:818: warning: comparison of distinct pointer types lacks a cast
+amiga/menu.c:804: warning: unused variable `left_posn'
+amiga/menu.c:807: warning: unused variable `space_width'
+amiga/menu.c: In function `ami_menu_arexx_scan':
+amiga/menu.c:965: warning: cast increases required alignment of target type
+amiga/menu.c:969: warning: cast increases required alignment of target type
+amiga/menu.c: In function `ami_menu_update_checked':
+amiga/menu.c:1044: warning: dereferencing type-punned pointer will break strict-aliasing rules
+amiga/login.c: In function `ami_401login_login':
+amiga/login.c:193: warning: dereferencing type-punned pointer will break strict-aliasing rules
+amiga/login.c:194: warning: dereferencing type-punned pointer will break strict-aliasing rules
+amiga/iff_dr2d.c: In function `ami_svg_to_dr2d':
+amiga/iff_dr2d.c:122: warning: initialization discards qualifiers from pointer target type
+amiga/iff_dr2d.c:128: warning: initialization discards qualifiers from pointer target type
+amiga/iff_dr2d.c:284: warning: initialization discards qualifiers from pointer target type
+amiga/icon.c: In function `amiga_icon_convert':
+amiga/icon.c:173: warning: initialization makes integer from pointer without a cast
+amiga/icon.c:173: warning: initialization makes integer from pointer without a cast
+amiga/icon.c:173: warning: initialization makes integer from pointer without a cast
+amiga/icon.c:193: warning: cast increases required alignment of target type
+amiga/icon.c:201: warning: initialization makes integer from pointer without a cast
+amiga/icon.c:207: warning: initialization makes integer from pointer without a cast
+amiga/icon.c:207: warning: initialization makes integer from pointer without a cast
+amiga/icon.c:207: warning: initialization makes integer from pointer without a cast
+amiga/icon.c: In function `amiga_icon_superimpose_favicon_internal':
+amiga/icon.c:370: warning: initialization makes integer from pointer without a cast
+amiga/icon.c:370: warning: initialization makes integer from pointer without a cast
+amiga/icon.c:370: warning: initialization makes integer from pointer without a cast
+amiga/icon.c:370: warning: initialization makes integer from pointer without a cast
+amiga/icon.c:370: warning: initialization makes integer from pointer without a cast
+amiga/icon.c:363: warning: unused variable `bm'
+amiga/icon.c: In function `amiga_icon_superimpose_favicon':
+amiga/icon.c:437: warning: initialization makes integer from pointer without a cast
+amiga/icon.c:444: warning: initialization makes integer from pointer without a cast
+amiga/icon.c:444: warning: initialization makes integer from pointer without a cast
+amiga/icon.c:444: warning: initialization makes integer from pointer without a cast
+amiga/icon.c:444: warning: initialization makes integer from pointer without a cast
+amiga/icon.c:444: warning: initialization makes integer from pointer without a cast
+amiga/icon.c:455: warning: initialization makes integer from pointer without a cast
+amiga/icon.c:455: warning: initialization makes integer from pointer without a cast
+amiga/icon.c:455: warning: initialization makes integer from pointer without a cast
+amiga/icon.c:455: warning: initialization makes integer from pointer without a cast
+amiga/icon.c:455: warning: initialization makes integer from pointer without a cast
+amiga/icon.c:455: warning: initialization makes integer from pointer without a cast
+amiga/icon.c:469: warning: initialization makes integer from pointer without a cast
+amiga/icon.c:469: warning: initialization makes integer from pointer without a cast
+amiga/icon.c: In function `amiga_icon_from_bitmap':
+amiga/icon.c:516: warning: initialization makes integer from pointer without a cast
+amiga/icon.c:495: warning: unused variable `bitmap'
+amiga/icon.c:496: warning: unused variable `icondata'
+In file included from amiga/hotlist.c:23:
+./desktop/hotlist.h:188: warning: parameter has incomplete type
+In file included from amiga/history_local.c:48:
+./desktop/browser.h:677: warning: parameter has incomplete type
+./desktop/browser.h:686: warning: parameter has incomplete type
+amiga/help.c: In function `ami_help_new_screen':
+amiga/help.c:69: warning: initialization makes integer from pointer without a cast
+In file included from amiga/gui_options.c:62:
+./desktop/browser.h:677: warning: parameter has incomplete type
+./desktop/browser.h:686: warning: parameter has incomplete type
+amiga/gui_options.c: In function `ami_gui_opts_array_to_list':
+amiga/gui_options.c:254: warning: initialization makes integer from pointer without a cast
+amiga/gui_options.c:257: warning: initialization makes integer from pointer without a cast
+amiga/gui_options.c:262: warning: initialization makes integer from pointer without a cast
+amiga/gui_options.c: In function `ami_gui_opts_setup':
+amiga/gui_options.c:457: warning: passing arg 2 of `ami_gui_opts_array_to_list' from incompatible pointer type
+amiga/gui_options.c:458: warning: passing arg 2 of `ami_gui_opts_array_to_list' from incompatible pointer type
+amiga/gui_options.c:459: warning: passing arg 2 of `ami_gui_opts_array_to_list' from incompatible pointer type
+amiga/gui_options.c:460: warning: passing arg 2 of `ami_gui_opts_array_to_list' from incompatible pointer type
+amiga/gui_options.c:461: warning: passing arg 2 of `ami_gui_opts_array_to_list' from incompatible pointer type
+amiga/gui_options.c:462: warning: passing arg 2 of `ami_gui_opts_array_to_list' from incompatible pointer type
+amiga/gui_options.c: In function `ami_gui_opts_websearch':
+amiga/gui_options.c:2293: warning: initialization makes integer from pointer without a cast
+amiga/gui_options.c: In function `ami_gui_opts_array_to_list':
+amiga/gui_options.c:247: warning: 'node' might be used uninitialized in this function
+amiga/gui.c:1343:2: warning: #warning qualifier needs fixing for OS3
+amiga/gui.c:5587:2: warning: #warning FIXME for OS3 and older OS4
+In file included from amiga/gui.c:104:
+./desktop/browser.h:677: warning: parameter has incomplete type
+./desktop/browser.h:686: warning: parameter has incomplete type
+In file included from amiga/gui.c:124:
+./amiga/ctxmenu.h:84: warning: no previous prototype for 'ami_ctxmenu_init'
+./amiga/ctxmenu.h:85: warning: no previous prototype for 'ami_ctxmenu_free'
+./amiga/ctxmenu.h:86: warning: no previous prototype for 'ami_ctxmenu_get_hook'
+./amiga/ctxmenu.h:87: warning: no previous prototype for 'ami_ctxmenu_release_hook'
+./amiga/ctxmenu.h:88: warning: no previous prototype for 'ami_ctxmenu_history_create'
+./amiga/ctxmenu.h:89: warning: no previous prototype for 'ami_ctxmenu_clicktab_create'
+amiga/gui.c: In function `ami_system_colour_scrollbar_fgpen':
+amiga/gui.c:434: warning: unused variable `scrollerfillpen'
+amiga/gui.c: In function `ami_openscreen':
+amiga/gui.c:769: warning: initialization makes integer from pointer without a cast
+amiga/gui.c:769: warning: initialization makes integer from pointer without a cast
+amiga/gui.c:769: warning: initialization makes integer from pointer without a cast
+amiga/gui.c: In function `ami_gui_commandline':
+amiga/gui.c:844: warning: format argument is not a pointer (arg 5)
+amiga/gui.c:849: warning: format argument is not a pointer (arg 5)
+amiga/gui.c:888: warning: assignment discards qualifiers from pointer target type
+amiga/gui.c: In function `ami_gui_read_tooltypes':
+amiga/gui.c:905: warning: initialization discards qualifiers from pointer target type
+amiga/gui.c:906: warning: initialization discards qualifiers from pointer target type
+amiga/gui.c: In function `ami_update_buttons':
+amiga/gui.c:1124: warning: unused variable `s_back'
+amiga/gui.c:1124: warning: unused variable `s_forward'
+amiga/gui.c:1124: warning: unused variable `s_tabclose'
+amiga/gui.c:1124: warning: unused variable `s_stop'
+amiga/gui.c:1124: warning: unused variable `s_reload'
+amiga/gui.c: In function `ami_gui_hscroll_add':
+amiga/gui.c:1631: warning: initialization makes integer from pointer without a cast
+amiga/gui.c:1631: warning: initialization makes integer from pointer without a cast
+amiga/gui.c: In function `ami_gui_hscroll_remove':
+amiga/gui.c:1646: warning: initialization makes integer from pointer without a cast
+amiga/gui.c: In function `ami_gui_vscroll_add':
+amiga/gui.c:1676: warning: initialization makes integer from pointer without a cast
+amiga/gui.c:1676: warning: initialization makes integer from pointer without a cast
+amiga/gui.c: In function `ami_gui_vscroll_remove':
+amiga/gui.c:1691: warning: initialization makes integer from pointer without a cast
+amiga/gui.c: In function `gui_window_set_icon':
+amiga/gui.c:1807: warning: initialization makes pointer from integer without a cast
+amiga/gui.c: In function `ami_handle_msg':
+amiga/gui.c:2192: warning: initialization makes integer from pointer without a cast
+amiga/gui.c:2351: warning: dereferencing type-punned pointer will break strict-aliasing rules
+amiga/gui.c: In function `ami_get_msg':
+amiga/gui.c:2783: warning: passing arg 6 of `waitselect' from incompatible pointer type
+amiga/gui.c: In function `ami_switch_tab':
+amiga/gui.c:2864: warning: dereferencing type-punned pointer will break strict-aliasing rules
+amiga/gui.c:2866: warning: initialization makes integer from pointer without a cast
+amiga/gui.c: In function `ami_gui_update_hotlist_button':
+amiga/gui.c:3099: warning: dereferencing type-punned pointer will break strict-aliasing rules
+amiga/gui.c: In function `ami_gui_hotlist_add':
+amiga/gui.c:3162: warning: initialization makes integer from pointer without a cast
+amiga/gui.c:3162: warning: initialization makes integer from pointer without a cast
+amiga/gui.c:3162: warning: initialization makes integer from pointer without a cast
+amiga/gui.c: In function `ami_gui_hotlist_toolbar_add':
+amiga/gui.c:3218: warning: initialization makes integer from pointer without a cast
+amiga/gui.c:3218: warning: initialization makes integer from pointer without a cast
+amiga/gui.c:3220: warning: initialization makes integer from pointer without a cast
+amiga/gui.c: In function `ami_gui_hotlist_toolbar_remove':
+amiga/gui.c:3267: warning: initialization makes integer from pointer without a cast
+amiga/gui.c:3268: warning: initialization makes integer from pointer without a cast
+amiga/gui.c: In function `ami_gui_hotlist_toolbar_update':
+amiga/gui.c:3294: warning: initialization makes integer from pointer without a cast
+amiga/gui.c: In function `ami_toggletabbar':
+amiga/gui.c:3367: warning: initialization makes integer from pointer without a cast
+amiga/gui.c:3369: warning: initialization makes integer from pointer without a cast
+amiga/gui.c:3369: warning: initialization makes integer from pointer without a cast
+amiga/gui.c:3380: warning: initialization makes integer from pointer without a cast
+amiga/gui.c:3382: warning: initialization makes integer from pointer without a cast
+amiga/gui.c: In function `ami_scroller_hook':
+amiga/gui.c:3712: warning: dereferencing type-punned pointer will break strict-aliasing rules
+amiga/gui.c:3712: warning: initialization makes integer from pointer without a cast
+amiga/gui.c:3691: warning: unused variable `wheel'
+amiga/gui.c: In function `gui_window_create':
+amiga/gui.c:3833: warning: initialization makes integer from pointer without a cast
+amiga/gui.c:3833: warning: initialization makes integer from pointer without a cast
+amiga/gui.c:3926: warning: initialization makes integer from pointer without a cast
+amiga/gui.c:3926: warning: initialization makes integer from pointer without a cast
+amiga/gui.c: In function `ami_gui_close_tabs':
+amiga/gui.c:4431: warning: initialization makes integer from pointer without a cast
+amiga/gui.c: In function `gui_window_destroy':
+amiga/gui.c:4485: warning: dereferencing type-punned pointer will break strict-aliasing rules
+amiga/gui.c: In function `gui_window_set_title':
+amiga/gui.c:4592: warning: initialization makes integer from pointer without a cast
+amiga/gui.c:4592: warning: initialization makes integer from pointer without a cast
+amiga/gui.c: In function `gui_window_update_box':
+amiga/gui.c:4740: warning: initialization discards qualifiers from pointer target type
+amiga/gui.c: In function `gui_window_set_status':
+amiga/gui.c:5037: warning: initialization makes integer from pointer without a cast
+amiga/gui.c: In function `ami_gui_splash_open':
+amiga/gui.c:5344: warning: assignment discards qualifiers from pointer target type
+amiga/gui.c:5356: warning: assignment discards qualifiers from pointer target type
+amiga/gui.c:5369: warning: assignment discards qualifiers from pointer target type
+amiga/gui.c: In function `gui_file_gadget_open':
+amiga/gui.c:5404: warning: initialization makes integer from pointer without a cast
+amiga/gui.c:5404: warning: initialization makes integer from pointer without a cast
+amiga/gui.c:5404: warning: initialization makes integer from pointer without a cast
+amiga/gui.c: At top level:
+amiga/gui.c:194: warning: 'applibport' defined but not used
+amiga/gui.c:454: warning: 'colour_option_from_pen' defined but not used
+amiga/gui.c:1510: warning: 'ami_ns_rect_to_ibox' defined but not used
+amiga/font_scan.c: In function `ami_font_scan_font':
+amiga/font_scan.c:224: warning: passing arg 1 of `OpenOutlineFont' discards qualifiers from pointer target type
+amiga/font_scan.c:238: warning: initialization makes integer from pointer without a cast
+amiga/font_scan.c:250: warning: initialization makes integer from pointer without a cast
+amiga/font_scan.c:222: warning: unused variable `unicoderanges'
+amiga/font_scan.c: In function `ami_font_scan_load':
+amiga/font_scan.c:393: warning: assignment makes integer from pointer without a cast
+amiga/font_scan.c: In function `ami_font_scan_save':
+amiga/font_scan.c:434: warning: initialization makes integer from pointer without a cast
+amiga/font_scan.c: In function `ami_font_scan_init':
+amiga/font_scan.c:494: warning: implicit declaration of function `strsep'
+amiga/font_scan.c:494: warning: nested extern declaration of `strsep'
+amiga/font_scan.c:494: warning: assignment makes pointer from integer without a cast
+amiga/font_diskfont.c: In function `ami_font_bm_open':
+amiga/font_diskfont.c:89: warning: initialization makes integer from pointer without a cast
+amiga/font_cache.c: In function `ami_font_cache_cleanup':
+amiga/font_cache.c:97: warning: initialization from incompatible pointer type
+amiga/font_cache.c:98: warning: initialization from incompatible pointer type
+amiga/font_cache.c:98: warning: initialization from incompatible pointer type
+amiga/font_cache.c:101: warning: long int format, uint32 arg (arg 6)
+amiga/font_cache.c: In function `ami_font_cache_locate':
+amiga/font_cache.c:145: warning: initialization from incompatible pointer type
+amiga/font_cache.c:149: warning: long unsigned int format, uint32 arg (arg 6)
+amiga/font_cache.c: In function `ami_font_cache_alloc_entry':
+amiga/font_cache.c:164: warning: initialization from incompatible pointer type
+amiga/font_cache.c: In function `ami_font_cache_locate':
+amiga/font_cache.c:133: warning: 'nodedata' might be used uninitialized in this function
+amiga/font_bullet.c: In function `amiga_nsfont_width':
+amiga/font_bullet.c:164: warning: comparison between signed and unsigned
+amiga/font_bullet.c: In function `amiga_nsfont_position_in_string':
+amiga/font_bullet.c:194: warning: dereferencing type-punned pointer will break strict-aliasing rules
+amiga/font_bullet.c: In function `amiga_nsfont_split':
+amiga/font_bullet.c:278: warning: dereferencing type-punned pointer will break strict-aliasing rules
+amiga/font_bullet.c: In function `ami_font_open':
+amiga/font_bullet.c:352: warning: passing arg 1 of `OpenOutlineFont' discards qualifiers from pointer target type
+amiga/font_bullet.c: In function `ami_font_plot_glyph':
+amiga/font_bullet.c:572: warning: initialization makes integer from pointer without a cast
+amiga/font_bullet.c:599: warning: pointer of type `void *' used in arithmetic
+amiga/font_bullet.c:599: warning: pointer of type `void *' used in arithmetic
+amiga/font_bullet.c:613: warning: initialization makes integer from pointer without a cast
+amiga/font_bullet.c:619: warning: initialization makes integer from pointer without a cast
+amiga/font_bullet.c:533: warning: unused variable `template_type'
+amiga/font_bullet.c: In function `ami_font_width_glyph':
+amiga/font_bullet.c:669: warning: initialization makes integer from pointer without a cast
+amiga/font_bullet.c:685: warning: initialization makes integer from pointer without a cast
+amiga/font_bullet.c:696: warning: initialization makes integer from pointer without a cast
+amiga/font_bullet.c: In function `amiga_nsfont_text':
+amiga/font_bullet.c:736: warning: dereferencing type-punned pointer will break strict-aliasing rules
+amiga/font_bullet.c: In function `ami_font_unicode_width':
+amiga/font_bullet.c:800: warning: dereferencing type-punned pointer will break strict-aliasing rules
+amiga/font_bullet.c: In function `amiga_nsfont_width':
+amiga/font_bullet.c:164: warning: statement with no effect
+In file included from amiga/font.c:27:
+./desktop/browser.h:677: warning: parameter has incomplete type
+./desktop/browser.h:686: warning: parameter has incomplete type
+amiga/filetype.c: In function `fetch_filetype':
+amiga/filetype.c:80: warning: initialization discards qualifiers from pointer target type
+amiga/filetype.c:83: warning: initialization discards qualifiers from pointer target type
+amiga/filetype.c: In function `ami_mime_init':
+amiga/filetype.c:204: warning: assignment makes integer from pointer without a cast
+amiga/file.c: In function `ami_file_open':
+amiga/file.c:82: warning: initialization makes integer from pointer without a cast
+amiga/file.c:82: warning: initialization makes integer from pointer without a cast
+amiga/file.c:82: warning: initialization makes integer from pointer without a cast
+amiga/file.c:82: warning: initialization makes integer from pointer without a cast
+amiga/file.c: In function `ami_file_set_type':
+amiga/file.c:132: warning: initialization makes integer from pointer without a cast
+amiga/file.c:136: warning: initialization discards qualifiers from pointer target type
+amiga/file.c: In function `ami_file_save':
+amiga/file.c:158: warning: initialization discards qualifiers from pointer target type
+amiga/file.c:199: warning: initialization discards qualifiers from pointer target type
+amiga/file.c: In function `ami_file_save_req':
+amiga/file.c:249: warning: initialization makes integer from pointer without a cast
+amiga/file.c:249: warning: initialization makes integer from pointer without a cast
+amiga/file.c:249: warning: initialization makes integer from pointer without a cast
+amiga/file.c:249: warning: initialization makes integer from pointer without a cast
+amiga/file.c: In function `ami_file_req_init':
+amiga/file.c:275: warning: initialization makes integer from pointer without a cast
+amiga/dt_sound.c: In function `amiga_dt_sound_init':
+amiga/dt_sound.c:87: warning: initialization makes integer from pointer without a cast
+amiga/dt_sound.c: In function `amiga_dt_sound_convert':
+amiga/dt_sound.c:154: warning: initialization makes integer from pointer without a cast
+amiga/dt_picture.c: In function `amiga_dt_picture_init':
+amiga/dt_picture.c:76: warning: initialization makes integer from pointer without a cast
+amiga/dt_picture.c: In function `amiga_dt_picture_newdtobject':
+amiga/dt_picture.c:138: warning: initialization makes integer from pointer without a cast
+amiga/dt_picture.c: In function `amiga_dt_picture_datatype':
+amiga/dt_picture.c:160: warning: initialization makes integer from pointer without a cast
+amiga/dt_picture.c: In function `amiga_dt_picture_convert':
+amiga/dt_picture.c:220: warning: initialization makes integer from pointer without a cast
+amiga/dt_anim.c:214:2: warning: #warning FIXME: Need to use a different blitter function for OS3!
+amiga/dt_anim.c: In function `amiga_dt_anim_init':
+amiga/dt_anim.c:107: warning: initialization makes integer from pointer without a cast
+amiga/dt_anim.c: In function `amiga_dt_anim_convert':
+amiga/dt_anim.c:178: warning: initialization makes integer from pointer without a cast
+amiga/dt_anim.c:184: warning: initialization makes integer from pointer without a cast
+amiga/dt_anim.c:199: warning: dereferencing type-punned pointer will break strict-aliasing rules
+amiga/dt_anim.c:219: warning: dereferencing type-punned pointer will break strict-aliasing rules
+In file included from ./amiga/drag.h:22,
+                 from amiga/drag.c:315:
+./desktop/browser.h:677: warning: parameter has incomplete type
+./desktop/browser.h:686: warning: parameter has incomplete type
+In file included from amiga/download.c:51:
+./desktop/browser.h:677: warning: parameter has incomplete type
+./desktop/browser.h:686: warning: parameter has incomplete type
+amiga/download.c: In function `gui_download_window_create':
+amiga/download.c:112: warning: initialization makes integer from pointer without a cast
+amiga/download.c:112: warning: initialization makes integer from pointer without a cast
+amiga/download.c:112: warning: initialization makes integer from pointer without a cast
+amiga/download.c:112: warning: initialization makes integer from pointer without a cast
+amiga/download.c: In function `gui_download_window_data':
+amiga/download.c:206: warning: initialization discards qualifiers from pointer target type
+amiga/download.c: In function `gui_window_save_link':
+amiga/download.c:358: warning: initialization makes integer from pointer without a cast
+amiga/download.c:358: warning: initialization makes integer from pointer without a cast
+amiga/download.c:358: warning: initialization makes integer from pointer without a cast
+amiga/download.c:358: warning: initialization makes integer from pointer without a cast
+amiga/download.c:384: warning: initialization makes integer from pointer without a cast
+amiga/download.c:388: warning: assignment discards qualifiers from pointer target type
+In file included from amiga/cookies.c:21:
+./desktop/cookie_manager.h:97: warning: parameter has incomplete type
+In file included from amiga/clipboard.c:31:
+./desktop/browser.h:677: warning: parameter has incomplete type
+./desktop/browser.h:686: warning: parameter has incomplete type
+amiga/clipboard.c: In function `gui_set_clipboard':
+amiga/clipboard.c:232: warning: initialization discards qualifiers from pointer target type
+amiga/clipboard.c:240: warning: comparison is always false due to limited range of data type
+amiga/clipboard.c:254: warning: initialization discards qualifiers from pointer target type
+amiga/clipboard.c: In function `ami_drag_selection':
+amiga/clipboard.c:284: warning: dereferencing type-punned pointer will break strict-aliasing rules
+amiga/clipboard.c:284: warning: dereferencing type-punned pointer will break strict-aliasing rules
+amiga/clipboard.c: In function `ami_easy_clipboard_bitmap':
+amiga/clipboard.c:341: warning: initialization makes integer from pointer without a cast
+amiga/bitmap.c:646:2: warning: #warning FIXME for OS3 (in current state none of bitmap_render can work!)
+amiga/bitmap.c: In function `amiga_bitmap_save':
+amiga/bitmap.c:179: warning: initialization makes integer from pointer without a cast
+amiga/bitmap.c:179: warning: initialization makes integer from pointer without a cast
+amiga/bitmap.c: In function `amiga_bitmap_test_opaque':
+amiga/bitmap.c:220: warning: cast increases required alignment of target type
+amiga/bitmap.c: In function `ami_datatype_object_from_bitmap':
+amiga/bitmap.c:332: warning: initialization makes integer from pointer without a cast
+amiga/bitmap.c:340: warning: initialization makes integer from pointer without a cast
+amiga/bitmap.c:340: warning: initialization makes integer from pointer without a cast
+amiga/bitmap.c:340: warning: initialization makes integer from pointer without a cast
+amiga/bitmap.c: In function `ami_bitmap_from_datatype':
+amiga/bitmap.c:370: warning: initialization makes integer from pointer without a cast
+amiga/bitmap.c: In function `ami_bitmap_get_mask':
+amiga/bitmap.c:498: warning: cast increases required alignment of target type
+amiga/bitmap.c: In function `ami_bitmap_get_palettemapped':
+amiga/bitmap.c:548: warning: initialization makes integer from pointer without a cast
+amiga/bitmap.c:563: warning: initialization makes integer from pointer without a cast
+In file included from amiga/arexx.c:32:
+./desktop/browser.h:677: warning: parameter has incomplete type
+./desktop/browser.h:686: warning: parameter has incomplete type
+amiga/arexx.c:91: warning: initialization discards qualifiers from pointer target type
+amiga/arexx.c:91: warning: initialization discards qualifiers from pointer target type
+amiga/arexx.c:92: warning: initialization discards qualifiers from pointer target type
+amiga/arexx.c:93: warning: initialization discards qualifiers from pointer target type
+amiga/arexx.c:94: warning: initialization discards qualifiers from pointer target type
+amiga/arexx.c:94: warning: initialization discards qualifiers from pointer target type
+amiga/arexx.c:95: warning: initialization discards qualifiers from pointer target type
+amiga/arexx.c:95: warning: initialization discards qualifiers from pointer target type
+amiga/arexx.c:96: warning: initialization discards qualifiers from pointer target type
+amiga/arexx.c:96: warning: initialization discards qualifiers from pointer target type
+amiga/arexx.c:97: warning: initialization discards qualifiers from pointer target type
+amiga/arexx.c:97: warning: initialization discards qualifiers from pointer target type
+amiga/arexx.c:98: warning: initialization discards qualifiers from pointer target type
+amiga/arexx.c:99: warning: initialization discards qualifiers from pointer target type
+amiga/arexx.c:99: warning: initialization discards qualifiers from pointer target type
+amiga/arexx.c:100: warning: initialization discards qualifiers from pointer target type
+amiga/arexx.c:100: warning: initialization discards qualifiers from pointer target type
+amiga/arexx.c:101: warning: initialization discards qualifiers from pointer target type
+amiga/arexx.c:101: warning: initialization discards qualifiers from pointer target type
+amiga/arexx.c:102: warning: initialization discards qualifiers from pointer target type
+amiga/arexx.c:102: warning: initialization discards qualifiers from pointer target type
+amiga/arexx.c:103: warning: initialization discards qualifiers from pointer target type
+amiga/arexx.c:103: warning: initialization discards qualifiers from pointer target type
+amiga/arexx.c:104: warning: initialization discards qualifiers from pointer target type
+amiga/arexx.c:104: warning: initialization discards qualifiers from pointer target type
+amiga/arexx.c:105: warning: initialization discards qualifiers from pointer target type
+amiga/arexx.c:105: warning: initialization discards qualifiers from pointer target type
+amiga/arexx.c:106: warning: initialization discards qualifiers from pointer target type
+amiga/arexx.c:106: warning: initialization discards qualifiers from pointer target type
+amiga/arexx.c: In function `ami_find_tab_gwin':
+amiga/arexx.c:176: warning: initialization makes integer from pointer without a cast
+amiga/arexx.c: In function `ami_find_tab_bw':
+amiga/arexx.c:200: warning: initialization makes integer from pointer without a cast
+amiga/arexx.c: In function `rx_save':
+amiga/arexx.c:328: warning: initialization discards qualifiers from pointer target type
+amiga/agclass/amigaguide_class.c: In function `agm_open':
+amiga/agclass/amigaguide_class.c:330: warning: initialization discards qualifiers from pointer target type

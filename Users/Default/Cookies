@@ -1,0 +1,10 @@
+# >PROGDIR:Users/Default/Cookies
+# NetSurf cookies file.
+#
+# Lines starting with a '#' are comments, blank lines are ignored.
+#
+# All lines prior to "Version:	102" are discarded.
+#
+# Version	Domain	Domain from Set-Cookie	Path	Path from Set-Cookie	Secure	HTTP-Only	Expires	Last used	No destroy	Name	Value	Value was quoted	Scheme	URL	Comment
+Version:	102
+0	.google.ca	1	/	1	0	1	1478633581	1463743781	0	NID	79=ByS0gIBBHICc1xxOm4Lax83GdZNV1FpnNGU1GZLA6x1yR_9jAgg1yVT6b8wq85galznCH1AW0sQFrLh6aJNKlyqPETip_XGQOKunfpJVdJNy7NJghWo_ULxWKeps7UM2	0	unused	unused	

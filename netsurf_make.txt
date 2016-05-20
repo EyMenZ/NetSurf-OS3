@@ -1,0 +1,205 @@
+M.CONFIG: JPEG (libjpeg)	enabled       (NETSURF_USE_JPEG := YES)
+M.CONFIG: PDF export (haru)	disabled      (NETSURF_USE_HARU_PDF := NO)
+M.CONFIG: glibc internal iconv	disabled      (NETSURF_USE_LIBICONV_PLUG := NO)
+M.CONFIG: Javascript (Duktape)	disabled      (NETSURF_USE_DUKTAPE := NO)
+PKG.CNFG: CSS (libcss)	enabled
+PKG.CNFG: DOM (libdom)	enabled
+PKG.CNFG: nsutils (libnsutils)	enabled
+PKG.CNFG: utf8proc (libutf8proc)	enabled
+M.CONFIG: Sprite (librosprite)	disabled      (NETSURF_USE_ROSPRITE := NO)
+M.CONFIG: BMP (libnsbmp)	enabled       (NETSURF_USE_BMP := YES)
+M.CONFIG: GIF (libnsgif)	enabled       (NETSURF_USE_GIF := YES)
+M.CONFIG: PNG (libpng)	enabled       (NETSURF_USE_PNG := YES)
+M.CONFIG: NSSVG (libsvgtiny)	enabled       (NETSURF_USE_NSSVG := YES)
+M.CONFIG: JavaScript	disabled      (NETSURF_USE_MOZJS := NO)
+M.CONFIG: Amiga icon	enabled       (NETSURF_USE_AMIGA_ICON := YES)
+M.CONFIG: DataTypes	enabled       (NETSURF_USE_AMIGA_DATATYPES := YES)
+PKG.CNFG: Check (check)	disabled
+   MKDIR: build-CYGWIN_NT_6_3_WOW-amigaos3
+   MKDIR: build-CYGWIN_NT_6_3_WOW-amigaos3/deps
+ COMPILE: utils/utils.c
+ COMPILE: utils/utf8.c
+ COMPILE: utils/useragent.c
+ COMPILE: utils/url.c
+ COMPILE: utils/talloc.c
+ COMPILE: utils/punycode.c
+ COMPILE: utils/nsurl.c
+ COMPILE: utils/nsoption.c
+ COMPILE: utils/messages.c
+ COMPILE: utils/log.c
+ COMPILE: utils/locale.c
+ COMPILE: utils/libdom.c
+ COMPILE: utils/idna.c
+ COMPILE: utils/http/www-authenticate.c
+ COMPILE: utils/http/primitives.c
+ COMPILE: utils/http/parameter.c
+ COMPILE: utils/http/generics.c
+ COMPILE: utils/http/content-type.c
+ COMPILE: utils/http/content-disposition.c
+ COMPILE: utils/http/challenge.c
+ COMPILE: utils/hashtable.c
+ COMPILE: utils/filepath.c
+ COMPILE: utils/filename.c
+ COMPILE: utils/file.c
+ COMPILE: utils/corestrings.c
+ COMPILE: utils/bloom.c
+ COMPILE: utils/base64.c
+ COMPILE: render/textplain.c
+ COMPILE: render/table.c
+ COMPILE: render/search.c
+ COMPILE: render/layout.c
+ COMPILE: render/imagemap.c
+ COMPILE: render/html_script.c
+ COMPILE: render/html_redraw.c
+ COMPILE: render/html_object.c
+ COMPILE: render/html_interaction.c
+ COMPILE: render/html_forms.c
+ COMPILE: render/html_css_fetcher.c
+ COMPILE: render/html_css.c
+ COMPILE: render/html.c
+ COMPILE: render/form.c
+ COMPILE: render/font.c
+ COMPILE: render/box_textarea.c
+ COMPILE: render/box_normalise.c
+ COMPILE: render/box_construct.c
+ COMPILE: render/box.c
+ COMPILE: javascript/none/none.c
+ COMPILE: javascript/fetcher.c
+ COMPILE: image/svg.c
+ COMPILE: image/png.c
+ COMPILE: image/jpeg.c
+ COMPILE: image/image_cache.c
+ COMPILE: image/image.c
+ COMPILE: image/ico.c
+ COMPILE: image/gif.c
+ COMPILE: image/bmp.c
+TESTMENT: build-CYGWIN_NT_6_3_WOW-amigaos3/testament.h
+ COMPILE: desktop/version.c
+ COMPILE: desktop/treeview.c
+ COMPILE: desktop/tree.c
+ COMPILE: desktop/textinput.c
+ COMPILE: desktop/textarea.c
+ COMPILE: desktop/system_colour.c
+ COMPILE: desktop/sslcert_viewer.c
+ COMPILE: desktop/selection.c
+ COMPILE: desktop/searchweb.c
+ COMPILE: desktop/search.c
+ COMPILE: desktop/scrollbar.c
+ COMPILE: desktop/save_text.c
+ COMPILE: desktop/save_pdf.c
+ COMPILE: desktop/save_complete.c
+ COMPILE: desktop/print.c
+ COMPILE: desktop/plot_style.c
+ COMPILE: desktop/netsurf.c
+ COMPILE: desktop/mouse.c
+ COMPILE: desktop/knockout.c
+ COMPILE: desktop/hotlist.c
+ COMPILE: desktop/gui_factory.c
+ COMPILE: desktop/global_history.c
+ COMPILE: desktop/frames.c
+ COMPILE: desktop/font_haru.c
+ COMPILE: desktop/download.c
+ COMPILE: desktop/cookie_manager.c
+ COMPILE: desktop/browser_history.c
+ COMPILE: desktop/browser.c
+ COMPILE: css/utils.c
+ COMPILE: css/select.c
+ COMPILE: css/internal.c
+ COMPILE: css/hints.c
+ COMPILE: css/dump.c
+ COMPILE: css/css.c
+ COMPILE: content/urldb.c
+ COMPILE: content/no_backing_store.c
+ COMPILE: content/mimesniff.c
+ COMPILE: content/llcache.c
+ COMPILE: content/hlcache.c
+ COMPILE: content/fs_backing_store.c
+ COMPILE: content/fetchers/resource.c
+ COMPILE: content/fetchers/file.c
+ COMPILE: content/fetchers/data.c
+ COMPILE: content/fetchers/curl.c
+ COMPILE: content/fetchers/about.c
+ COMPILE: content/fetch.c
+ COMPILE: content/dirlist.c
+ COMPILE: content/content_factory.c
+ COMPILE: content/content.c
+ COMPILE: amiga/version.c
+ COMPILE: amiga/utf8.c
+ COMPILE: amiga/tree.c
+ COMPILE: amiga/theme.c
+ COMPILE: amiga/stringview/urlhistory.c
+ COMPILE: amiga/stringview/stringview.c
+ COMPILE: amiga/sslcert.c
+ COMPILE: amiga/selectmenu.c
+ COMPILE: amiga/search.c
+ COMPILE: amiga/schedule.c
+ COMPILE: amiga/save_pdf.c
+ COMPILE: amiga/rtg.c
+ COMPILE: amiga/print.c
+ COMPILE: amiga/plugin_hack.c
+ COMPILE: amiga/plotters.c
+ COMPILE: amiga/os3support.c
+ COMPILE: amiga/object.c
+ COMPILE: amiga/misc.c
+ COMPILE: amiga/menu.c
+ COMPILE: amiga/login.c
+ COMPILE: amiga/libs.c
+ COMPILE: amiga/launch.c
+ COMPILE: amiga/iff_dr2d.c
+ COMPILE: amiga/icon.c
+ COMPILE: amiga/hotlist.c
+ COMPILE: amiga/history_local.c
+ COMPILE: amiga/history.c
+ COMPILE: amiga/help.c
+ COMPILE: amiga/hash/xxhash.c
+ COMPILE: amiga/gui_options.c
+ COMPILE: amiga/gui.c
+ COMPILE: amiga/font_scan.c
+ COMPILE: amiga/font_diskfont.c
+ COMPILE: amiga/font_cache.c
+ COMPILE: amiga/font_bullet.c
+ COMPILE: amiga/font.c
+ COMPILE: amiga/filetype.c
+ COMPILE: amiga/file.c
+ COMPILE: amiga/dt_sound.c
+ COMPILE: amiga/dt_picture.c
+ COMPILE: amiga/dt_anim.c
+ COMPILE: amiga/drag.c
+ COMPILE: amiga/download.c
+ COMPILE: amiga/datatypes.c
+ COMPILE: amiga/ctxmenu.c
+ COMPILE: amiga/cookies.c
+ COMPILE: amiga/clipboard.c
+ COMPILE: amiga/bitmap.c
+ COMPILE: amiga/arexx.c
+ COMPILE: amiga/agclass/amigaguide_class.c
+M.CONFIG: JPEG (libjpeg)	enabled       (NETSURF_USE_JPEG := YES)
+M.CONFIG: PDF export (haru)	disabled      (NETSURF_USE_HARU_PDF := NO)
+M.CONFIG: glibc internal iconv	disabled      (NETSURF_USE_LIBICONV_PLUG := NO)
+M.CONFIG: Javascript (Duktape)	disabled      (NETSURF_USE_DUKTAPE := NO)
+PKG.CNFG: CSS (libcss)	enabled
+PKG.CNFG: DOM (libdom)	enabled
+PKG.CNFG: nsutils (libnsutils)	enabled
+PKG.CNFG: utf8proc (libutf8proc)	enabled
+M.CONFIG: Sprite (librosprite)	disabled      (NETSURF_USE_ROSPRITE := NO)
+M.CONFIG: BMP (libnsbmp)	enabled       (NETSURF_USE_BMP := YES)
+M.CONFIG: GIF (libnsgif)	enabled       (NETSURF_USE_GIF := YES)
+M.CONFIG: PNG (libpng)	enabled       (NETSURF_USE_PNG := YES)
+M.CONFIG: NSSVG (libsvgtiny)	enabled       (NETSURF_USE_NSSVG := YES)
+M.CONFIG: JavaScript	disabled      (NETSURF_USE_MOZJS := NO)
+M.CONFIG: Amiga icon	enabled       (NETSURF_USE_AMIGA_ICON := YES)
+M.CONFIG: DataTypes	enabled       (NETSURF_USE_AMIGA_DATATYPES := YES)
+PKG.CNFG: Check (check)	disabled
+TESTMENT: unchanged
+MSGSPLIT: Language: de Filter: ami
+COMPRESS: !NetSurf/Resources/de/Messages
+MSGSPLIT: Language: en Filter: ami
+COMPRESS: !NetSurf/Resources/en/Messages
+MSGSPLIT: Language: fr Filter: ami
+COMPRESS: !NetSurf/Resources/fr/Messages
+MSGSPLIT: Language: it Filter: ami
+COMPRESS: !NetSurf/Resources/it/Messages
+MSGSPLIT: Language: nl Filter: ami
+COMPRESS: !NetSurf/Resources/nl/Messages
+    LINK: NetSurf
+rm !NetSurf/Resources/en/Messages.tmp !NetSurf/Resources/fr/Messages.tmp !NetSurf/Resources/it/Messages.tmp !NetSurf/Resources/nl/Messages.tmp !NetSurf/Resources/de/Messages.tmp
